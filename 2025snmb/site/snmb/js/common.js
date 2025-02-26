@@ -515,7 +515,7 @@ $(function () {
             refreshLnbHeight();
             if ($lnbSpy.length) {
                 $html.removeClass('lnb_open');
-                $lnbSpy.parents('.depth_item').removeClass('active');
+                $lnbSpy.parents('.depth_item').removeClass('active slide_on');
                 $lnbDepthItem.removeClass('active_prev active_next');
                 //
                 $('.depth3').removeAttr('style');
@@ -538,7 +538,7 @@ $(function () {
         //여기서부터 코드 작성해주세요
 
         //상단 정부 UI/UX LNB 커스텀 시작
-        //와이드 1차메뉴 첫번째 포커스 처리
+        //와이드 1차메뉴 첫번째 포커스 처리 동작
         $('.lnb .menu .depth1 .depth1_list .depth1_item:first-child .depth1_text').keydown(function (key) {
             if (key.keyCode == 9) {
                 if (key.shiftKey) {
@@ -546,33 +546,61 @@ $(function () {
                 }
             }
         });
-        //와이드 3차메뉴 상단 2차메뉴
+        //와이드 3차메뉴 상단 2차메뉴 렌더링
         $('.lnb .menu .depth2 .depth2_list .depth2_item .depth2_text').each(function () {
             if ($(this)) {
                 var $thisClone = $(this).clone();
                 $(this).siblings('.depth3').prepend($thisClone.removeClass('depth_text depth2_text').addClass('depth2_link'));
             }
         });
-        //모바일 1차메뉴 좌측
+        //모바일 1차메뉴 좌측 앵커 렌더링
         $('.lnb .menu .depth1').prepend('<div class="left_depth1"><ul class="left_depth1_list"></ul></div>');
-        for(var i=1; i<=$('.depth1_item').length; i++){
-            $('.left_depth1 .left_depth1_list').append($('.depth1_item:nth-child('+i+')').clone().removeClass('depth_item depth1_item').addClass('left_depth1_item'));
+        for (var i = 1; i <= $('.depth1_item').length; i++) {
+            $('.left_depth1 .left_depth1_list').append($('.depth1_item:nth-child(' + i + ')').clone().removeClass('depth_item depth1_item').addClass('left_depth1_item'));
         }
         $('.left_depth1 .left_depth1_list .left_depth1_item').find('.depth1_text').removeClass('depth_text depth1_text').addClass('left_depth1_text');
         $('.left_depth1 .left_depth1_list .left_depth1_item').find('.depth2').remove();
-        //모바일 1차메뉴 좌측 앵커 클릭
-        $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').each(function(){
-            if( $(this).parent('.left_depth1_item').is('.has') ){
-                $(this).attr('href', '#anchor_'+$(this).parent('.left_depth1_item').index()+'');
-                $('.depth1 .depth1_list .depth1_item').eq($(this).parent('.left_depth1_item').index()).attr('id', 'anchor_'+$(this).parent('.left_depth1_item').index()+'');
+        //모바일 1차메뉴 좌측 앵커 동작
+        $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').each(function () {
+            if ($(this).parent('.left_depth1_item').is('.has')) {
+                $(this).attr('href', '#anchor_' + $(this).parent('.left_depth1_item').index() + '');
+                $('.depth1 .depth1_list .depth1_item').eq($(this).parent('.left_depth1_item').index()).attr('id', 'anchor_' + $(this).parent('.left_depth1_item').index() + '');
             }
         });
-        $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').on('click', function(e){
+        $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').on('click', function (e) {
             $('.left_depth1 .left_depth1_list .left_depth1_item').removeClass('active');
             $(this).parent('.left_depth1_item').addClass('active');
         })
-        //모바일 2차 클릭시 3차 슬라이드
-        $('.lnb .menu .depth2 .depth2_list .depth2_item.has .depth2_text').on('click', function(e){
+        $('.menu_show button.menu_button').on('click', function () {
+            if (mode === 'mobile') {
+                var $spyLastItem = $('.lnb .menu').find('.spy:last').parents('.depth1_item'),
+                    clickIndex = $spyLastItem.index();
+                $spyLastItem.addClass('tttttttttttttttttttttttttttttttttt');
+                if ($spyLastItem.is('.solo')) {
+                    var $targetItem = $('.left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
+                    var $targetText = $targetItem.find('.left_depth1_text');
+                    if ($targetText.length) {
+                        // 비동기 로딩 문제 해결을 위해 setTimeout 사용
+                        setTimeout(function () {
+                            $targetItem.addClass('active'); // active 클래스 추가
+                        }, 1);
+                    }
+                }
+                if ($spyLastItem.is('.has')) {
+                    var $targetItem = $('.left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
+                    var $targetText = $targetItem.find('.left_depth1_text');
+                    if ($targetText.length) {
+                        // 비동기 로딩 문제 해결을 위해 setTimeout 사용
+                        setTimeout(function () {
+                            $targetItem.addClass('active'); // active 클래스 추가
+                            $targetText.get(0).click();
+                        }, 1);
+                    }
+                }
+            }
+        });
+        //모바일 2차 클릭시 3차 슬라이드 동작
+        $('.lnb .menu .depth2 .depth2_list .depth2_item.has .depth2_text').on('click', function (e) {
             if ($body.attr('data-mobile-lnb-slide') === 'Y') {
                 if (mode === 'mobile') {
                     if (!($(this).parent('.depth2_item.has').is('.slide_on'))) {
@@ -587,7 +615,7 @@ $(function () {
                 }
             }
         });
-        //모바일 3차메뉴 상단 4차메뉴
+        //모바일 3차메뉴 클릭시 4차메뉴 동작
         $('.lnb .menu .depth3 .depth3_list .depth3_item.has .depth3_text').each(function () {
             if ($(this)) {
                 var $thisClone = $(this).clone();
@@ -595,9 +623,10 @@ $(function () {
                 $(this).siblings('.depth4').prepend('<div class="top_depth4_btn_box"><button type="button" class="active_close type01">닫기</button><button type="button" class="active_close type02">닫기</button></div>');
             }
         });
-        //상단 4차 버튼 박스 동작
-        $('.top_depth4_btn_box button.active_close').on('click', function(){
+        //모바일 4차메뉴 상단 버튼 박스 동작
+        $('.top_depth4_btn_box button.active_close').on('click', function () {
             $(this).parent('.top_depth4_btn_box').parent('.depth4').parent('.depth3_item').removeClass('active');
+            $(this).parent('.top_depth4_btn_box').parent('.depth4').parent('.depth3_item').find('.depth3_text').focus();
         });
         //상단 정부 UI/UX LNB 커스텀 종료
 
