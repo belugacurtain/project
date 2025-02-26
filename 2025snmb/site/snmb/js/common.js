@@ -117,33 +117,33 @@ $(function () {
     //ie7일 때
     if (_browser.indexOf('msie 7.0') > -1) {
         _browser = 'ie ie7';
-    //ie8일 때
+        //ie8일 때
     } else if (_browser.indexOf('msie 8.0') > -1) {
         _browser = 'ie ie8';
-    //ie9일 때
+        //ie9일 때
     } else if (_browser.indexOf('msie 9.0') > -1) {
         _browser = 'ie ie9';
-    //ie10일 때
+        //ie10일 때
     } else if (_browser.indexOf('msie 10.0') > -1) {
         _browser = 'ie ie10';
-    //ie11일 때
+        //ie11일 때
     } else if (_browser.indexOf('trident/7.0') > -1) {
         _browser = 'ie ie11';
-    //edge일 때
+        //edge일 때
     } else if (_browser.indexOf('edge') > -1) {
         _browser = 'edge MS';
     } else if (_browser.indexOf('edg/') > -1) {
         _browser = 'edge chromium_based';
-    //opera일 때
+        //opera일 때
     } else if (_browser.indexOf('opr') > -1) {
         _browser = 'opera';
-    //chrome일 때
+        //chrome일 때
     } else if (_browser.indexOf('chrome') > -1) {
         _browser = 'chrome';
-    //firefox일 때
+        //firefox일 때
     } else if (_browser.indexOf('firefox') > -1) {
         _browser = 'firefox';
-    //safari일 때
+        //safari일 때
     } else if (_browser.indexOf('safari') > -1) {
         _browser = 'safari';
     } else {
@@ -560,7 +560,17 @@ $(function () {
         }
         $('.left_depth1 .left_depth1_list .left_depth1_item').find('.depth1_text').removeClass('depth_text depth1_text').addClass('left_depth1_text');
         $('.left_depth1 .left_depth1_list .left_depth1_item').find('.depth2').remove();
-
+        //모바일 1차메뉴 좌측 앵커 클릭
+        $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').each(function(){
+            if( $(this).parent('.left_depth1_item').is('.has') ){
+                $(this).attr('href', '#anchor_'+$(this).parent('.left_depth1_item').index()+'');
+                $('.depth1 .depth1_list .depth1_item').eq($(this).parent('.left_depth1_item').index()).attr('id', 'anchor_'+$(this).parent('.left_depth1_item').index()+'');
+            }
+        });
+        $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').on('click', function(e){
+            $('.left_depth1 .left_depth1_list .left_depth1_item').removeClass('active');
+            $(this).parent('.left_depth1_item').addClass('active');
+        })
         //모바일 2차 클릭시 3차 슬라이드
         $('.lnb .menu .depth2 .depth2_list .depth2_item.has .depth2_text').on('click', function(e){
             if ($body.attr('data-mobile-lnb-slide') === 'Y') {

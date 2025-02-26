@@ -485,7 +485,7 @@ input[type="submit"]{cursor:pointer;}
     .lnb .lnb_top_box .box_sch .sch_wrap .sch_form .sch_form_inner .input_box.active .sch_input_close{display:block;}
     .lnb .lnb_top_box .box_sch .sch_wrap .sch_form .sch_form_inner .input_box .sch_submit{display:block;position:absolute;top:calc(50% - 12px);right:13px;width:24px;height:24px;background-image:url(../images/guide/ico_sch_40.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;}
     
-    .lnb .menu{display:flex;align-items:normal;justify-content:flex-start;flex-direction:column;position:static;width:100%;max-height:calc(100% - 130px);overflow-y:auto;scroll-behavior:auto;}
+    .lnb .menu{display:flex;align-items:normal;justify-content:flex-start;flex-direction:column;position:static;width:100%;max-height:calc(100% - 130px);overflow-y:auto;scroll-behavior:smooth;}
     
     .lnb .menu .depth1{display:flex;position:static;min-width:100%;height:auto;background-color:#eef2f7;}
     .lnb .menu .depth1 .left_depth1{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;position:relative;top:0;left:0;width:124px;}
@@ -501,6 +501,7 @@ input[type="submit"]{cursor:pointer;}
     
     .lnb .menu .depth1 .depth1_list{display:flex;align-items:normal;justify-content:flex-start;flex-direction:column;position:static;width:calc(100% - 124px);background-color:#fff;}
     .lnb .menu .depth1 .depth1_list .depth1_item{display:block;position:static;width:100%;padding:16px;}
+    .lnb .menu .depth1 .depth1_list .depth1_item.solo{visibility:hidden;opacity:0;height:0;padding:0;overflow:hidden;}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text{display:flex;align-items:center;justify-content:flex-start;flex-direction:row;position:relative;width:100%;margin-bottom:9px;padding:8px;}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text:hover,
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text:focus{text-decoration:none;}
@@ -565,8 +566,16 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth4 .depth4_list .depth4_item .depth4_text span em{display:inline-block;position:relative;font-size:17px;color:#1e2124;line-height:24px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
     .lnb .menu .depth4 .depth4_list .depth4_item.active .depth4_text span em{color:#003675;}
     
-    
-    .lnb .menu .lnb_bottom_box{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;position:relative;width:100%;min-height:200px;}
+    .lnb .menu .lnb_bottom_box{display:flex;align-items:flex-start;justify-content:center;flex-direction:column;position:relative;width:100%;padding:16px 24px;}
+    .lnb .menu .lnb_bottom_box .box_etc{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;position:relative;width:100%;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;position:relative;width:100%;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item{display:inline-flex;align-items:flex-start;justify-content:flex-start;position:relative;width:100%;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item + .etc_item{margin-top:16px;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item .etc_btn{display:inline-flex;align-items:flex-start;justify-content:flex-start;position:relative;padding:10px 0;font-size:16px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:500;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;transition:background-color 400ms ease-in-out;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item .etc_btn:hover,
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item .etc_btn:focus{text-decoration:none;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item .etc_btn:focus{border-radius:6px;outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:2px;}
+    .lnb .menu .lnb_bottom_box .box_etc .etc_list .etc_item.type_blank .etc_btn:after{display:inline-block;position:relative;width:20px;height:20px;margin:0 0 0 4px;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';}
     
     .lnb .menu_hide{display:inline-block;position:absolute;z-index:2;top:16px;right:16px;width:24px;height:24px;vertical-align:top;}
     .lnb .menu_hide .menu_button{display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;background-image:url(../images/guide/ico_close_24.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;}
