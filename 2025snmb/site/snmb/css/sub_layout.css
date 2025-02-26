@@ -2,6 +2,11 @@
 
 /* (주)한신정보기술 박남규 - 2025.02 */
 
+/* ---------- sub_visual 시작 ---------- */
+.sub_visual{display:none;}
+/* ---------- sub_visual 종료 ---------- */
+
+
 /* ---------- side 시작 ---------- */
 .side{display:block;position:relative;float:left;width:296px;min-height:100px;border-top:1px solid #f00;background-color:#eee;box-sizing:border-box;}
 @media all and (min-width:1001px){
@@ -29,9 +34,7 @@
     .colgroup{float:none;width:100%;padding:0 0 76px 0;}
     .colgroup:before{display:none;}
 }
-
 .colgroup article{display:block;position:relative;width:100%;box-sizing:border-box;}
 .sub_head{display:block;position:relative;width:100%;min-height:280px;background-color:#eee;box-sizing:border-box;}
 #contents{display:block;position:relative;width:100%;min-height:1000px;box-sizing:border-box;}
-
 /* ---------- colgroup 종료 ---------- */

@@ -522,9 +522,10 @@ $(function () {
             refreshLnbHeight();
             if ($lnbSpy.length) {
                 $html.removeClass('lnb_open');
-                $lnbSpy.parents('.depth_item').removeClass('active slide_on');
+                $lnbSpy.parents('.depth_item').removeClass('active');
                 $lnbDepthItem.removeClass('active_prev active_next');
                 //
+                $lnbSpy.parents('.depth_item').removeClass('slide_on');
                 $('.depth3').removeAttr('style');
             }
         });
@@ -536,6 +537,7 @@ $(function () {
                 $lnbSpy.parents('.depth_item').prev('.depth_item').addClass('active_prev');
                 $lnbSpy.parents('.depth_item').next('.depth_item').addClass('active_next');
                 //
+                $lnbSpy.parents('.depth1').find('.depth_item').removeClass('slide_on');
                 $lnbSpy.parents('.depth3').siblings('.depth2_text').parent('.depth2_item').addClass('slide_on');
                 $lnbSpy.parents('.depth3').slideDown();
             }
@@ -544,7 +546,7 @@ $(function () {
 
         //여기서부터 코드 작성해주세요
 
-        //상단 정부 UI/UX LNB 커스텀 시작
+        //상단 정부 UI/UX(와이드,모바일) LNB 커스텀 시작
         //와이드 1차메뉴 첫번째 포커스 처리 동작
         $('.lnb .menu .depth1 .depth1_list .depth1_item:first-child .depth1_text').keydown(function (key) {
             if (key.keyCode == 9) {
@@ -605,6 +607,18 @@ $(function () {
                 }
             }
         });
+        $('.lnb .menu').on('scroll', function () {
+            var thisScrollTop = $(this).scrollTop();
+            var $depthList = $(this).find('.depth1_list');
+            if (mode === 'mobile') {
+                $depthList.find('.depth1_item').each(function () {
+                    if (thisScrollTop >= $(this).offset().top) {
+                        $('.left_depth1_item').removeClass('scroll_active');
+                        $('.left_depth1_item').eq($(this).index()).addClass('scroll_active');
+                    }
+                });
+            }
+        });
         //모바일 2차 클릭시 3차 슬라이드 동작
         $('.lnb .menu .depth2 .depth2_list .depth2_item.has .depth2_text').on('click', function (e) {
             if ($body.attr('data-mobile-lnb-slide') === 'Y') {
@@ -655,9 +669,9 @@ $(function () {
                 $html.removeClass('iphone_ltb');
             }
         });
-        //상단 정부 UI/UX LNB 커스텀 종료
+        //상단 정부 UI/UX(와이드,모바일) LNB 커스텀 종료
 
-        //상단 정부 UI/UX(와이드,모바일) scroll 시작
+        //상단 정부 UI/UX(와이드,모바일) 헤더 scroll 시작
         var lastScrollTop = 0;
         $(window).on('scroll', function () {
             var currentScroll = $(this).scrollTop();
@@ -676,7 +690,7 @@ $(function () {
             }
             lastScrollTop = currentScroll;
         });
-        //상단 정부 UI/UX(와이드,모바일) scroll 종료
+        //상단 정부 UI/UX(와이드,모바일) 헤더 scroll 종료
 
         //상단 정부 UI/UX(와이드) 화면 크기 시작
         $(document).on('click', '.drop_list li button', function () {
