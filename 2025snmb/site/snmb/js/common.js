@@ -41,6 +41,7 @@ function tabOn(tab, num, img) {
         event.preventDefault();
     });
 }
+
 function tabOrg(tabid, a, img) {
     var $tab, $tab_btn, $obj, $obj_view;
     var tabid = tabid, num = a, btn_img = img;
@@ -81,6 +82,7 @@ function tabOrg(tabid, a, img) {
         event.preventDefault();
     });
 }
+
 $(function () {
     //이미지 롤오버
     $('.overimg').on('mouseover', function (event) {
@@ -154,6 +156,11 @@ $(function () {
         return _browser;
     };
     $html.addClass(_browser);
+
+    //iPhone 여부 확인
+    if (navigator.userAgent.toLowerCase().indexOf('iphone') > -1) {
+        $html.addClass('iphone');
+    }
 
     //화면 사이즈 리사이징 구간 지정 시작
     $document.on('ready', function (event) {
@@ -575,7 +582,6 @@ $(function () {
             if (mode === 'mobile') {
                 var $spyLastItem = $('.lnb .menu').find('.spy:last').parents('.depth1_item'),
                     clickIndex = $spyLastItem.index();
-                $spyLastItem.addClass('tttttttttttttttttttttttttttttttttt');
                 if ($spyLastItem.is('.solo')) {
                     var $targetItem = $('.left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
                     var $targetText = $targetItem.find('.left_depth1_text');
@@ -616,6 +622,24 @@ $(function () {
             }
         });
         //모바일 3차메뉴 클릭시 4차메뉴 동작
+        $('.lnb .menu .depth3 .depth3_list .depth3_item.has .depth3_text').on('click', function () {
+            if (mode === 'mobile') {
+                if ($html.is('.iphone')) {
+                    $html.addClass('iphone_ltb');
+                }
+            }
+        });
+        $('.menu_show button.menu_button').on('click', function () {
+            if (mode === 'mobile') {
+                if ($('.depth4').find('.spy:last').length > 0) {
+                    if ($('.depth4').find('.spy:last').parent('.depth4_item').parent('.depth4_list').parent('.depth4').parent('.depth3_item').is('.active')) {
+                        if ($html.is('.iphone')) {
+                            $html.addClass('iphone_ltb');
+                        }
+                    }
+                }
+            }
+        });
         $('.lnb .menu .depth3 .depth3_list .depth3_item.has .depth3_text').each(function () {
             if ($(this)) {
                 var $thisClone = $(this).clone();
@@ -627,6 +651,9 @@ $(function () {
         $('.top_depth4_btn_box button.active_close').on('click', function () {
             $(this).parent('.top_depth4_btn_box').parent('.depth4').parent('.depth3_item').removeClass('active');
             $(this).parent('.top_depth4_btn_box').parent('.depth4').parent('.depth3_item').find('.depth3_text').focus();
+            if ($html.is('.iphone')) {
+                $html.removeClass('iphone_ltb');
+            }
         });
         //상단 정부 UI/UX LNB 커스텀 종료
 

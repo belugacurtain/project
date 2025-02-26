@@ -421,6 +421,7 @@ input[type="submit"]{cursor:pointer;}
     .lnb *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
     
     .lnb .lnb_top_box{display:block;position:relative;z-index:1;width:100%;padding:16px 16px 24px;background-color:#fff;}
+    .iphone.iphone_ltb .lnb .lnb_top_box{display:none;}
     .lnb .lnb_top_box:before{display:block;position:absolute;bottom:0;left:0;width:100%;height:1px;background-color:#cdd1d5;content:'';}
     .lnb .lnb_top_box .box_etc{display:block;position:relative;z-index:1;width:100%;padding-right:24px;}
     .lnb .lnb_top_box .box_etc .etc_list{display:inline-block;position:relative;vertical-align:top;}
