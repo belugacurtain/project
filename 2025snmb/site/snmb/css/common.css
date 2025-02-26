@@ -243,7 +243,7 @@ input[type="submit"]{cursor:pointer;}
 .header_message *:before,
 .header_message *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
 .header_message .text{display:inline-block;position:relative;padding-left:28px;font-size:15px;color:#1d1d1d;line-height:16px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
-.header_message .text:before{display:inline-block;position:absolute;top:calc(50% - 8px);left:0;width:24px;height:16px;background-image:url(../images/guide/top_ban_ico_flag.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;vertical-align:top;}
+.header_message .text:before{display:inline-block;position:absolute;top:calc(50% - 8px);left:0;width:22px;height:16px;background-image:url(../images/guide/top_ban_ico_flag.svg);background-repeat:no-repeat;background-position:center center;background-size:100%;vertical-align:top;}
 @media all and (max-width:1280px){
     .header_message{padding:8px 3%;}
 }
