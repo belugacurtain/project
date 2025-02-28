@@ -564,8 +564,8 @@ $(function () {
         });
         //모바일 1차메뉴 좌측 앵커 렌더링
         $('.lnb .menu .depth1').prepend('<div class="left_depth1"><ul class="left_depth1_list"></ul></div>');
-        for (var i = 1; i <= $('.depth1_item').length; i++) {
-            $('.left_depth1 .left_depth1_list').append($('.depth1_item:nth-child(' + i + ')').clone().removeClass('depth_item depth1_item').addClass('left_depth1_item'));
+        for (var i = 1; i <= $('.lnb .menu .depth1 .depth1_list .depth1_item').length; i++) {
+            $('.left_depth1 .left_depth1_list').append($('.lnb .menu .depth1 .depth1_list .depth1_item:nth-child(' + i + ')').clone().removeClass('depth_item depth1_item').addClass('left_depth1_item'));
         }
         $('.left_depth1 .left_depth1_list .left_depth1_item').find('.depth1_text').removeClass('depth_text depth1_text').addClass('left_depth1_text');
         $('.left_depth1 .left_depth1_list .left_depth1_item').find('.depth2').remove();
@@ -573,7 +573,7 @@ $(function () {
         $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').each(function () {
             if ($(this).parent('.left_depth1_item').is('.has')) {
                 $(this).attr('href', '#anchor_' + $(this).parent('.left_depth1_item').index() + '');
-                $('.depth1 .depth1_list .depth1_item').eq($(this).parent('.left_depth1_item').index()).attr('id', 'anchor_' + $(this).parent('.left_depth1_item').index() + '');
+                $('.lnb .menu .depth1 .depth1_list .depth1_item').eq($(this).parent('.left_depth1_item').index()).attr('id', 'anchor_' + $(this).parent('.left_depth1_item').index() + '');
             }
         });
         $('.left_depth1 .left_depth1_list .left_depth1_item .left_depth1_text').on('click', function (e) {
@@ -585,7 +585,7 @@ $(function () {
                 var $spyLastItem = $('.lnb .menu').find('.spy:last').parents('.depth1_item'),
                     clickIndex = $spyLastItem.index();
                 if ($spyLastItem.is('.solo')) {
-                    var $targetItem = $('.left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
+                    var $targetItem = $('.lnb .menu .left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
                     var $targetText = $targetItem.find('.left_depth1_text');
                     if ($targetText.length) {
                         // 비동기 로딩 문제 해결을 위해 setTimeout 사용
@@ -595,7 +595,7 @@ $(function () {
                     }
                 }
                 if ($spyLastItem.is('.has')) {
-                    var $targetItem = $('.left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
+                    var $targetItem = $('.lnb .menu .left_depth1 .left_depth1_list .left_depth1_item').eq(clickIndex);
                     var $targetText = $targetItem.find('.left_depth1_text');
                     if ($targetText.length) {
                         // 비동기 로딩 문제 해결을 위해 setTimeout 사용

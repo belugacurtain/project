@@ -24,8 +24,7 @@
                 if ($this.hasClass('depth1_item')) {
                     if ($this.hasClass('active')) {
                         $html.removeClass('side_open');
-                    }
-                    else {
+                    } else {
                         $html.addClass('side_open');
                     }
                 }
@@ -39,8 +38,7 @@
                             $this.prev('.depth_item').addClass('active_prev');
                             $this.next('.depth_item').addClass('active_next');
                             $this.children('.depth_text').attr('title', '하위메뉴 닫기');
-                        }
-                        else {
+                        } else {
                             $this.removeClass('active');
                             $this.siblings('.depth_item').removeClass('active_prev active_next');
                             $this.children('.depth_text').attr('title', '하위메뉴 열기');
@@ -55,8 +53,7 @@
             var $element = $(element);
             if ($element.children('.depth').length) {
                 $element.addClass('has').children('.depth_text').attr('title', '하위메뉴 열기');
-            }
-            else {
+            } else {
                 $element.addClass('solo');
             }
         });
@@ -71,9 +68,31 @@
                 if ($this.siblings('.depth').length) {
                     $this.attr('title', '하위메뉴 닫기');
                 }
+                //
+                $('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has').find('.depth2').slideUp();
+                $this.parents('.depth1_item.has').find('.depth1_text').attr('title', '하위메뉴 닫기');
+                $this.parents('.depth1_item.has').find('.depth1_text').siblings('.depth2').slideDown();
             });
         }
 
         //여기서부터 코드 작성해주세요
+
+        //사이드 메뉴 UI/UX(와이드) 커스텀 시작
+        //와이드 2차 클릭시 3차 슬라이드 동작
+        $('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text').on('click', function (e) {
+            if ($('body').attr('data-mobile-lnb-slide') === 'Y') {
+                if (!($(this).parent('.depth1_item.has').is('.active'))) {
+                    e.preventDefault();
+                    $('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has').find('.depth1_text').attr('title', '하위메뉴 열기');
+                    $('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has').find('.depth2').slideUp();
+                    $(this).attr('title', '하위메뉴 닫기');
+                    $(this).siblings('.depth2').slideDown();
+                }
+                else{
+                    $(this).siblings('.depth2').slideUp();
+                }
+            }
+        });
+        //사이드 메뉴 UI/UX(와이드) 커스텀 종료
     });
 })(jQuery);

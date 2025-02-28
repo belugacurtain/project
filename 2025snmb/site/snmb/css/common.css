@@ -3,7 +3,7 @@
 /* (주)한신정보기술 박남규 - 2025.02 */
 
 /* 기본세팅 시작 */
-body{position:relative;font-size:19px;color:#1d1d1d;line-height:36px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV','Malgun Gothic','맑은 고딕',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;overflow-x:hidden;}
+body{position:relative;font-size:18px;color:#1d1d1d;line-height:36px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV','Malgun Gothic','맑은 고딕',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;overflow-x:hidden;}
 a:link{color:#1d1d1d;text-decoration:none;}
 a:visited{color:#1d1d1d;text-decoration:none;}
 a:hover{color:#1d1d1d;text-decoration:underline;}
@@ -390,8 +390,8 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text span em{display:inline-block;position:relative;font-size:19px;color:#555;line-height:20px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text:hover span em{color:#003675;}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text span em:after{transition:transform 250ms ease-in-out;}
-    .lnb .menu .depth1 .depth1_list .depth1_item.has .depth1_text span em:after{display:inline-block;position:relative;width:20px;height:20px;margin:0 0 0 8px;background-image:url(../images/guide/head_lnb_ico_arr.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;vertical-align:top;content:'';transform:rotate(0deg);}
-    .lnb .menu .depth1 .depth1_list .depth1_item.has .depth1_text:hover span em:after{background-image:url(../images/guide/head_lnb_ico_arr_on.svg);}
+    .lnb .menu .depth1 .depth1_list .depth1_item.has .depth1_text span em:after{display:inline-block;position:relative;width:20px;height:20px;margin:0 0 0 8px;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;vertical-align:top;content:'';transform:rotate(0deg);}
+    .lnb .menu .depth1 .depth1_list .depth1_item.has .depth1_text:hover span em:after{background-image:url(../images/guide/ico_angle_blue.svg);}
     .lnb .menu .depth1 .depth1_list .depth1_item.has.active .depth1_text span em:after{transform:rotate(-180deg);}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"] span em:after{display:inline-block;position:relative;width:20px;height:20px;margin:0 0 0 8px;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;vertical-align:top;content:'';}
     .lnb .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"]:hover span em:after{background-image:url(../images/guide/ico_go_20_on.svg);}
@@ -568,7 +568,7 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth2 .depth2_list .depth2_item.has.active.slide_on .depth2_text{background-color:#eef2f7;}
     .lnb .menu .depth2 .depth2_list .depth2_item.has .depth2_text:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;vertical-align:top;content:'';transform:rotate(0deg);transition:transform 400ms ease-in-out;}
     .lnb .menu .depth2 .depth2_list .depth2_item.has.slide_on .depth2_text:after,
-    .lnb .menu .depth2 .depth2_list .depth2_item.has.active.slide_on .depth2_text:after{transform:rotate(180deg);}
+    .lnb .menu .depth2 .depth2_list .depth2_item.has.active.slide_on .depth2_text:after{background-image:url(../images/guide/ico_angle_blue.svg);transform:rotate(180deg);}
     .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text[target="_blank"]:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';}
     .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text span{display:inline-block;position:relative;vertical-align:top;}
     .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text span em{display:inline-block;position:relative;font-size:16px;color:#1e2124;line-height:26px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
@@ -577,6 +577,7 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth2 .depth2_list .depth2_item.has.active.slide_on .depth2_text span em{color:#003675;font-weight:600;}
     
     .lnb .menu .depth3{display:none;position:static;width:100%;visibility:visible;opacity:1;}
+    .lnb .menu .depth3 .depth2_link{display:none;}
     .lnb .menu .depth3 .depth3_list{display:block;position:static;width:100%;}
     .lnb .menu .depth3 .depth3_list .depth3_item{display:block;position:static;width:100%;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;padding:3px 28px 3px 8px;}

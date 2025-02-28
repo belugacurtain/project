@@ -8,7 +8,49 @@
 
 
 /* ---------- side 시작 ---------- */
-.side{display:block;position:relative;float:left;width:296px;min-height:100px;border-top:1px solid #f00;background-color:#eee;box-sizing:border-box;}
+.side{display:block;position:relative;float:left;width:296px;font-size:0;line-height:0;box-sizing:border-box;}
+.side:before,
+.side:after,
+.side *,
+.side *:before,
+.side *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
+.side .side_menu{display:block;position:relative;width:100%;}
+.side .side_menu .menu{display:block;position:relative;width:100%;}
+.side .side_menu .menu .depth1{display:block;position:static;width:100%;visibility:visible;opacity:1;}
+.side .side_menu .menu .depth1 .depth1_list{display:block;position:static;width:100%;padding-right:40px;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item{display:block;position:static;width:100%;border-bottom:1px solid #cdd1d5;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text{display:flex;align-items:center;justify-content:flex-start;flex-direction:row;position:relative;width:100%;height:64px;padding:16px 8px;background-color:transparent;transition:background-color 400ms ease-in-out;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover,
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:focus{text-decoration:none;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover,
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.active .depth1_text{background-color:#eef2f7;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:before{display:block;position:absolute;bottom:-1px;right:0;width:0px;height:3px;background-color:#063a74;content:'';transition:width 250ms ease-in-out;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover:before{right:auto;left:0;width:100%;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;content:'';transform:rotate(0deg);transition:transform 400ms ease-in-out;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text:hover:after{background-image:url(../images/guide/ico_angle_blue.svg);}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.has.active .depth1_text:after{background-image:url(../images/guide/ico_angle_blue.svg);transform:rotate(180deg);}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"]:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;content:'';}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"]:hover:after{background-image:url(../images/guide/ico_go_20_on.svg);}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text span{display:inline-flex;position:relative;width:100%;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text span,
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"] span{width:calc(100% - 20px);}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text span em{display:inline-flex;position:relative;width:100%;font-size:17px;color:#1e2124;line-height:24px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;}
+
+.side .side_menu .menu .depth2{display:none;position:static;width:100%;visibility:visible;opacity:1;}
+.side .side_menu .menu .depth2 .depth2_list{display:block;position:static;width:100%;padding:8px 0;}
+.side .side_menu .menu .depth2 .depth2_list .depth2_item{display:block;position:static;width:100%;}
+.side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text{}.
+                                                                       .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text span{}
+.side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text span em{}
+
+.side .side_menu .menu .depth3{display:block;position:static;width:100%;visibility:hidden;opacity:1;}
+.side .side_menu .menu .depth3 .depth3_list{}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item{}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text{}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text span{}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text span em{}
+
 @media all and (min-width:1001px){
     body[data-sub-type="wide"] .side{display:none;}
 }
