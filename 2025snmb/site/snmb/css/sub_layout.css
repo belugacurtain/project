@@ -23,27 +23,28 @@
 .side .side_menu .menu .depth1 .depth1_list .depth1_item.visible_none .depth1_text{visibility:hidden;opacity:0;}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover,
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:focus{text-decoration:none;}
-.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover{background-color:#eef2f7;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover,
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.active .depth1_text{background-color:#eef2f7;}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:before{display:block;position:absolute;bottom:-1px;right:0;width:0px;height:3px;background-color:#063a74;content:'';transition:width 250ms ease-in-out;}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text:hover:before,
 .side .side_menu .menu .depth1 .depth1_list .depth1_item.active .depth1_text:before{right:auto;left:0;width:100%;}
-.side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;content:'';transform:rotate(0deg);transition:transform 400ms ease-in-out;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text:after{display:inline-flex;position:relative;min-width:20px;min-height:20px;margin-left:auto;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;content:'';transform:rotate(0deg);transition:transform 400ms ease-in-out;}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text:hover:after{background-image:url(../images/guide/ico_angle_blue.svg);}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item.has.active .depth1_text:after{background-image:url(../images/guide/ico_angle_blue.svg);transform:rotate(180deg);}
-.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"]:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;content:'';}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"]:after{display:inline-flex;position:relative;min-width:20px;min-height:20px;margin-left:auto;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;content:'';}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"]:hover:after{background-image:url(../images/guide/ico_go_20_on.svg);}
-.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text span{display:inline-flex;position:relative;width:100%;}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text span{display:inline-flex;position:relative;max-width:100%;}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item.has .depth1_text span,
-.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"] span{width:calc(100% - 20px);}
+.side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text[target="_blank"] span{max-width:calc(100% - 20px);}
 .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text span em{display:inline-flex;position:relative;width:100%;font-size:17px;color:#1e2124;line-height:24px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;}
 
 .side .side_menu .menu .depth2{display:none;position:static;width:100%;visibility:visible;opacity:1;}
 .side .side_menu .menu .depth2 .depth2_list{display:block;position:static;width:100%;padding:8px 0;}
 .side .side_menu .menu .depth2 .depth2_list .depth2_item{display:block;position:static;width:100%;}
+.side .side_menu .menu .depth2 .depth2_list .depth2_item + .depth2_item{margin-top:4px;}
 .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;padding:8px 16px;background-color:transparent;border-radius:6px;visibility:visible;opacity:1;transition-property:background-color, visibility, opacity;transition-duration:400ms;transition-timing-function:ease-in-out;}
 .side .side_menu .menu .depth2 .depth2_list .depth2_item.visible_none .depth2_text{visibility:hidden;opacity:0;}
-
 .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text:hover,
 .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text:focus{text-decoration:none;}
 .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text:hover,
@@ -57,7 +58,7 @@
 .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text[target="_blank"] span{max-width:calc(100% - 24px);}
 .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text span em{display:inline-block;position:relative;font-size:16px;color:#1e2124;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
 
-.side .side_menu .menu .depth3{display:block;position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;padding:16px;background-color:#fff;visibility:hidden;opacity:0;transform:translateX(-100%);transition-property:visibility, opacity, transform;transition-duration:400ms;transition-timing-function:ease-in-out;}
+.side .side_menu .menu .depth3{display:block;position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;padding:16px 14px;background-color:#fff;visibility:hidden;opacity:0;transform:translateX(-100%);transition-property:visibility, opacity, transform;transition-duration:400ms;transition-timing-function:ease-in-out;}
 .side .side_menu .menu .depth1_item.active .depth2_item.active .depth3{visibility:visible;opacity:1;transform:translateX(0%);}
 .side .side_menu .menu .depth3 .depth2_link{display:flex;align-items:center;justify-content:flex-start;flex-direction:row;position:relative;width:100%;height:64px;background-color:transparent;border-radius:6px;transition:background-color 400ms ease-in-out;}
 .side .side_menu .menu .depth3 .depth2_link:hover,
@@ -69,19 +70,31 @@
 .side .side_menu .menu .depth3 .depth2_link span em{display:inline-block;position:relative;font-size:24px;line-height:30px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
 .side .side_menu .menu .depth3 .depth3_list{display:block;position:static;width:100%;margin:9px 0 0;padding:8px 0;border-top:1px solid #b1b8be;border-bottom:1px solid #b1b8be;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item{display:block;position:static;width:100%;}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item + .depth3_item{margin-top:4px;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text{display:inline-flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;padding:8px 16px;background-color:transparent;border-radius:6px;transition:background-color 400ms ease-in-out;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:hover,
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:focus{text-decoration:none;}
-.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:hover{background-color:#eef2f7;}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:hover,
+.side .side_menu .menu .depth3 .depth3_list .depth3_item.active .depth3_text{background-color:#eef2f7;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:before{display:inline-flex;position:relative;margin:0 4px 0 0;font-size:16px;color:#1e2124;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;content:'•';}
-.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text span{display:inline-block;position:relative;vertical-align:top;}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text[target="_blank"]:after{display:inline-flex;position:relative;min-width:20px;min-height:20px;margin:0 0 0 4px;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:80%;vertical-align:top;content:'';}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text span{display:inline-block;position:relative;max-width:100%;vertical-align:top;}
+.side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text[target="_blank"] span{max-width:calc(100% - 24px);}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text span em{display:inline-block;position:relative;font-size:16px;color:#1e2124;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
 @media all and (min-width:1001px){
     body[data-sub-type="wide"] .side{display:none;}
 }
 @media all and (min-width:1001px) and (max-width:1280px){
     body[data-sub-type="basic"] .side{width:230px;}
+    .side .side_menu .menu .depth1 .depth1_list .depth1_item .depth1_text span em{font-size:16px;}
+    
+    .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text:before{font-size:15px;}
+    .side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text span em{font-size:15px;}
+    
+    .side .side_menu .menu .depth3 .depth2_link span em{font-size:22px;}
+    .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text:before{font-size:15px;}
+    .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text span em{font-size:15px;}
 }
 @media all and (max-width:1000px){
     .side{display:none;}
@@ -105,4 +118,5 @@
 .colgroup article{display:block;position:relative;width:100%;box-sizing:border-box;}
 .sub_head{display:block;position:relative;width:100%;min-height:280px;background-color:#eee;box-sizing:border-box;}
 #contents{display:block;position:relative;width:100%;min-height:1000px;box-sizing:border-box;}
+#contents > *:first-child{margin-top:0 !important;}
 /* ---------- colgroup 종료 ---------- */
