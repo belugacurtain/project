@@ -87,12 +87,46 @@
                     $('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has').find('.depth2').slideUp();
                     $(this).attr('title', '하위메뉴 닫기');
                     $(this).siblings('.depth2').slideDown();
-                }
-                else{
+                } else {
                     $(this).siblings('.depth2').slideUp();
                 }
             }
         });
+        //와이드 4차메뉴 상단 3차메뉴 렌더링
+        $('.side .side_menu .menu .depth2 .depth2_list .depth2_item .depth2_text').each(function () {
+            if ($(this)) {
+                var $thisClone = $(this).clone();
+                $(this).siblings('.depth3').prepend($thisClone.removeClass('depth_text depth2_text').addClass('depth2_link').attr('title', '이전메뉴 보기'));
+            }
+        });
+        //와이드 3차메뉴 클릭시 포커스
+        $('.side .side_menu .menu .depth2 .depth2_list .depth2_item.has .depth2_text').on('click', function () {
+            if ($(this).parent('.depth2_item').find('.spy')) {
+                $('.side .side_menu .menu').find('.depth1_item').addClass('visible_none');
+                $('.side .side_menu .menu').find('.depth2_item').addClass('visible_none');
+            }
+            var $depth2Link = $(this).siblings('.depth3').find('.depth2_link');
+            setTimeout(function () {
+                $depth2Link.focus();
+            }, 500);
+        });
+        //와이드 4차메뉴 상단 3차메뉴 클릭
+        $('.side .side_menu .menu .depth3 .depth2_link').on('click', function (e) {
+            e.preventDefault();
+            $('.side .side_menu .menu').find('.visible_none').removeClass('visible_none');
+            $(this).parent('.depth3').siblings('.depth2_text').parent('.depth2_item.has').removeClass('active');
+            $(this).parent('.depth3').siblings('.depth2_text').attr('title', '하위메뉴 열기');
+            var $depth2TextFocus = $(this).parent('.depth3').siblings('.depth2_text');
+            setTimeout(function () {
+                $depth2TextFocus.focus();
+            }, 500);
+        });
+        //와이드 4차메뉴 spy 있을 시
+        var $loadingSpy = $('.side .side_menu .menu').find('.spy:last');
+        if ($loadingSpy.hasClass('depth3_text')) {
+            $loadingSpy.parents('.depth1').find('.depth1_item').addClass('visible_none');
+            $loadingSpy.parents('.depth2').find('.depth2_item').addClass('visible_none');
+        }
         //사이드 메뉴 UI/UX(와이드) 커스텀 종료
     });
 })(jQuery);

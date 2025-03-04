@@ -570,7 +570,9 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth2 .depth2_list .depth2_item.has.slide_on .depth2_text:after,
     .lnb .menu .depth2 .depth2_list .depth2_item.has.active.slide_on .depth2_text:after{background-image:url(../images/guide/ico_angle_blue.svg);transform:rotate(180deg);}
     .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text[target="_blank"]:after{display:inline-flex;position:relative;width:20px;height:20px;margin-left:auto;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';}
-    .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text span{display:inline-block;position:relative;vertical-align:top;}
+    .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text span{display:inline-block;width:100%;position:relative;vertical-align:top;}
+    .lnb .menu .depth2 .depth2_list .depth2_item.has .depth2_text span,
+    .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text[target="_blank"] span{width:calc(100% - 20px);}
     .lnb .menu .depth2 .depth2_list .depth2_item .depth2_text span em{display:inline-block;position:relative;font-size:16px;color:#1e2124;line-height:26px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
     .lnb .menu .depth2 .depth2_list .depth2_item.solo.active .depth2_text span em,
     .lnb .menu .depth2 .depth2_list .depth2_item.has.slide_on .depth2_text span em,
@@ -586,9 +588,11 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text:before{display:inline-flex;position:relative;margin:0 4px 0 0;font-size:15px;color:#1e2124;line-height:24px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;content:'•';}
     .lnb .menu .depth3 .depth3_list .depth3_item.active .depth3_text:before{color:#003675;}
-    .lnb .menu .depth3 .depth3_list .depth3_item.has .depth3_text:after{display:inline-flex;position:relative;width:18px;height:18px;margin:3px 0 0 4px;background-image:url(../images/guide/lnb_ico_prev.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';transform:rotate(180deg);}
-    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text[target="_blank"]:after{display:inline-flex;position:relative;width:18px;height:18px;margin:3px 0 0 4px;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';}
-    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span{display:inline-block;position:relative;vertical-align:top;}
+    .lnb .menu .depth3 .depth3_list .depth3_item.has .depth3_text:after{display:inline-flex;position:relative;min-width:18px;min-height:18px;margin:3px 0 0 4px;background-image:url(../images/guide/lnb_ico_prev.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';transform:rotate(180deg);}
+    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text[target="_blank"]:after{display:inline-flex;position:relative;min-width:18px;min-height:18px;margin:3px 0 0 4px;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;vertical-align:top;content:'';}
+    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span{display:inline-block;position:relative;max-width:100%;vertical-align:top;}
+    .lnb .menu .depth3 .depth3_list .depth3_item.has .depth3_text span,
+    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text[target="_blank"] span{max-width:calc(100% - 22px);}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span em{display:inline-block;position:relative;font-size:15px;color:#1e2124;line-height:24px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
     .lnb .menu .depth3 .depth3_list .depth3_item.active .depth3_text span em{color:#003675;}
     .lnb .menu .depth3 .depth3_list .depth3_item.solo.active .depth3_text span em{text-decoration:underline;text-underline-position:under;}
