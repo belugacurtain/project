@@ -372,7 +372,7 @@ $(function () {
                                     $this.find('.depth2_item.has').removeClass('active');
                                     $this.find('.depth2_item.has .depth2_text').attr('title', '하위메뉴열기');
                                     $(this).addClass('active');
-                                    $(this).find('.depth2_text').attr('title', '하위메뉴닫기');
+                                    $(this).find('.depth2_text').attr('title', '하위메뉴열림');
                                     event.preventDefault();
                                 } else {
                                     event.preventDefault();
