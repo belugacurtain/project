@@ -369,7 +369,7 @@ $(function () {
                             }, 1);
                             $this.find('.depth2_item.has').on('click', function (event) {
                                 if (!($(this).is('.active'))) {
-                                    $this.find('.depth2_item.has').removeClass('active');
+                                    $this.find('.depth2_item').removeClass('active');
                                     $this.find('.depth2_item.has .depth2_text').attr('title', '하위메뉴열기');
                                     $(this).addClass('active');
                                     $(this).find('.depth2_text').attr('title', '하위메뉴열림');
