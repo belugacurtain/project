@@ -362,7 +362,7 @@ $(function () {
                             });
                             //2차메뉴 부분 시작
                             $this.siblings('.depth1_item').find('.depth2_item').removeClass('active');
-                            $this.siblings('.depth1_item').find('.has .depth2_text').attr('title', '하위메뉴열기');
+                            $this.find('.depth2_item.has').find('.depth2_text').attr('title', '하위메뉴열기');
                             setTimeout(function () {
                                 $this.find('.depth2_item:first-child').click();
                                 $this.find('.depth2_item.solo:first-child').addClass('active');
