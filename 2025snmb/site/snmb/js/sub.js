@@ -199,5 +199,36 @@ function printURL() {
             UrlCopy(link);
         });
         //현재 URL 복사 종료
+
+        //공유하기 레이어 열기 시작
+        $('.share_link').on('click', function (e) {
+            e.preventDefault();
+            if (!($(this).parent('.share_etc').is('.active'))) {
+                $(this).attr('title', '공유하기 리스트 열림');
+                $(this).parent('.share_etc').addClass('active');
+            } else {
+                $(this).attr('title', '공유하기 리스트 열기');
+                $(this).parent('.share_etc').removeClass('active');
+            }
+        });
+        $(document).on('click', '.list_layer .share_close', function (e) {
+            e.preventDefault();
+            $('.share_link').attr('title', '공유하기 리스트 열기');
+            $('.share_link').focus();
+            $(this).parents('.share_etc').removeClass('active');
+        });
+        $(document).on('keydown', '.share_list .share_item:last-child .share_in_link', function (key) {
+            if (key.keyCode == 9) {
+                if (key.shiftKey) {
+
+                } else {
+                    setTimeout(function () {
+                        $('.list_layer .share_close').focus();
+                    }, 1);
+                }
+            }
+        });
+        //공유하기 레이어 열기 종료
+
     });
 })(jQuery);
