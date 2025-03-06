@@ -1,3 +1,57 @@
+//컨텐츠 영역 프린트 함수(마크업 onclick 직접사용) 시작
+function printURL() {
+    // 프린트 할 영역 선언
+    var $printSubHead = $('.sub_head');
+    var $printContents = $('#contents');
+
+    // 프린트 할 영역 css 선언 위함
+    var $head = $('head').clone();
+
+    // 프린트 할 영역 복사
+    var $PrintSubHeadClone = $printSubHead.clone();
+    var $PrintContentsClone = $printContents.clone();
+
+    // html 변환
+    var headHtml = $head[0].innerHTML;
+    var PrintSubHeadHtml = $PrintSubHeadClone[0].innerHTML;
+    var PrintContentsHtml = $PrintContentsClone[0].innerHTML;
+    console.log(PrintContentsHtml);
+
+    // 새창 브라우저 너비 , 높이 ,가운데 위치 값 선언
+    // ( ★주의★ 모니터 두개 이상 사용시 메인 모니터 에서만 가운데 정렬 됨 )
+    var printWindowWidth = 1000;
+    var printWindowHeight = 700;
+    var printWindowTop = (window.screen.height / 2) - (printWindowHeight / 2);
+    var printWindowLeft = (window.screen.width / 2) - (printWindowWidth / 2);
+
+    // 새창으로 띄울 브라우저 변수에 담은 후 너비 , 높이 , 가운데 위치 값 지정
+    var printWindow = window.open("/", "_blank", 'width=' + printWindowWidth + ', height=' + printWindowHeight + ', top=' + printWindowTop + ', left=' + printWindowLeft + '');
+
+    // 새창으로 띄울 브라우저 문서 doctype 작성
+    printWindow.document.write(
+        '<!DOCTYPE html>' +
+        '<html>' +
+        '<head>' +
+        headHtml +
+        '</head>' +
+        '<body id="body" class="print_body">' +
+        '<div class="sub_head">'+
+        PrintSubHeadHtml +
+        '</div>'+
+        '<div id="contents">'+
+        PrintContentsHtml +
+        '</div>'+
+        '</body>' +
+        '</html>'
+    );
+    printWindow.focus();
+    setTimeout(function () {
+        printWindow.print();
+        //printWindow.close();
+    }, 1000);
+}
+//컨텐츠 영역 프린트 함수(마크업 onclick 직접사용) 끝
+
 (function ($) {
     'use strict';
 
@@ -128,5 +182,22 @@
             $loadingSpy.parents('.depth2').find('.depth2_item').addClass('visible_none');
         }
         //사이드 메뉴 UI/UX(와이드) 커스텀 종료
+
+        //현재 URL 복사 시작
+        function UrlCopy(url) {
+            var $temp = $('<input>');
+            $('body').append($temp);
+            $temp.val(url).select();
+            document.execCommand('copy');
+            $temp.remove();
+            alert('현재 URL이 복사되었습니다.');
+        }
+
+        $('.url_link').on('click', function (e) {
+            e.preventDefault();
+            var link = location.href;
+            UrlCopy(link);
+        });
+        //현재 URL 복사 종료
     });
 })(jQuery);
