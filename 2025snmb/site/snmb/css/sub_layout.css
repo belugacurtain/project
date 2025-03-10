@@ -68,7 +68,7 @@
 .side .side_menu .menu .depth3 .depth2_link:before{display:inline-flex;position:relative;min-width:24px;min-height:24px;margin:0 4px 0 0;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;vertical-align:top;content:'';transform:rotate(-270deg);}
 .side .side_menu .menu .depth3 .depth2_link span{display:inline-block;position:relative;max-width:calc(100% - 28px);vertical-align:top;}
 .side .side_menu .menu .depth3 .depth2_link span em{display:inline-block;position:relative;font-size:24px;line-height:30px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
-.side .side_menu .menu .depth3 .depth3_list{display:block;position:static;width:100%;margin:9px 0 0;padding:8px 0;border-top:1px solid #b1b8be;border-bottom:1px solid #b1b8be;}
+.side .side_menu .menu .depth3 .depth3_list{display:block;position:static;width:100%;margin:9px 0 0;padding:8px 0;border-top:1px solid #cdd1d5;border-bottom:1px solid #cdd1d5;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item{display:block;position:static;width:100%;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item + .depth3_item{margin-top:4px;}
 .side .side_menu .menu .depth3 .depth3_list .depth3_item .depth3_text{display:inline-flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;padding:8px 16px;background-color:transparent;border-radius:6px;transition:background-color 400ms ease-in-out;}
@@ -103,7 +103,7 @@
 
 /* ---------- colgroup 시작 ---------- */
 .colgroup{display:block;position:relative;float:right;width:calc(100% - 296px);padding:0 0 80px 80px;box-sizing:border-box;}
-.colgroup:before{display:block;position:absolute;top:0;left:0;width:1px;height:100%;background-color:#c6c6c6;content:'';box-sizing:border-box;}
+.colgroup:before{display:block;position:absolute;top:0;left:0;width:1px;height:100%;background-color:#cdd1d5;content:'';box-sizing:border-box;}
 .colgroup article{display:block;position:relative;width:100%;box-sizing:border-box;}
 @media all and (min-width:1001px){
     body[data-sub-type="wide"] .colgroup{float:none;width:100%;padding:0 0 76px 0;}

@@ -785,5 +785,29 @@ $(function () {
             });
         });
         //상단 정부 UI/UX(와이드,모바일) 통합검색 레이어 input search 닫기버튼 종료
+
+        //하단 정부 UI/UX(와이드,모바일) 모달 레이어 시작
+        $('.footer_layer_wrap button.layer_open').on('click', function () {
+            $('.footer_layer_wrap').find('.layer_item').removeClass('active');
+            $(this).parent('.layer_item').addClass('active');
+            var $modalList = $(this).siblings('.modal_list').clone();
+            $wrapper.after('<div class="modal_layer"><button type="button" class="modal_layer_close start">닫기</button><div class="modal_wrap"><div class="modal_title">' + $(this).text() + '</div></div><button type="button" class="modal_layer_close end">닫기</button></div>');
+            $html.addClass('modal_open');
+            setTimeout(function () {
+                if (($('.modal_layer .modal_wrap .modal_list').outerHeight() + $('.modal_layer .modal_wrap .modal_title').outerHeight()) > $('.modal_layer .modal_wrap').height()) {
+                    $('.modal_layer .modal_wrap').attr('tabindex', 0);
+                } else {
+                    $('.modal_layer .modal_wrap').removeAttr('tabindex');
+                }
+            }, 1);
+            $('.modal_layer .modal_wrap').append($modalList);
+            $('.modal_layer > button.modal_layer_close:first-child').focus();
+        });
+        $(document).on('click', '.modal_layer > .modal_layer_close', function () {
+            $html.removeClass('modal_open');
+            $('.modal_layer').remove();
+            $('.footer_layer_wrap .layer_list .active button.layer_open').focus();
+        });
+        //하단 정부 UI/UX(와이드,모바일) 모달 레이어 종료
     });
 })(jQuery);
