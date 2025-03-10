@@ -134,6 +134,7 @@ input[type="submit"]{cursor:pointer;}
 .sch_layer .sch_wrap .sch_form .sch_form_inner .search_title{display:inline-block;position:relative;font-size:32px;color:#1d1d1d;line-height:48px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
 .sch_layer .sch_wrap .sch_form .sch_form_inner .input_box{display:block;position:relative;width:100%;margin:24px 0 0;}
 .sch_layer .sch_wrap .sch_form .sch_form_inner .input_box .sch_input{display:block;position:relative;width:100%;padding:0 72px 0 24px;background-color:#fff;border:1px solid #717171;border-radius:12px;font-size:25px;color:#464c53;line-height:78px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';}
+.ie .sch_layer .sch_wrap .sch_form .sch_form_inner .input_box .sch_input{min-height:80px;}
 .sch_layer .sch_wrap .sch_form .sch_form_inner .input_box.active .sch_input{padding-right:112px;}
 .sch_layer .sch_wrap .sch_form .sch_form_inner .input_box .sch_input:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
 .sch_layer .sch_wrap .sch_form .sch_form_inner .input_box .sch_input::placeholder{color:#8a949e;}
@@ -671,5 +672,5 @@ input[type="submit"]{cursor:pointer;}
 /* ---------- #container 종료 ---------- */
 
 /* ---------- #footer 시작 ---------- */
-#footer{display:block;position:relative;width:100%;min-height:520px;background-color:#f8f8f8;box-sizing:border-box;overflow-x:hidden;}
+#footer{display:block;position:relative;width:100%;min-height:361px;background-color:#f8f8f8;box-sizing:border-box;overflow-x:hidden;}
 /* ---------- #footer 종료 ---------- */

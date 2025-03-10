@@ -262,7 +262,6 @@ function printURL() {
                 $thisCts = $thisTabList.parent('.uiux_tab').siblings('.uiux_cts[data-cts="' + thisTabData + '"]'),
                 $thisCtsItem = $thisCts.find('.uiux_cts_item[data-cts-item="' + thisTabItemData + '"]'),
                 $otherCtsItem = $thisCtsItem.siblings('.uiux_cts_item'),
-
                 $thisCtsMapWrap = $thisCtsItem.find('.con_map_wrap'),
                 $otherCtsMapWrap = $otherCtsItem.find('.con_map_wrap');
             if (!IsActive) {

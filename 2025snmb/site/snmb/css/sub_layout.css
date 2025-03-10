@@ -132,7 +132,9 @@
 .sub_head .breadcrumb .bc_list .bc_item .bc_link:hover,
 .sub_head .breadcrumb .bc_list .bc_item .bc_link:focus{text-decoration:none;outline:none;}
 .sub_head .breadcrumb .bc_list .bc_item .bc_link.home:before{display:inline-flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:16px;height:16px;margin-top:7px;margin-right:4px;background-color:#1e2124;-webkit-mask-image:url(../images/guide/ico_bread_home.svg);-webkit-mask-repeat:no-repeat;-webkit-mask-position:center center;-webkit-mask-size:auto;mask-image:url(../images/guide/ico_bread_home.svg);mask-repeat:no-repeat;mask-position:center center;mask-size:auto;content:'';}
+.ie .sub_head .breadcrumb .bc_list .bc_item .bc_link.home:before{background-color:transparent;background-image:url(../images/guide/ico_bread_home.svg);background-repeat:no-repeat;background-position:center center;background-size:auto;-webkit-mask-image:none;mask-image:none;}
 .sub_head .breadcrumb .bc_list .bc_item .bc_link:after{display:inline-flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:16px;height:16px;margin-top:7px;background-color:#1e2124;-webkit-mask-image:url(../images/guide/ico_angle.svg);-webkit-mask-repeat:no-repeat;-webkit-mask-position:center center;-webkit-mask-size:90%;mask-image:url(../images/guide/ico_angle.svg);mask-repeat:no-repeat;mask-position:center center;mask-size:90%;content:'';transform:rotate(-90deg);}
+.ie .sub_head .breadcrumb .bc_list .bc_item .bc_link:after{background-color:transparent;background-image:url(../images/guide/ico_angle.svg);background-repeat:no-repeat;background-position:center center;background-size:90%;-webkit-mask-image:none;mask-image:none;}
 .sub_head .breadcrumb .bc_list .bc_item:last-child .bc_link:after{display:none;}
 .sub_head .breadcrumb .bc_list .bc_item .bc_link em{display:inline-flex;position:relative;padding:4px;font-size:15px;color:#1e2124;line-height:22px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;text-decoration:underline;text-underline-offset:3px;vertical-align:top;border-radius:6px;background-color:transparent;transition:background-color 400ms ease-in-out;}
 .sub_head .breadcrumb .bc_list .bc_item .bc_link:hover em{background-color:#eef2f7;}
@@ -160,6 +162,7 @@
 .sub_head .head_box .etc_box .share_etc{}
 .sub_head .head_box .etc_box .share_etc .share_link{}
 .sub_head .head_box .etc_box .share_etc .share_link:before{background-color:#fff;-webkit-mask-image:url(../images/guide/ico_share_20.svg);mask-image:url(../images/guide/ico_share_20.svg);}
+.ie .sub_head .head_box .etc_box .share_etc .share_link:before{background-color:transparent;background-image:url(../images/guide/util_ico_share.svg);background-repeat:no-repeat;background-position:center center;background-size:16px;-webkit-mask-image:none;mask-image:none;}
 .sub_head .head_box .etc_box .share_etc .list_layer{display:none;position:absolute;z-index:1;top:100%;left:50%;transform:translateX(-50%);min-width:160px;margin-top:16px;padding:35px 19px 19px;background-color:#fff;border:1px solid #d8d8d8;border-radius:8px;box-shadow:0 0.4rem 1.2rem 0 rgba(0, 0, 0, 0.12);}
 .sub_head .head_box .etc_box .share_etc.active .list_layer{display:block;}
 .sub_head .head_box .etc_box .share_etc .list_layer:before{display:inline-block;position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:20px;height:12px;background-image:url(../images/guide/ico_drop_arr.svg);background-repeat:no-repeat;background-position:center center;background-size:contain;content:'';}
@@ -181,6 +184,7 @@
 .sub_head .head_box .etc_box .share_etc .list_layer .share_list .share_item.twitter .share_in_link:before{background-color:#000;background-image:url(../images/guide/util_share_ico_twitter.svg);background-size:10px 10px;}
 .sub_head .head_box .etc_box .print_etc{}
 .sub_head .head_box .etc_box .print_etc .print_link:before{background-color:#fff;-webkit-mask-image:url(../images/guide/ico_print_20.svg);mask-image:url(../images/guide/ico_print_20.svg);}
+.ie .sub_head .head_box .etc_box .print_etc .print_link:before{background-color:transparent;background-image:url(../images/guide/util_ico_print.svg);background-repeat:no-repeat;background-position:center center;background-size:16px;-webkit-mask-image:none;mask-image:none;}
 @media all and (min-width:1280px){
 
 }
