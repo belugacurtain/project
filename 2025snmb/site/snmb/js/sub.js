@@ -261,7 +261,10 @@ function printURL() {
                 thisTabData = $thisTabList.parent('.uiux_tab').attr('data-tab'),
                 $thisCts = $thisTabList.parent('.uiux_tab').siblings('.uiux_cts[data-cts="' + thisTabData + '"]'),
                 $thisCtsItem = $thisCts.find('.uiux_cts_item[data-cts-item="' + thisTabItemData + '"]'),
-                $otherCtsItem = $thisCtsItem.siblings('.uiux_cts_item');
+                $otherCtsItem = $thisCtsItem.siblings('.uiux_cts_item'),
+
+                $thisCtsMapWrap = $thisCtsItem.find('.con_map_wrap'),
+                $otherCtsMapWrap = $otherCtsItem.find('.con_map_wrap');
             if (!IsActive) {
                 $otherTabItem.removeClass('active');
                 $otherTabBtn.removeAttr('title');
@@ -269,6 +272,28 @@ function printURL() {
                 $thisTabItem.addClass('active');
                 $thisTabBtn.attr('title', '선택됨');
                 $thisCtsItem.addClass('active');
+                //탭안에 지도 시작
+                setTimeout(function () {
+                    $thisCtsMapWrap.each(function () {
+                        var $this = $(this),
+                            MyTimeStamp = $this.attr('data-timestamp'),
+                            MyMapKey = $this.attr('data-key'),
+                            $DaumRoughMap = $this.find('.root_daum_roughmap');
+                        $DaumRoughMap.empty();
+                        new daum.roughmap.Lander({
+                            "timestamp": MyTimeStamp,
+                            "key": MyMapKey,
+                            "mapWidth": "",
+                            "mapHeight": ""
+                        }).render();
+                    });
+                    $otherCtsMapWrap.each(function () {
+                        var $this = $(this),
+                            $DaumRoughMap = $this.find('.root_daum_roughmap');
+                        $DaumRoughMap.empty();
+                    });
+                }, 1);
+                //탭안에 지도 종료
             }
         });
         //컨텐츠 내부 탭메뉴 종료

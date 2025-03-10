@@ -137,6 +137,15 @@
 .sub_head .breadcrumb .bc_list .bc_item .bc_link em{display:inline-flex;position:relative;padding:4px;font-size:15px;color:#1e2124;line-height:22px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;text-decoration:underline;text-underline-offset:3px;vertical-align:top;border-radius:6px;background-color:transparent;transition:background-color 400ms ease-in-out;}
 .sub_head .breadcrumb .bc_list .bc_item .bc_link:hover em{background-color:#eef2f7;}
 .sub_head .breadcrumb .bc_list .bc_item .bc_link:focus em{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-4px;}
+@media all and (min-width:1280px){
+
+}
+@media all and (min-width:1000px){
+
+}
+@media all and (min-width:640px){
+
+}
 
 .sub_head .head_box{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;}
 .sub_head .head_box .current_title{display:inline-flex;position:relative;width:calc(100% - 142px);font-size:40px;color:#1e2124;line-height:40px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
@@ -172,9 +181,18 @@
 .sub_head .head_box .etc_box .share_etc .list_layer .share_list .share_item.twitter .share_in_link:before{background-color:#000;background-image:url(../images/guide/util_share_ico_twitter.svg);background-size:10px 10px;}
 .sub_head .head_box .etc_box .print_etc{}
 .sub_head .head_box .etc_box .print_etc .print_link:before{background-color:#fff;-webkit-mask-image:url(../images/guide/ico_print_20.svg);mask-image:url(../images/guide/ico_print_20.svg);}
+@media all and (min-width:1280px){
+
+}
+@media all and (min-width:1000px){
+
+}
+@media all and (min-width:640px){
+
+}
 
 .uiux_tab{display:block;position:relative;width:100%;font-size:0;line-height:0;box-sizing:border-box;}
-.head_box + .uiux_tab{margin-top:55px;}
+.head_box + .uiux_tab{margin-top:75px;}
 .uiux_tab:before,
 .uiux_tab:after,
 .uiux_tab *,
