@@ -230,5 +230,48 @@ function printURL() {
         });
         //공유하기 레이어 열기 종료
 
+        //탭메뉴 width 값 처리 시작
+        var $uiuxTab = $('.uiux_tab');
+        $uiuxTab.each(function () {
+            var $this = $(this),
+                uiuxTabItemLength = $this.find('.uiux_tab_item').length;
+            if (uiuxTabItemLength >= 5) {
+                $this.attr('data-item-length', '5');
+            } else if (uiuxTabItemLength == 4) {
+                $this.attr('data-item-length', '4');
+            } else if (uiuxTabItemLength == 3) {
+                $this.attr('data-item-length', '3');
+            } else if (uiuxTabItemLength == 2) {
+                $this.attr('data-item-length', '2');
+            } else if (uiuxTabItemLength == 1) {
+                $this.attr('data-item-length', '1');
+            }
+        });
+        //탭메뉴 width 값 처리 종료
+
+        //컨텐츠 내부 탭메뉴 시작
+        $('button.uiux_tab_btn').on('click', function () {
+            var $thisTabBtn = $(this),
+                $thisTabItem = $thisTabBtn.parent('.uiux_tab_item'),
+                thisTabItemData = $thisTabItem.attr('data-tab-item'),
+                $otherTabItem = $thisTabItem.siblings('.uiux_tab_item'),
+                $otherTabBtn = $otherTabItem.find('button.uiux_tab_btn'),
+                IsActive = $thisTabItem.is('.active'),
+                $thisTabList = $thisTabItem.parent('.uiux_tab_list'),
+                thisTabData = $thisTabList.parent('.uiux_tab').attr('data-tab'),
+                $thisCts = $thisTabList.parent('.uiux_tab').siblings('.uiux_cts[data-cts="' + thisTabData + '"]'),
+                $thisCtsItem = $thisCts.find('.uiux_cts_item[data-cts-item="' + thisTabItemData + '"]'),
+                $otherCtsItem = $thisCtsItem.siblings('.uiux_cts_item');
+            if (!IsActive) {
+                $otherTabItem.removeClass('active');
+                $otherTabBtn.removeAttr('title');
+                $otherCtsItem.removeClass('active');
+                $thisTabItem.addClass('active');
+                $thisTabBtn.attr('title', '선택됨');
+                $thisCtsItem.addClass('active');
+            }
+        });
+        //컨텐츠 내부 탭메뉴 종료
+
     });
 })(jQuery);

@@ -11,11 +11,12 @@ a:active { color:#444; text-decoration:underline; }
 .accessibility a{display:block;overflow:hidden;z-index:3000;height:1px;width:1px;margin:0 -1px -1px 0;font-size:0;line-height:0;text-align:center}
 .accessibility a:focus, #accessibility a:hover, #accessibility a:active {width:auto;height:30px;margin:0;padding:8px 0;background:#20262c;font-size:14px;font-weight:700;line-height:1;color:#fff;}
 
+/*
 .satisfaction{margin:30px 0 0;padding:0;border:1px solid #e9e9e9}
 .satisfaction .kogl_open{padding:24px 3% 20px;min-height:75px}
 .satisfaction .kogl_open img{float:left;margin-top:-4px;margin-right:20px}
 .satisfaction .satisfaction_list{padding:20px 3%;background:#f7f7f7}
-.satisfaction .question{padding:2px 0 2px 36px;background:url(../../common/images/program/comment_smile.png) no-repeat left top;color:#000}
+.satisfaction .question{padding:2px 0 2px 36px;background:url(/common/images/program/comment_smile.png) no-repeat left top;color:#000}
 .satisfaction .satisfaction_list label{vertical-align:middle}
 .satisfaction .satisfaction_list .input_radio{display:block;margin-top:8px}
 .satisfaction .satisfaction_list .input_radio input[type=radio]{width:16px;height:16px}
@@ -41,3 +42,51 @@ a:active { color:#444; text-decoration:underline; }
     .satisfaction .manager_info ul li{float:none;width:100%}
     .satisfaction .satisfaction_list label{margin-right:40px}
 }
+*/
+
+/* 담당자 정보 , 정부 UI/UX 커스텀 - 박남규 과장 시작  */
+.satisfaction{display:block;position:relative;width:100%;margin:80px 0 0;padding:0 0 19px;background-color:#f8f8f8;border:1px solid #c6c6c6;border-radius:10px;font-size:0;line-height:0;box-sizing:border-box;overflow:hidden;}
+.satisfaction:before,
+.satisfaction:after,
+.satisfaction *,
+.satisfaction *:before,
+.satisfaction *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
+.satisfaction .kogl_open{display:flex;align-items:center;justify-content:flex-start;flex-direction:row;position:relative;width:100%;margin:0;padding:20px 39px;background-color:#fff;border-bottom:1px solid #c6c6c6;font-size:17px;color:#555;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;}
+.satisfaction .kogl_open img{display:inline-flex;position:relative;width:auto;height:auto;margin-right:30px;vertical-align:top;}
+.satisfaction .kogl_open em{display:inline;font-size:inherit;line-height:inherit;letter-spacing:inherit;font-family:inherit;word-break:inherit;}
+.satisfaction .satisfaction_list{display:block;position:relative;padding:35px 39px 20px;}
+.satisfaction .satisfaction_list .question{display:block;position:relative;width:100%;font-size:19px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;}
+.satisfaction .satisfaction_list .input_radio{display:block;position:relative;width:100%;padding:23px 0 16px;}
+.satisfaction .satisfaction_list .input_radio .item{display:inline-block;position:relative;margin-right:12px;vertical-align:top;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"]{display:block;position:absolute;top:0;left:0;width:0;height:0;background-color:transparent;border:none;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label{display:inline-block;position:relative;padding-left:27px;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:0;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"]:focus + label{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:4px;border-radius:6px;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label:before,
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label:after{display:block;position:absolute;border-radius:100%;content:'';transition:border-color 400ms ease-in-out, background-color 400ms ease-in-out, visibility 400ms ease-in-out, opacity 400ms ease-in-out;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label:before{top:0;left:0;width:20px;height:20px;background-color:#fff;border:1px solid #717171;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"]:checked + label:before{border-color:#246beb;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label:after{top:calc(50% - 5px);left:5px;width:10px;height:10px;background-color:transparent;visibility:hidden;opacity:0;}
+.satisfaction .satisfaction_list .input_radio .item input[type="radio"]:checked + label:after{background-color:#246beb;visibility:visible;opacity:1;}
+.satisfaction .satisfaction_list .opinion{display:block;position:relative;width:100%;}
+.satisfaction .satisfaction_list .opinion input[type="text"]{display:inline-block;position:relative;width:calc(100% - 70px);min-height:48px;padding:0 15px;border:1px solid #717171;border-radius:10px;font-size:17px;color:#1d1d1d;line-height:46px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
+.satisfaction .satisfaction_list .opinion input[type="text"]:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
+.satisfaction .satisfaction_list .opinion input[type="text"]::placeholder{color:#8e8e8e;}
+.satisfaction .satisfaction_list .opinion .opinion_submit{display:inline-block;position:relative;width:62px;margin-left:8px;vertical-align:top;}
+.satisfaction .satisfaction_list .opinion .opinion_submit input[type="submit"]{display:inline-block;position:relative;width:100%;min-height:48px;background-color:#eff5ff;border:1px solid #246beb;border-radius:10px;font-size:17px;color:#1d56bc;line-height:46px;letter-spacing:-0.03em;font-weight:500;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;transition:background-color 400ms ease-in-out;}
+.satisfaction .satisfaction_list .opinion .opinion_submit input[type="submit"]:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
+.satisfaction .satisfaction_list .opinion .opinion_submit input[type="submit"]:hover{background-color:#d3e1fb;}
+.satisfaction .manager_info{display:block;position:relative;width:100%;padding:15px 39px;}
+.satisfaction .manager_info:before{display:block;position:absolute;top:0;left:39px;width:calc(100% - 78px);height:1px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAAXNSR0IArs4c6QAAABRJREFUGFdjPHbs2H8GKLCysmIEADHuBALtDc+7AAAAAElFTkSuQmCC);background-repeat:repeat-x;background-position:left top;content:'';}
+.satisfaction .manager_info ul{display:block;position:relative;width:100%;}
+.satisfaction .manager_info ul li{display:inline-block;position:relative;margin-right:25px;font-size:17px;color:#555;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
+.satisfaction .manager_info ul li span{display:inline-block;position:relative;padding-right:20px;font-size:inherit;line-height:inherit;letter-spacing:inherit;font-weight:600;font-family:inherit;word-break:inherit;vertical-align:top;}
+@media all and (max-width:1240px){
+
+}
+@media all and (max-width:1000px){
+
+}
+@media all and (max-width:640px){
+
+}
+/* 담당자 정보 , 정부 UI/UX 커스텀 - 박남규 과장 종료  */

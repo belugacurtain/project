@@ -102,7 +102,7 @@
 /* ---------- side 종료 ---------- */
 
 /* ---------- colgroup 시작 ---------- */
-.colgroup{display:block;position:relative;float:right;width:calc(100% - 296px);padding:0 0 76px 80px;box-sizing:border-box;}
+.colgroup{display:block;position:relative;float:right;width:calc(100% - 296px);padding:0 0 80px 80px;box-sizing:border-box;}
 .colgroup:before{display:block;position:absolute;top:0;left:0;width:1px;height:100%;background-color:#c6c6c6;content:'';box-sizing:border-box;}
 .colgroup article{display:block;position:relative;width:100%;box-sizing:border-box;}
 @media all and (min-width:1001px){
@@ -173,16 +173,21 @@
 .sub_head .head_box .etc_box .print_etc{}
 .sub_head .head_box .etc_box .print_etc .print_link:before{background-color:#fff;-webkit-mask-image:url(../images/guide/ico_print_20.svg);mask-image:url(../images/guide/ico_print_20.svg);}
 
-.uiux_tab{display:block;position:relative;width:100%;border-bottom:2px solid #b1b8be;font-size:0;line-height:0;box-sizing:border-box;}
+.uiux_tab{display:block;position:relative;width:100%;font-size:0;line-height:0;box-sizing:border-box;}
 .head_box + .uiux_tab{margin-top:55px;}
 .uiux_tab:before,
 .uiux_tab:after,
 .uiux_tab *,
 .uiux_tab *:before,
 .uiux_tab *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
-.uiux_tab .uiux_tab_list{display:flex;align-items:stretch;justify-content:flex-start;flex-direction:row;position:relative;width:100%;}
-.uiux_tab .uiux_tab_list .uiux_tab_item{display:inline-flex;flex:1 1 0;position:relative;vertical-align:top;}
-.uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn{display:inline-flex;align-items:center;justify-content:center;position:relative;width:100%;height:54px;vertical-align:top;background-color:transparent;transition:background-color 400ms ease-in-out;}
+.uiux_tab .uiux_tab_list{display:block;position:relative;width:100%;}
+.uiux_tab .uiux_tab_list .uiux_tab_item{display:inline-block;position:relative;vertical-align:top;}
+.uiux_tab[data-item-length="1"] .uiux_tab_list .uiux_tab_item{width:100%;}
+.uiux_tab[data-item-length="2"] .uiux_tab_list .uiux_tab_item{width:calc(100% / 2);}
+.uiux_tab[data-item-length="3"] .uiux_tab_list .uiux_tab_item{width:calc(100% / 3);}
+.uiux_tab[data-item-length="4"] .uiux_tab_list .uiux_tab_item{width:calc(100% / 4);}
+.uiux_tab[data-item-length="5"] .uiux_tab_list .uiux_tab_item{width:calc(100% / 5);}
+.uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn{display:inline-flex;align-items:center;justify-content:center;position:relative;width:100%;height:56px;border-bottom:2px solid #b1b8be;vertical-align:top;background-color:transparent;transition:background-color 400ms ease-in-out;}
 .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:hover,
 .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:focus{text-decoration:none;}
 .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:hover,
@@ -193,7 +198,6 @@
 .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span{display:inline-block;position:relative;width:100%;text-align:center;vertical-align:top;}
 .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span em{display:inline-block;position:relative;font-size:19px;color:#464c53;line-height:27px;letter-spacing:-0.03em;font-weight:600;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;transition:color 400ms ease-in-out;}
 .uiux_tab .uiux_tab_list .uiux_tab_item.active .uiux_tab_btn span em{color:#052b57;}
-
 .uiux_cts{display:block;width:100%;box-sizing:border-box;}
 .uiux_cts .uiux_cts_list{display:block;width:100%;box-sizing:border-box;}
 .uiux_cts .uiux_cts_list .uiux_cts_item{display:none;width:100%;box-sizing:border-box;}
