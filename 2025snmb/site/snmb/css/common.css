@@ -678,7 +678,7 @@ input[type="submit"]{cursor:pointer;}
 
 
 /* ---------- #footer 시작 ---------- */
-#footer{display:block;position:relative;width:100%;min-height:361px;background-color:#f8f8f8;box-sizing:border-box;overflow-x:hidden;}
+#footer{display:block;position:relative;width:100%;background-color:#f8f8f8;box-sizing:border-box;overflow-x:hidden;}
 .footer_layer_wrap{display:block;position:relative;width:100%;padding:0 calc((100% - 1280px) / 2);background-color:#fff;border-width:1px 0;border-style:solid;border-color:#cdd1d5 transparent;font-size:0;line-height:0;box-sizing:border-box;}
 .footer_layer_wrap:before,
 .footer_layer_wrap:after,
@@ -696,6 +696,90 @@ input[type="submit"]{cursor:pointer;}
 .footer_layer_wrap .layer_list .layer_item .layer_open span{display:inline-flex;position:relative;max-width:calc(100% - 20px);vertical-align:top;text-align:left;}
 .footer_layer_wrap .layer_list .layer_item .layer_open span em{display:inline-flex;position:relative;font-size:17px;color:#1e2124;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
 .footer_layer_wrap .layer_list .layer_item .modal_list{display:none;}
+@media all and (max-width:1280px){
+    .footer_layer_wrap{padding:0 3%;}
+    .footer_layer_wrap .layer_list .layer_item .layer_open{padding:0 14px;}
+    .footer_layer_wrap .layer_list .layer_item .layer_open span em{font-size:16px;}
+}
+@media all and (max-width:1000px){
+
+}
+@media all and (max-width:640px){
+
+}
+
+.footer_box{display:block;position:relative;width:100%;padding:0 calc((100% - 1280px) / 2) 40px;font-size:0;line-height:0;box-sizing:border-box;}
+.footer_box:before,
+.footer_box:after,
+.footer_box *,
+.footer_box *:before,
+.footer_box *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
+.footer_box .box_inner{display:inline-block;position:relative;width:calc(100% - 254px);padding:39px 0 0;vertical-align:top;}
+.footer_box .box_inner .logo{display:inline-block;position:relative;vertical-align:top;}
+.footer_box .box_inner .logo a{display:inline-block;position:relative;width:192px;height:46px;background-image:url(../images/common/logo@2x.svg);background-repeat:no-repeat;background-position:center center;background-size:100% 100%;vertical-align:top;}
+.footer_box .box_inner .logo a:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:2px;}
+.footer_box .box_inner .desc{display:block;position:relative;width:100%;padding:32px 0 0;}
+.footer_box .box_inner .desc .desc_text{display:inline-block;position:relative;padding:10px 0;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
+.footer_box .box_inner .desc .desc_text + .desc_text{margin-left:18px;}
+.footer_box .box_etc{display:inline-block;position:relative;width:254px;margin-left:auto;padding:117px 70px 0 0;vertical-align:top;}
+.footer_box .box_etc .sns_list{display:block;position:relative;width:100%;}
+.footer_box .box_etc .sns_list .sns_item{display:inline-block;position:relative;vertical-align:top;}
+.footer_box .box_etc .sns_list .sns_item + .sns_item{margin-left:8px;}
+.footer_box .box_etc .sns_list .sns_item a{display:inline-block;position:relative;width:40px;height:40px;background-color:#fff;border-radius:100%;vertical-align:top;}
+.footer_box .box_etc .sns_list .sns_item a:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
+.footer_box .box_etc .sns_list .sns_item a:before{display:block;position:absolute;-webkit-mask-repeat:no-repeat;-webkit-mask-position:center center;-webkit-mask-size:100%;mask-repeat:no-repeat;mask-position:center center;mask-size:100%;content:'';}
+.ie .footer_box .box_etc .sns_list .sns_item a:before{background-repeat:no-repeat;background-position:center center;background-size:100%;-webkit-mask-image:none;mask-image:none;}
+.footer_box .box_etc .sns_list .sns_item.youtube a:before{top:calc(50% - 12px);left:calc(50% - 12px);width:24px;height:24px;background-color:#000;-webkit-mask-image:url(../images/guide/footer-youtube-ico.svg);mask-image:url(../images/guide/footer-youtube-ico.svg);}
+.footer_box .box_etc .sns_list .sns_item.instagram a:before{top:calc(50% - 12px);left:calc(50% - 12px);width:24px;height:24px;background-color:#000;-webkit-mask-image:url(../images/guide/footer-instagram-ico.svg);mask-image:url(../images/guide/footer-instagram-ico.svg);}
+.footer_box .box_etc .sns_list .sns_item.kakao a:before{top:calc(50% - 11px);left:calc(50% - 10px);width:20px;height:22px;background-color:#000;-webkit-mask-image:url(../images/guide/footer-kakao-ico.svg);mask-image:url(../images/guide/footer-kakao-ico.svg);}
+.footer_box .box_etc .sns_list .sns_item.blog a:before{top:calc(50% - 8px);left:calc(50% - 6px);width:12px;height:16px;background-color:#000;-webkit-mask-image:url(../images/guide/footer-blog-ico.svg);mask-image:url(../images/guide/footer-blog-ico.svg);}
+.ie .footer_box .box_etc .sns_list .sns_item.youtube a:before{background-color:transparent;background-image:url(../images/guide/footer-youtube-ico.svg);}
+.ie .footer_box .box_etc .sns_list .sns_item.instagram a:before{background-color:transparent;background-image:url(../images/guide/footer-instagram-ico.svg);}
+.ie .footer_box .box_etc .sns_list .sns_item.kakao a:before{background-color:transparent;background-image:url(../images/guide/footer-kakao-ico.svg);}
+.ie .footer_box .box_etc .sns_list .sns_item.blog a:before{background-color:transparent;background-image:url(../images/guide/footer-blog-ico.svg);}
+@media all and (max-width:1280px){
+    .footer_box{padding:0 3% 40px;}
+    .footer_box .box_inner{width:calc(100% - 184px);}
+    .footer_box .box_inner .desc .desc_text{font-size:16px;}
+    .footer_box .box_etc{width:184px;padding:117px 0 0 0;}
+}
+@media all and (max-width:1000px){
+
+}
+@media all and (max-width:640px){
+
+}
+
+.footer_bottom{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;padding:14px calc((100% - 1280px) / 2) 64px;font-size:0;line-height:0;box-sizing:border-box;}
+.footer_bottom:before,
+.footer_bottom:after,
+.footer_bottom *,
+.footer_bottom *:before,
+.footer_bottom *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
+.footer_bottom:before{display:block;position:absolute;top:0;left:calc((100% - 1280px) / 2);width:1280px;height:1px;background-color:#d8d8d8;content:'';}
+.footer_bottom .quick_box{display:inline-flex;position:relative;vertical-align:top;}
+.footer_bottom .quick_box .quick_list{display:inline-flex;position:relative;vertical-align:top;}
+.footer_bottom .quick_box .quick_list .quick_item{display:inline-block;position:relative;vertical-align:top;}
+.footer_bottom .quick_box .quick_list .quick_item + .quick_item{margin-left:32px;}
+.footer_bottom .quick_box .quick_list .quick_item a{display:inline-block;position:relative;padding:5px 0;border-radius:6px;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;background-color:transparent;transition:background-color 400ms ease-in-out;}
+.footer_bottom .quick_box .quick_list .quick_item.privacy a{color:#003675;font-weight:600;}
+.footer_bottom .quick_box .quick_list .quick_item a:hover,
+.footer_bottom .quick_box .quick_list .quick_item a:focus{text-decoration:none;}
+.footer_bottom .quick_box .quick_list .quick_item a:hover{background-color:#eef2f7;}
+.footer_bottom .quick_box .quick_list .quick_item a:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:2px;}
+.footer_bottom .copyright{display:inline-flex;position:relative;margin-left:auto;padding:5px 0;font-size:15px;color:#1d1d1d;line-height:20px;letter-spacing:-0.06em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;}
+@media all and (max-width:1280px){
+    .footer_bottom{padding:14px 3% 64px;}
+    .footer_bottom .quick_box .quick_list .quick_item + .quick_item{margin-left:10px;}
+    .footer_bottom .quick_box .quick_list .quick_item a{font-size:16px;}
+    .footer_bottom .copyright{font-size:16px;}
+}
+@media all and (max-width:1000px){
+
+}
+@media all and (max-width:640px){
+
+}
 /* ---------- #footer 종료 ---------- */
 
 /* ---------- 푸터 모달 레이어창 시작 ---------- */
@@ -724,4 +808,18 @@ input[type="submit"]{cursor:pointer;}
 .modal_layer .modal_wrap .modal_list .modal_item a:hover{text-decoration:none;background-color:#d6e0eb;}
 .modal_layer .modal_wrap .modal_list .modal_item a:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
 .modal_layer .modal_wrap .modal_list .modal_item a:before{display:inline-flex;position:relative;margin-right:4px;font-size:inherit;color:inherit;line-height:inherit;letter-spacing:inherit;font-weight:inherit;font-family:inherit;word-break:inherit;content:'･';}
+@media all and (max-width:1280px){
+    .modal_layer{padding:70px 15px;}
+    .modal_layer .modal_wrap{padding:0 5%;}
+    .modal_layer .modal_layer_close{top:15px;right:15px;width:40px;height:40px;}
+    .modal_layer .modal_wrap .modal_title{padding:0 0 10px;}
+    .modal_layer .modal_wrap .modal_list .modal_item{padding:8px 0;}
+    .modal_layer .modal_wrap .modal_list .modal_item a{padding:0 8px;}
+}
+@media all and (max-width:1000px){
+
+}
+@media all and (max-width:640px){
+
+}
 /* ---------- 푸터 모달 레이어창 종료 ---------- */
