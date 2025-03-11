@@ -45,7 +45,7 @@ a:active { color:#444; text-decoration:underline; }
 */
 
 /* 담당자 정보 , 정부 UI/UX 커스텀 - 박남규 과장 시작  */
-.satisfaction{display:block;position:relative;width:100%;margin:80px 0 0;padding:0 0 19px;background-color:#f8f8f8;border:1px solid #c6c6c6;border-radius:10px;font-size:0;line-height:0;box-sizing:border-box;overflow:hidden;}
+.satisfaction{display:block;position:relative;width:100%;margin:75px 0 0;padding:0 0 19px;background-color:#f8f8f8;border:1px solid #c6c6c6;border-radius:10px;font-size:0;line-height:0;box-sizing:border-box;overflow:hidden;}
 .satisfaction:before,
 .satisfaction:after,
 .satisfaction *,
@@ -80,13 +80,23 @@ a:active { color:#444; text-decoration:underline; }
 .satisfaction .manager_info ul{display:block;position:relative;width:100%;}
 .satisfaction .manager_info ul li{display:inline-block;position:relative;margin-right:25px;font-size:17px;color:#555;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
 .satisfaction .manager_info ul li span{display:inline-block;position:relative;padding-right:20px;font-size:inherit;line-height:inherit;letter-spacing:inherit;font-weight:600;font-family:inherit;word-break:inherit;vertical-align:top;}
-@media all and (max-width:1240px){
-
+@media all and (max-width:1280px){
+    .satisfaction{margin-top:45px;padding:0;}
+    .satisfaction .kogl_open{padding:20px 3vw;font-size:16px;}
+    .satisfaction .kogl_open img{margin-right:15px;}
+    .satisfaction .satisfaction_list{padding:20px 3vw;}
+    .satisfaction .satisfaction_list .question{font-size:18px;}
+    .satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label{padding-left:24px;font-size:16px;}
+    .satisfaction .satisfaction_list .opinion input[type="text"]{font-size:16px;}
+    .satisfaction .satisfaction_list .opinion .opinion_submit input[type="submit"]{font-size:16px;}
+    .satisfaction .manager_info{padding:15px 3vw;}
+    .satisfaction .manager_info:before{left:3vw;width:calc(100% - 6vw);}
+    .satisfaction .manager_info ul li{font-size:16px;}
 }
 @media all and (max-width:1000px){
-
+    .satisfaction{margin-top:35px;}
 }
 @media all and (max-width:640px){
-
+    .satisfaction{margin-top:25px;}
 }
 /* 담당자 정보 , 정부 UI/UX 커스텀 - 박남규 과장 종료  */

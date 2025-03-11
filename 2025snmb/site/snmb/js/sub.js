@@ -297,5 +297,27 @@ function printURL() {
         });
         //컨텐츠 내부 탭메뉴 종료
 
+        //현재 메뉴명 5차일 경우 탭메뉴 UI/UX(와이드) 커스텀 시작
+        var $subHeadUIUXTab = $('.sub_head .uiux_tab')
+        $subHeadUIUXTab.each(function () {
+            if ($(this).length > 0) {
+                $(this).parent('.sub_head').addClass('current_tab_type');
+                $(this).prepend('<button type="button" class="current_tab_open"><span><em>'+$(this).find('.active').text()+'</em></span></button>');
+            }
+        });
+        $(document).on('click', '.current_tab_type .uiux_tab button.current_tab_open', function () {
+            if (!($(this).parent('.uiux_tab').is('.active'))) {
+                $(this).parent('.uiux_tab').addClass('active');
+            }
+            else{
+                $(this).parent('.uiux_tab').removeClass('active');
+            }
+        });
+        $(window).on('resize', function () {
+            if (mode === 'pc') {
+                $('.current_tab_type .uiux_tab').removeClass('active');
+            }
+        });
+        //현재 메뉴명 5차일 경우 탭메뉴 UI/UX(와이드) 커스텀 종료
     });
 })(jQuery);
