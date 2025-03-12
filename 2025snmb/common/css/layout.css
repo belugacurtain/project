@@ -95,8 +95,28 @@ a:active { color:#444; text-decoration:underline; }
 }
 @media all and (max-width:1000px){
     .satisfaction{margin-top:35px;}
+    .satisfaction .kogl_open{padding:15px 3vw;}
+    .satisfaction .kogl_open img{margin-right:10px;}
+    .satisfaction .satisfaction_list{padding:15px 3vw;}
+    .satisfaction .satisfaction_list .question{font-size:17px;}
+    .satisfaction .satisfaction_list .input_radio{padding:15px 0;}
+    .satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label{font-size:15px;line-height:18px;}
+    .satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label:before{width:18px;height:18px;}
+    .satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label:after{top:calc(50% - 4px);width:8px;height:8px;}
+    .satisfaction .satisfaction_list .opinion input[type="text"]{min-height:38px;line-height:36px;}
+    .satisfaction .satisfaction_list .opinion .opinion_submit input[type="submit"]{min-height:38px;line-height:36px;}
+    .satisfaction .manager_info ul li{font-size:15px;}
+    .satisfaction .manager_info ul li span{padding-right:10px;}
 }
 @media all and (max-width:640px){
     .satisfaction{margin-top:25px;}
+    .satisfaction .kogl_open{padding:13px 3vw;font-size:15px;}
+    .satisfaction .satisfaction_list{padding:13px 3vw;}
+    .satisfaction .satisfaction_list .input_radio{padding:7px 0;}
+    .satisfaction .satisfaction_list .input_radio .item{padding:3px 0;}
+    .satisfaction .satisfaction_list .input_radio .item input[type="radio"] + label{font-size:14px;}
+    .satisfaction .satisfaction_list .opinion input[type="text"]{font-size:15px;}
+    .satisfaction .satisfaction_list .opinion .opinion_submit input[type="submit"]{font-size:15px;}
+    .satisfaction .manager_info{padding:13px 3vw;}
 }
 /* 담당자 정보 , 정부 UI/UX 커스텀 - 박남규 과장 종료  */
