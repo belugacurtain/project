@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="사이트 제목" />
+    <meta name="keywords" content="키워드 입력" />
+    <meta name="description" content="사이트 상세설명" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:site_name" content="사이트명 표시" />
+    <meta property="og:url" content="url 표기" />
+    <meta property="og:image" content="대표 이미지 경로" />
+    <meta property="og:title" content="페이지 제목 표시" />
+    <meta property="og:description" content="페이지 설명 표시" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" sizes="512x512" href="../../site/snmb/images/guide/favicon_512.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../../site/snmb/images/guide/favicon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../site/snmb/images/guide/favicon_32.png" />
+    <link rel="stylesheet" href="../../site/snmb/css/font.css" />
+    <link rel="stylesheet" href="../../site/snmb/css/sub.css" />
+    <script src="../../common/js/jquery-1.12.4.HS-20200709.min.js"></script>
+    <script src="../../common/js/jquery.screen.min.custom.1.0.2.js"></script>
+    <script src="../../common/js/slick.min.custom.1.8.0.14.js"></script>
+    <script src="../../common/js/slick.extensions.min.js"></script>
+    <script src="../../common/js/program.min.js"></script>
+    <script src="../../site/snmb/js/common.js"></script>
+    <script src="../../site/snmb/js/sub.js"></script>
+    <script src="../../site/snmb/js/template.js"></script>
+    <script src="../../site/snmb/js/program.js"></script>
+    <title>국립서울현충원 - 서브레이아웃 와이드</title>
+</head>
+<body id="sub" class="sub" data-zoom="1" data-sub-type="wide" data-mobile-lnb-slide="Y">
+<div class="accessibility">
+    <a href="#contents">본문 바로가기</a>
+</div>    <!--//accessibility-->
+<!--// 통합검색 레이어 개발 부분 시작-->
+<div class="sch_layer">    <!--// 초기에는 css로 display:none; 되어있음 -->
+    <button type="button" title="통합검색 레이어창 닫기" class="sch_layer_close start">닫기</button>    <!--//sch_layer_close start-->
+    <div class="sch_wrap">
+        <form action="" class="sch_form">    <!--//action값 꼭 넣을 것-->
+            <fieldset>
+                <legend>통합검색 레이어 검색 창</legend>
+                <div class="sch_form_inner">
+                    <label for="sch_input" class="search_title">검색어를 입력해주세요</label>    <!--//search_title-->
+                    <div class="input_box">
+                        <input type="search" id="sch_input" class="sch_input" value="" placeholder="검색어를 입력해주세요." />    <!--//sch_input-->
+                        <button type="button" title="입력된 검색어 삭제" class="sch_input_close">삭제</button>    <!--//sch_input_close-->
+                        <input type="submit" class="sch_submit" value="검색하기" />    <!--//sch_submit-->
+                    </div>    <!--//input_box-->
+                </div>    <!--//sch_form_inner-->
+            </fieldset>
+        </form>    <!--//sch_form-->
+        <div class="sch_desc">
+            <div class="desc_inner popular">
+                <span class="desc_title">인기검색어</span>    <!--//desc_title-->
+                <ol class="popular_list">
+                    <li>
+                        <span class="num">1</span>    <!--//num-->
+                        <span class="text">인기검색어1</span>    <!--//text-->
+                        <span class="rank up">
+                            <span class="skip">상승</span>11
+                        </span>    <!--//rank up-->
+                    </li>
+                    <li>
+                        <span class="num">2</span>    <!--//num-->
+                        <span class="text">인기검색어2</span>    <!--//text-->
+                        <span class="rank down">
+                            <span class="skip">하락</span>5
+                        </span>    <!--//rank down-->
+                    </li>
+                    <li>
+                        <span class="num">3</span>    <!--//num-->
+                        <span class="text">인기검색어3</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">4</span>    <!--//num-->
+                        <span class="text">인기검색어4</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">5</span>    <!--//num-->
+                        <span class="text">인기검색어5</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">6</span>    <!--//num-->
+                        <span class="text">인기검색어6</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">7</span>    <!--//num-->
+                        <span class="text">인기검색어7</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">8</span>    <!--//num-->
+                        <span class="text">인기검색어8</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">9</span>    <!--//num-->
+                        <span class="text">인기검색어9</span>    <!--//text-->
+                        <span class="rank same">
+                            <span class="skip">동일</span>
+                        </span>    <!--//rank same-->
+                    </li>
+                    <li>
+                        <span class="num">10</span>    <!--//num-->
+                        <span class="text">인기검색어 최대 10개</span>    <!--//text-->
+                        <span class="rank down">
+                            <span class="skip">하락</span>4
+                        </span>    <!--//rank down-->
+                    </li>
+                </ol>    <!--//popular_list-->
+            </div>    <!--//desc_inner popular-->
+            <div class="desc_inner recently">
+                <span class="desc_title">최근검색어</span>    <!--//desc_title-->
+                <ul class="recently_list">
+                    <li>
+                        <span class="text">최근검색어1</span>    <!--//text-->
+                        <button type="button" title="검색어 삭제" class="recently_close">최근검색어1 삭제</button>    <!--//recently_close-->
+                    </li>
+                    <li>
+                        <span class="text">최근검색어2</span>    <!--//text-->
+                        <button type="button" title="검색어 삭제" class="recently_close">최근검색어2 삭제</button>    <!--//recently_close-->
+                    </li>
+                </ul>    <!--//recently_list-->
+                <button type="button" title="최근검색어 전체 삭제" class="recently_all_close">최근검색어 전체 삭제</button>    <!--//recently_all_close-->
+            </div>    <!--//desc_inner recently-->
+        </div>    <!--//sch_desc-->
+    </div>    <!--//sch_wrap-->
+    <button type="button" title="통합검색 레이어창 닫기" class="sch_layer_close end">닫기</button>    <!--//sch_layer_close end-->
+</div>    <!--//sch_layer-->
+<!--// 통합검색 레이어 개발 부분 종료-->
+<div id="wrapper">
+    <header id="header">
+        <div class="header_message"><span class="text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span></div>    <!--//header_message-->
+        <div class="header_box">
+            <div class="box_etc">
+                <ul class="etc_list">
+                    <li class="etc_item">
+                        <a href="" class="etc_btn" rel="noopener noreferrer">각종신청서</a>    <!--//etc_btn-->
+                    </li>    <!--//etc_item-->
+                    <li class="etc_item type_blank">
+                        <a href="https://www.mpva.go.kr/mpva/index.do" class="etc_btn" target="_blank" title="새창" rel="noopener noreferrer">국가보훈부</a>    <!--//etc_btn-->
+                    </li>    <!--//etc_item-->
+                    <li class="etc_item type_blank">
+                        <a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" class="etc_btn" target="_blank" title="새창" rel="noopener noreferrer">국가상징</a>    <!--//etc_btn-->
+                    </li>    <!--//etc_item-->
+                    <li class="etc_item type_drop">
+                        <button type="button" title="화면크기 레이어창 열기" class="etc_btn">화면크기</button>    <!--//etc_btn-->
+                        <div class="drop_menu">
+                            <div class="drop_in">
+                                <ul class="drop_list">
+                                    <li><button type="button" class="xsm">작게</button></li>
+                                    <li><button type="button" class="sm">보통</button></li>
+                                    <li><button type="button" class="md">조금크게</button></li>
+                                    <li><button type="button" class="lg">크게</button></li>
+                                    <li><button type="button" class="xlg">가장크게</button></li>
+                                </ul>    <!--//drop_list-->
+                                <div class="drop_btn"><button type="button">초기화</button></div>    <!--//drop_btn-->
+                            </div>    <!--//drop_in-->
+                        </div>    <!--//drop_menu-->
+                    </li>    <!--//etc_item-->
+                    <li class="etc_item type_drop">
+                        <button type="button" title="언어선택 레이어창 열기" class="etc_btn lang_btn" rel="noopener noreferrer">Language</button>    <!--//etc_btn-->
+                        <div class="drop_menu">
+                            <div class="drop_in">
+                                <ul class="drop_list">
+                                    <li><a href="" target="_blank" title="새창" rel="noopener noreferrer">English</a></li>
+                                </ul>    <!--//drop_list-->
+                            </div>    <!--//drop_in-->
+                        </div>    <!--//drop_menu-->
+                    </li>    <!--//etc_item-->
+                </ul>    <!--//etc_list-->
+            </div>    <!--//box_etc-->
+            <div class="box_inner">
+                <h1 class="logo">
+                    <a href="./index.do" title="메인페이지로 이동" rel="noopener noreferrer">국립서울현충원</a>
+                </h1>    <!--//logo-->
+                <div class="gnb">
+                    <a href="" class="btn_nav login" rel="noopener noreferrer">로그인</a>    <!--//btn_nav login-->
+                    <!--//<a href="" class="btn_nav join" rel="noopener noreferrer">회원가입</a>-->    <!--//btn_nav join-->
+                    <button type="button" title="통합검색 레이어창 열기" class="btn_nav sch">통합검색</button>    <!--//btn_nav sch-->
+                    <div class="menu_show">
+                        <button type="button" title="메뉴열기" class="menu_button">전체메뉴</button>    <!--//menu_button-->
+                    </div>    <!--//menu_show-->
+                </div>    <!--//gnb-->
+            </div>    <!--//box_inner-->
+        </div>    <!--//header_box-->
+        <div class="lnb">
+            <div class="lnb_top_box">
+                <div class="box_etc">
+                    <ul class="etc_list">
+                        <li class="etc_item type_drop">
+                            <button type="button" title="언어선택 레이어창 열기" class="etc_btn lang_btn" rel="noopener noreferrer">Language</button>    <!--//etc_btn-->
+                            <div class="drop_menu">
+                                <div class="drop_in">
+                                    <ul class="drop_list">
+                                        <li><a href="" target="_blank" title="새창" rel="noopener noreferrer">English</a></li>
+                                    </ul>    <!--//drop_list-->
+                                </div>    <!--//drop_in-->
+                            </div>    <!--//drop_menu-->
+                        </li>    <!--//etc_item-->
+                    </ul>    <!--//etc_list-->
+                </div>    <!--//box_etc-->
+                <div class="box_sch">
+                    <div class="sch_wrap">
+                        <form action="" class="sch_form">    <!--//action값 꼭 넣을 것-->
+                            <fieldset>
+                                <legend>통합검색 레이어 검색 영역</legend>
+                                <div class="sch_form_inner">
+                                    <div class="input_box">
+                                        <input type="search" title="검색어 입력" class="sch_input" value="" placeholder="검색어를 입력해주세요." />    <!--//sch_input-->
+                                        <button type="button" title="입력된 검색어 삭제" class="sch_input_close">삭제</button>    <!--//sch_input_close-->
+                                        <input type="submit" class="sch_submit" value="검색하기" />    <!--//sch_submit-->
+                                    </div>    <!--//input_box-->
+                                </div>    <!--//sch_form_inner-->
+                            </fieldset>
+                        </form>    <!--//sch_form-->
+                    </div>    <!--//sch_wrap-->
+                </div>    <!--//box_sch-->
+            </div>    <!--//lnb_top_box-->
+            <nav class="menu eachdown click"><!-- mouse/click 둘중 하나는 꼭 들어가야함, mouseleave:클릭일때 메뉴영역에서 마우스 빠질때 메뉴닫기 -->
+                <h2 class="skip">메뉴</h2>
+                <div class="depth depth1">
+                    <ul class="depth_list depth1_list">
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>CMS 1차 하위-1</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth3_text-->
+                                                    <div class="depth depth4">
+                                                        <ul class="depth_list depth4_list">
+                                                            <li class="depth_item depth4_item">
+                                                                <a href="" class="depth_text depth4_text" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth4_text-->
+                                                            </li>    <!--//depth4_item-->
+                                                        </ul>    <!--//depth4_list-->
+                                                    </div>    <!--//depth4-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth3_text-->
+                                                    <div class="depth depth4">
+                                                        <ul class="depth_list depth4_list">
+                                                            <li class="depth_item depth4_item">
+                                                                <a href="" class="depth_text depth4_text" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth4_text-->
+                                                            </li>    <!--//depth4_item-->
+                                                        </ul>    <!--//depth4_list-->
+                                                    </div>    <!--//depth4-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>CMS 1차 하위-2</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth3_text-->
+                                                    <div class="depth depth4">
+                                                        <ul class="depth_list depth4_list">
+                                                            <li class="depth_item depth4_item">
+                                                                <a href="" class="depth_text depth4_text" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth4_text-->
+                                                            </li>    <!--//depth4_item-->
+                                                        </ul>    <!--//depth4_list-->
+                                                    </div>    <!--//depth4-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth3_text-->
+                                                    <div class="depth depth4">
+                                                        <ul class="depth_list depth4_list">
+                                                            <li class="depth_item depth4_item">
+                                                                <a href="" class="depth_text depth4_text spy" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth4_text-->
+                                                            </li>    <!--//depth4_item-->
+                                                            <li class="depth_item depth4_item">
+                                                                <a href="" class="depth_text depth4_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 4차 새창</em></span></a>    <!--//depth4_text-->
+                                                            </li>    <!--//depth4_item-->
+                                                        </ul>    <!--//depth4_list-->
+                                                    </div>    <!--//depth4-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 3차 새창</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 3차 단독</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 단독</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 2차 새창</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>CMS 1차 단독-3</em></span></a>    <!--//depth1_text-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 1차 새창-4</em></span></a>    <!--//depth1_text-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>CMS 1차 하위-5</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 단독</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 단독</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth3_text-->
+                                                    <div class="depth depth4">
+                                                        <ul class="depth_list depth4_list">
+                                                            <li class="depth_item depth4_item">
+                                                                <a href="" class="depth_text depth4_text" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth4_text-->
+                                                            </li>    <!--//depth4_item-->
+                                                        </ul>    <!--//depth4_list-->
+                                                    </div>    <!--//depth4-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                    </ul>    <!--//depth1_list-->
+                </div>    <!--//depth1-->
+                <div class="lnb_bottom_box">
+                    <div class="box_etc">
+                        <ul class="etc_list">
+                            <li class="etc_item">
+                                <a href="" class="etc_btn" rel="noopener noreferrer">각종신청서</a>    <!--//etc_btn-->
+                            </li>    <!--//etc_item-->
+                            <li class="etc_item type_blank">
+                                <a href="https://www.mpva.go.kr/mpva/index.do" class="etc_btn" target="_blank" title="새창" rel="noopener noreferrer">국가보훈부</a>    <!--//etc_btn-->
+                            </li>    <!--//etc_item-->
+                            <li class="etc_item type_blank">
+                                <a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" class="etc_btn" target="_blank" title="새창" rel="noopener noreferrer">국가상징</a>    <!--//etc_btn-->
+                            </li>    <!--//etc_item-->
+                        </ul>    <!--//etc_list-->
+                    </div>    <!--//box_etc-->
+                </div>    <!--//lnb_bottom_box-->
+            </nav>    <!--//menu-->
+            <div class="menu_hide">
+                <button type="button" class="menu_button">메뉴 닫기</button>    <!--//menu_button-->
+            </div>    <!--//menu_hide-->
+        </div>    <!--//lnb-->
+        <div class="lnb_curtain"><button type="button">메뉴 닫기</button></div>    <!--//lnb_curtain-->
+    </header>    <!--//#header-->
+    <div class="sub_visual">
+    
+    </div>    <!--//sub_visual-->
+    <div id="container">
+        <div class="wrap clearfix">
+            <div class="side">
+                <div class="side_menu">
+                    <nav class="menu">
+                        <h2 class="skip">서브메뉴</h2>    <!--//skip-->
+                        <div class="depth depth1">
+                            <ul class="depth_list depth1_list">
+                                <li class="depth_item depth1_item">
+                                    <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth1_text-->
+                                    <div class="depth depth2">
+                                        <ul class="depth_list depth2_list">
+                                            <li class="depth_item depth2_item">
+                                                <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth2_text-->
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth3_text-->
+                                                        </li>    <!--//depth3_item-->
+                                                    </ul>    <!--//depth3_list-->
+                                                </div>    <!--//depth3-->
+                                            </li>    <!--//depth2_item-->
+                                        </ul>    <!--//depth2_list-->
+                                    </div>    <!--//depth2-->
+                                </li>    <!--//depth1_item-->
+                                <li class="depth_item depth1_item">
+                                    <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>CMS 2차 하위</em></span></a>    <!--//depth1_text-->
+                                    <div class="depth depth2">
+                                        <ul class="depth_list depth2_list">
+                                            <li class="depth_item depth2_item">
+                                                <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>CMS 3차 하위</em></span></a>    <!--//depth2_text-->
+                                                <div class="depth depth3">
+                                                    <ul class="depth_list depth3_list">
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="" class="depth_text depth3_text spy" rel="noopener noreferrer"><span><em>CMS 4차 메뉴</em></span></a>    <!--//depth3_text-->
+                                                        </li>    <!--//depth3_item-->
+                                                        <li class="depth_item depth3_item">
+                                                            <a href="" class="depth_text depth3_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 4차 새창</em></span></a>    <!--//depth3_text-->
+                                                        </li>    <!--//depth3_item-->
+                                                    </ul>    <!--//depth3_list-->
+                                                </div>    <!--//depth3-->
+                                            </li>    <!--//depth2_item-->
+                                            <li class="depth_item depth2_item">
+                                                <a href="" class="depth_text depth2_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 3차 새창</em></span></a>    <!--//depth2_text-->
+                                            </li>    <!--//depth2_item-->
+                                            <li class="depth_item depth2_item">
+                                                <a href="" class="depth_text depth2_text " rel="noopener noreferrer"><span><em>CMS 3차 단독</em></span></a>    <!--//depth2_text-->
+                                            </li>    <!--//depth2_item-->
+                                        </ul>    <!--//depth2_list-->
+                                    </div>    <!--//depth2-->
+                                </li>    <!--//depth1_item-->
+                                <li class="depth_item depth1_item">
+                                    <a href="" class="depth_text depth1_text " rel="noopener noreferrer"><span><em>CMS 2차 단독</em></span></a>    <!--//depth1_text-->
+                                </li>    <!--//depth1_item-->
+                                <li class="depth_item depth1_item">
+                                    <a href="" class="depth_text depth1_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 2차 새창</em></span></a>    <!--//depth1_text-->
+                                </li>    <!--//depth1_item-->
+                            </ul>    <!--//depth1_list-->
+                        </div>    <!--//depth1-->
+                    </nav>    <!--//menu-->
+                </div>    <!--//side_menu-->
+            </div>    <!--//side-->
+            <main id="colgroup" class="colgroup">
+                <article>
+                    <header class="sub_head">
+                        <div class="breadcrumb">
+                            <ol class="bc_list">
+                                <li class="bc_item"><a href="" class="bc_link home" rel="noopenernoreferrer"><em>홈</em></a></li>    <!--//bc_item-->
+                                <li class="bc_item"><a href="" class="bc_link" rel="noopenernoreferrer"><em>CMS 1차메뉴</em></a></li>    <!--//bc_item-->
+                                <li class="bc_item"><a href="" class="bc_link" rel="noopenernoreferrer"><em>CMS 2차메뉴</em></a></li>    <!--//bc_item-->
+                                <li class="bc_item"><a href="" class="bc_link" rel="noopenernoreferrer"><em>CMS 3차메뉴</em></a></li>    <!--//bc_item-->
+                                <li class="bc_item"><a href="" class="bc_link" rel="noopenernoreferrer"><em>CMS 4차메뉴</em></a></li>    <!--//bc_item-->
+                                <li class="bc_item"><a href="" class="bc_link" rel="noopenernoreferrer"><em>현재 메뉴명</em></a></li>    <!--//bc_item-->
+                            </ol>    <!--//bc_list-->
+                        </div>    <!--//breadcrumb-->
+                        <div class="head_box">
+                            <h2 class="current_title">현재 메뉴명</h2>    <!--//current_title-->
+                            <div class="etc_box">
+                                <div class="url_etc etc_item">
+                                    <a href="" class="url_link etc_link" title="현재 url 복사하기" rel="noopener noreferrer">url 복사</a>    <!--//url_link etc_link-->
+                                </div>    <!--//url_etc etc_item-->
+                                <div class="share_etc etc_item">
+                                    <a href="" class="share_link etc_link" title="공유하기 리스트 열기" rel="noopener noreferrer">sns 공유하기</a>    <!--//share_link etc_link-->
+                                    <div class="list_layer">
+                                        <a href="" class="share_close" title="공유하기 리스트 닫기" rel="noopener noreferrer">리스트 닫기</a>
+                                        <ul class="share_list">
+                                            <li class="share_item facebook"><a href="" class="share_in_link" target="_blank" title="페이스북 공유하기 새창열기" rel="noopener noreferrer">페이스북</a></li>    <!--//share_item facebook-->
+                                            <li class="share_item blog"><a href="" class="share_in_link" target="_blank" title="블로그 공유하기 새창열기" rel="noopener noreferrer">블로그</a></li>    <!--//share_item blog-->
+                                            <li class="share_item kakao"><a href="" class="share_in_link" target="_blank" title="카카오 공유하기 새창열기" rel="noopener noreferrer">카카오</a></li>    <!--//share_item kakao-->
+                                            <li class="share_item instagram"><a href="" class="share_in_link" target="_blank" title="인스타그램 공유하기 새창열기" rel="noopener noreferrer">인스타그램</a></li>    <!--//share_item instagram-->
+                                            <li class="share_item twitter"><a href="" class="share_in_link" target="_blank" title="트위터(엑스) 공유하기 새창열기" rel="noopener noreferrer">트위터</a></li>    <!--//share_item twitter-->
+                                        </ul>    <!--//share_list-->
+                                    </div>    <!--//list_layer-->
+                                </div>    <!--//share_etc etc_item-->
+                                <div class="print_etc etc_item">
+                                    <a href="" class="print_link etc_link" target="_blank" title="새창 프린트" rel="noopener noreferrer" onclick="printURL();return false;">현재 페이지 프린트하기</a>    <!--//print_link etc_link-->
+                                </div>    <!--//print_etc etc_item-->
+                            </div>    <!--//etc_box-->
+                        </div>    <!--//head_box-->
+                        <div class="uiux_tab">
+                            <div class="uiux_tab_list">
+                                <div class="uiux_tab_item">
+                                    <a href="" class="uiux_tab_btn" rel="noopener noreferrer"><span><em>CMS 5차메뉴</em></span></a>    <!--//uiux_tab_btn-->
+                                </div>    <!--//uiux_tab_item-->
+                                <div class="uiux_tab_item active">
+                                    <a href="" title="선택됨" class="uiux_tab_btn" rel="noopener noreferrer"><span><em>현재 메뉴명</em></span></a>    <!--//uiux_tab_btn-->
+                                </div>    <!--//uiux_tab_item-->
+                                <div class="uiux_tab_item">
+                                    <a href="" class="uiux_tab_btn" rel="noopener noreferrer"><span><em>CMS 5차메뉴</em></span></a>    <!--//uiux_tab_btn-->
+                                </div>    <!--//uiux_tab_item-->
+                                <div class="uiux_tab_item">
+                                    <a href="" class="uiux_tab_btn" rel="noopener noreferrer"><span><em>CMS 5차메뉴</em></span></a>    <!--//uiux_tab_btn-->
+                                </div>    <!--//uiux_tab_item-->
+                                <div class="uiux_tab_item">
+                                    <a href="" class="uiux_tab_btn" target="_blank" title="새창" rel="noopener noreferrer"><span><em>CMS 5차메뉴 새창</em></span></a>    <!--//uiux_tab_btn-->
+                                </div>    <!--//uiux_tab_item-->
+                            </div>    <!--//uiux_tab_list-->
+                        </div>    <!--//uiux_tab-->
+                    </header>    <!--//sub_head-->
+                    <div id="contents">
+                        <div style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:#063a74;opacity:0.8;border-radius:20px;"></div>
+                    </div>    <!--//contents-->
+                    <footer class="satisfaction">
+                        <div class="kogl_open">
+                            <h3 class="skip">공공누리 공공저작물</h3>    <!--//skip-->
+                            <img src="../../common/images/program/img_opentype01.jpg" alt="공공누리 공공저작물 자유이용허락 : 출처표시" />
+                            본 저작물은 "공공누리 제1유형 : 출처표시" 조건에 따라 이용할 수 있습니다.
+                        </div>    <!--//kogl_open-->
+                        <div class="satisfaction_list clearfix">
+                            <h3 class="skip">콘텐츠 만족도 조사</h3>    <!--//skip-->
+                            <p class="question">열람하신 정보에 대해 만족하십니까?</p>    <!--//question-->
+                            <form action="">    <!--//action값 채워주세요-->
+                                <fieldset>
+                                    <legend>만족도 조사</legend>
+                                    <div class="input_radio">
+                                        <span class="item">
+                                            <input name="radio_value" id="value5" type="radio" /><label for="value5">매우만족</label>
+                                        </span>    <!--//item-->
+                                        <span class="item">
+                                            <input name="radio_value" id="value4" type="radio" /><label for="value4">만족</label>
+                                        </span>    <!--//item-->
+                                        <span class="item">
+                                            <input name="radio_value" id="value3" type="radio" /><label for="value3">보통</label>
+                                        </span>    <!--//item-->
+                                        <span class="item">
+                                            <input name="radio_value" id="value2" type="radio" /><label for="value2">불만족</label>
+                                        </span>    <!--//item-->
+                                        <span class="item">
+                                            <input name="radio_value" id="value1" type="radio" /><label for="value1">매우불만족</label>
+                                        </span>    <!--//item-->
+                                    </div>    <!--//input_radio-->
+                                    <div class="opinion">
+                                        <input type="text" title="의견을 입력해주세요" placeholder="여러분의 소중한 의견을 보내주세요" />
+                                        <span class="opinion_submit">
+                                            <input type="submit" value="입력" />
+                                        </span>    <!--//opinion_submit-->
+                                    </div>    <!--//opinion-->
+                                </fieldset>
+                            </form>
+                        </div>    <!--//satisfaction_list-->
+                        <div class="manager_info clearfix">
+                            <h3 class="skip">담당자 정보</h3>
+                            <ul class="clearfix">
+                                <li><span>담당자 정보</span> 담당부서 명 / 000-000-000</li>
+                            </ul>
+                        </div>    <!--//manager_info-->
+                    </footer>    <!--//satisfaction-->
+                </article>
+            </main>
+        </div>    <!--//wrap-->
+    </div>    <!--//#container-->
+    <footer id="footer">
+        <div class="footer_layer_wrap">
+            <div class="layer_list">
+                <div class="layer_item">
+                    <button type="button" title="관련 누리집 레이어 열기" class="layer_open"><span><em>관련 누리집</em></span></button>    <!--//layer_open-->
+                    <ul class="modal_list">
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/mpva/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국가보훈부</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.dnc.go.kr/web/portal/main" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립대전현충원</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/419/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립4.19민주묘지</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/315/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립3.15민주묘지</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/518/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립5.18민주묘지</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/ycnc/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립영천호국원</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/isnc/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립임실호국원</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/icnc/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립이천호국원</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/scnc/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립산청호국원</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/gsnc/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립괴산호국원</a></li>    <!--//modal_item-->
+                        <li class="modal_item"><a href="https://www.mpva.go.kr/jjnc/index.do" class="modal_link" target="_blank" title="새창" rel="noopener noreferrer">국립제주호국원</a></li>    <!--//modal_item-->
+                    </ul>    <!--//modal_list-->
+                </div>    <!--//layer_item-->
+            </div>    <!--//layer_list-->
+        </div>    <!--//footer_layer_wrap-->
+        <div class="footer_box">
+            <div class="box_inner">
+                <div class="logo">
+                    <a href="./index.do" title="메인페이지로 이동" rel="noopener noreferrer">국립서울현충원</a>
+                </div>    <!--//logo-->
+                <div class="desc">
+                    <address class="desc_text address">(06984) 서울동작구 현충로 210 (동작동, 국립서울현충원)</address>    <!--//desc_text address-->
+                    <span class="desc_text tel">TEL. 1522-1555(대표번호)</span>    <!--//desc_text tel-->
+                    <span class="desc_text fax">FAX. 02-822-3762</span>    <!--//desc_text fax-->
+                </div>    <!--//desc-->
+            </div>    <!--//box_inner-->
+            <div class="box_etc">
+                <ul class="sns_list">
+                    <li class="sns_item youtube"><a href="" target="_blank" title="유튜브 새창이동" rel="noopener noreferrer">국립서울현충원 유튜브 링크</a></li>    <!--//sns_item youtube-->
+                    <li class="sns_item instagram"><a href="" target="_blank" title="인스타그램 새창이동" rel="noopener noreferrer">국립서울현충원 인스타그램 링크</a></li>    <!--//sns_item instagram-->
+                    <li class="sns_item kakao"><a href="" target="_blank" title="카카오 새창이동" rel="noopener noreferrer">국립서울현충원 카카오 링크</a></li>    <!--//sns_item kakao-->
+                    <li class="sns_item blog"><a href="" target="_blank" title="블로그 새창이동" rel="noopener noreferrer">국립서울현충원 블로그 링크</a></li>    <!--//sns_item blog-->
+                </ul>    <!--//sns_list-->
+            </div>    <!--//box_etc-->
+        </div>    <!--//footer_box-->
+        <div class="footer_bottom">
+            <div class="quick_box">
+                <ul class="quick_list">
+                    <li class="quick_item privacy"><a href="" rel="noopener noreferrer">개인정보처리방침</a></li>    <!--//quick_item privacy-->
+                    <li class="quick_item"><a href="" rel="noopener noreferrer">행정정보공개</a></li>    <!--//quick_item-->
+                    <li class="quick_item"><a href="" rel="noopener noreferrer">저작권보호정책</a></li>    <!--//quick_item-->
+                    <li class="quick_item"><a href="" rel="noopener noreferrer">뷰어다운로드</a></li>    <!--//quick_item-->
+                    <li class="quick_item"><a href="" rel="noopener noreferrer">사이트맵</a></li>    <!--//quick_item-->
+                </ul>    <!--//quick_list-->
+            </div>    <!--//quick_box-->
+            <p class="copyright">COPYRIGHT ⓒ SEOUL NATIONAL CEMETERY. ALL RIGHTS RESERVED.</p>    <!--//copyright-->
+        </div>    <!--//footer_bottom-->
+    </footer>    <!--//#footer-->
+</div>    <!--//#wrapper-->
+</body>
+</html>

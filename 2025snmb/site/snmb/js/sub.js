@@ -31,17 +31,17 @@ function printURL() {
     printWindow.document.write(
         '<!DOCTYPE html>' +
         '<html>' +
-        '<head>' +
-        headHtml +
-        '</head>' +
-        '<body id="body" class="print_body">' +
-        '<div class="sub_head">'+
-        PrintSubHeadHtml +
-        '</div>'+
-        '<div id="contents">'+
-        PrintContentsHtml +
-        '</div>'+
-        '</body>' +
+            '<head>' +
+                headHtml +
+            '</head>' +
+            '<body id="body" class="print_body">' +
+                '<div class="sub_head">'+
+                    PrintSubHeadHtml +
+                '</div>'+
+                '<div id="contents">'+
+                    PrintContentsHtml +
+                '</div>'+
+            '</body>' +
         '</html>'
     );
     printWindow.focus();

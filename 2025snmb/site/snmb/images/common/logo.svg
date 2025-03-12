@@ -1,72 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 13.0.0, SVG Export Plug-In  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
-]>
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="192px" height="46px" viewBox="0 0 192 46" enable-background="new 0 0 192 46" xml:space="preserve">
-<defs>
-</defs>
-<image overflow="visible" width="192" height="46" xlink:href="data:image/png;base64,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
-qDlqRMUAAAAASUVORK5CYII=">
-</image>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.87 45.74">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #575756;
+        font-family: 'Government_160408', Government_160408;
+        font-size: 22.13px;
+        letter-spacing: -.04em;
+      }
+
+      .cls-2 {
+        fill: #003964;
+      }
+
+      .cls-3 {
+        fill: #ed1a3b;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-2" d="M35.31,21.83c-3.97-2.7-9.06-1.6-11.73,2.46-2.23,3.39-5.6,3.81-6.9,3.81-4.25,0-7.16-2.99-8.02-6.08h0s-.01-.06-.02-.09c0-.04-.02-.07-.03-.11-.34-1.29-.42-1.91-.42-3.28,0-7.4,7.59-15.63,18.52-15.63s17.6,8.52,19.25,13.26c-.03-.08-.05-.17-.08-.25C42.69,6.66,33.91,0,23.57,0,10.55,0,0,10.55,0,23.57c0,11.63,8.39,21.59,20.03,21.59,9.28,0,15.52-5.21,18.39-12.38,1.57-3.92.46-8.53-3.11-10.96Z"/>
+    <path class="cls-3" d="M46.1,16.63c-1.38-4.62-7.83-13.72-19.39-13.72-10.93,0-18.52,8.24-18.52,15.63,0,1.37.08,1.99.42,3.28-.14-.56-.22-1.13-.22-1.68,0-7.7,7.71-13.04,15.64-13.04,10.73,0,19.43,8.7,19.43,19.43,0,8.41-4.84,15.69-11.88,19.19h0c9.07-3.28,15.54-11.96,15.54-22.16,0-2.41-.33-4.54-1.04-6.94Z"/>
+  </g>
+  <text class="cls-1" transform="translate(57.88 31.19)"><tspan x="0" y="0">국립서울현충원</tspan></text>
 </svg>
