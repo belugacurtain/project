@@ -319,5 +319,53 @@ function printURL() {
             }
         });
         //현재 메뉴명 5차일 경우 탭메뉴 UI/UX(와이드) 커스텀 종료
+
+        //컨텐츠 내부 탭메뉴 길이측정 시작
+        var $contentsUIUXTab = $('#contents .uiux_tab');
+        $contentsUIUXTab.each(function () {
+            var $this = $(this);
+            var totalItemOuterWidth = 0;
+            for (var i = 0; i < $this.find('.uiux_tab_item').length; i++) {
+                totalItemOuterWidth = totalItemOuterWidth + $this.find('.uiux_tab_item').eq(i).outerWidth();
+            }
+            if ($(this).find('.uiux_tab_list').outerWidth() < totalItemOuterWidth) {
+                $(this).find('.uiux_tab_list').attr('tabindex', '0');
+                    if ($this.find('.uiux_tab_item.active').length) {
+                        var prevTotalWidth = 0;
+                        $this.find('.uiux_tab_item.active').prevAll('.uiux_tab_item').each(function () {
+                            prevTotalWidth += $(this).outerWidth();
+                        });
+                        $(this).find('.uiux_tab_list').animate({
+                            scrollLeft: prevTotalWidth
+                        }, 1);
+                    }
+            } else {
+                $(this).find('.uiux_tab_list').removeAttr('tabindex', '0');
+            }
+        });
+        $(window).on('resize', function () {
+            $contentsUIUXTab.each(function () {
+                var $this = $(this);
+                var totalItemOuterWidth = 0;
+                for (var i = 0; i < $this.find('.uiux_tab_item').length; i++) {
+                    totalItemOuterWidth = totalItemOuterWidth + $this.find('.uiux_tab_item').eq(i).outerWidth();
+                }
+                if ($(this).find('.uiux_tab_list').outerWidth() < totalItemOuterWidth) {
+                    $(this).find('.uiux_tab_list').attr('tabindex', '0');
+                    if ($this.find('.uiux_tab_item.active').length) {
+                        var prevTotalWidth = 0;
+                        $this.find('.uiux_tab_item.active').prevAll('.uiux_tab_item').each(function () {
+                            prevTotalWidth += $(this).outerWidth();
+                        });
+                        $(this).find('.uiux_tab_list').animate({
+                            scrollLeft: prevTotalWidth
+                        }, 1);
+                    }
+                } else {
+                    $(this).find('.uiux_tab_list').removeAttr('tabindex', '0');
+                }
+            });
+        });
+        //컨텐츠 내부 탭메뉴 길이측정 종료
     });
 })(jQuery);

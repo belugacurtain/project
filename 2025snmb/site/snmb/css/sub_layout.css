@@ -213,8 +213,16 @@
 .uiux_tab *:before,
 .uiux_tab *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
 .uiux_tab .uiux_tab_list{display:block;position:relative;width:100%;}
-.uiux_tab .uiux_tab_list .uiux_tab_item{display:inline-block;position:relative;margin-right:10px;vertical-align:top;}
-.sub_head .uiux_tab .uiux_tab_list .uiux_tab_item{margin-right:0;}
+#contents .uiux_tab .uiux_tab_list{display:flex;align-items:stretch;overflow-x:auto;}
+#contents .uiux_tab .uiux_tab_list[tabindex]{padding:0 0 5px;scroll-behavior:smooth;}
+#contents .uiux_tab .uiux_tab_list[tabindex]:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
+#contents .uiux_tab .uiux_tab_list::-webkit-scrollbar{height:8px;}
+#contents .uiux_tab .uiux_tab_list::-webkit-scrollbar-thumb:horizontal{background-color:#052b57;border-radius:4px;}
+#contents .uiux_tab .uiux_tab_list::-webkit-scrollbar-track:horizontal{background-color:#cdd1d5;border-radius:4px;}
+.uiux_tab .uiux_tab_list .uiux_tab_item{display:inline-block;position:relative;vertical-align:top;}
+#contents .uiux_tab .uiux_tab_list .uiux_tab_item{display:inline-flex;white-space:nowrap;}
+.uiux_tab .uiux_tab_list .uiux_tab_item + .uiux_tab_item{padding-left:5px;padding-right:5px;}
+.sub_head .uiux_tab .uiux_tab_list .uiux_tab_item + .uiux_tab_item{padding-left:0;padding-right:0;}
 .sub_head .uiux_tab[data-item-length="1"] .uiux_tab_list .uiux_tab_item{width:100%;}
 .sub_head .uiux_tab[data-item-length="2"] .uiux_tab_list .uiux_tab_item{width:calc(100% / 2);}
 .sub_head .uiux_tab[data-item-length="3"] .uiux_tab_list .uiux_tab_item{width:calc(100% / 3);}
@@ -227,8 +235,9 @@
 .uiux_tab .uiux_tab_list .uiux_tab_item.active .uiux_tab_btn{background-color:#063a74;}
 .sub_head .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:hover,
 .sub_head .uiux_tab .uiux_tab_list .uiux_tab_item.active .uiux_tab_btn{background-color:#eef2f7;}
-.uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:2px;}
+.uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-4px;}
 .sub_head .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-2px;}
+#contents .uiux_tab .uiux_tab_list .uiux_tab_item.active .uiux_tab_btn:focus{outline:2px solid #fff;outline-offset:-4px;}
 .sub_head .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:before{display:block;position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:0%;height:4px;background-color:transparent;transition:width 400ms ease-in-out, background-color 400ms ease-in-out;}
 .sub_head .uiux_tab .uiux_tab_list .uiux_tab_item.active .uiux_tab_btn:before{width:100%;background-color:#063a74;}
 .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span{display:inline-block;position:relative;width:100%;text-align:center;vertical-align:top;}
@@ -268,6 +277,8 @@
     .sub_head.current_tab_type .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span{text-align:left;}
     .sub_head.current_tab_type .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span em{font-size:16px;line-height:24px;font-weight:400;}
     .sub_head.current_tab_type .uiux_tab .uiux_tab_list .uiux_tab_item.active .uiux_tab_btn span em{font-weight:600;}
+    
+    .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span em{font-size:16px;}
 }
 @media all and (max-width:640px){
     .head_box + .uiux_tab{margin-top:25px;}
@@ -275,6 +286,8 @@
     .sub_head.current_tab_type .uiux_tab .uiux_tab_list{padding:4px;}
     .sub_head.current_tab_type .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn:before{font-size:15px;line-height:22px;letter-spacing:-0.06em;}
     .sub_head.current_tab_type .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span em{font-size:15px;line-height:22px;letter-spacing:-0.06em;}
+    
+    .uiux_tab .uiux_tab_list .uiux_tab_item .uiux_tab_btn span em{font-size:15px;}
 }
 
 #contents{display:block;position:relative;width:100%;min-height:1000px;margin-top:75px;box-sizing:border-box;}
