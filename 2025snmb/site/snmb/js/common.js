@@ -562,6 +562,9 @@ $(function () {
                 $(this).siblings('.depth3').prepend($thisClone.removeClass('depth_text depth2_text').addClass('depth2_link'));
             }
         });
+        $('.lnb .menu .depth3 .depth2_link').on('click', function () {
+            location.href = this.href;
+        });
         //모바일 1차메뉴 좌측 앵커 렌더링
         $('.lnb .menu .depth1').prepend('<div class="left_depth1"><ul class="left_depth1_list"></ul></div>');
         for (var i = 1; i <= $('.lnb .menu .depth1 .depth1_list .depth1_item').length; i++) {
