@@ -83,6 +83,7 @@ input[type="submit"]{cursor:pointer;}
 /* html,body,#wrapper 특정 경우의 수 정의 시작 */
 @media all and (min-width:1001px){
     html, body, #wrapper{scroll-behavior:smooth;overflow:visible;}
+    html{overflow-x:hidden;overflow-y:auto;}
     .lnb_open,
     .sch_open,
     .modal_open,
