@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svgSpriteGulp</title>
+    <style>
+        script{display:none !important;}
+        html,body{overflow-x:hidden;}
+        body{position:relative;width:100vw;height:100vh;margin:0;padding:0;box-sizing:border-box;}
+        body *{display:block;width:auto;height:auto;margin:0;padding:0;word-break:keep-all;white-space:nowrap;box-sizing:border-box;}
+        body img{display:inline-block;position:relative;vertical-align:top;}
+        p{color:#f00;}
+        ul{margin:15px 0;padding-left:15px;}
+        ul li{font-size:1vw;color:#00f;}
+        ul li ul{margin:0 0 10px;padding-left:10px;}
+        ul li ul li{font-size:0.9em;color:#000;}
+    </style>
+</head>
+<body>
+    <div style="display:inline-block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);vertical-align:top;">
+        <h1>웹스톰 터미널창 ( Local : X ) ( Command Prompt : O ) 화면에 하시길 바랍니다.</h1>
+        <p>동작원리 : 루트경로 > sprite 이름의 폴더생성 > 폴더안에 파일명.svg 계속추가 > 파일이름 순으로 정렬되며, id="파일이름" 이렇게 사용 가능하게 만들어 놓았습니다.</p>
+        <p>★중요사항 : svg 스프라이트를 이용한 이미지들은 live-server(로컬) 에서 플러그인 충돌이 나서 확인불가!!! 로컬에서 node 서버를 띄우든, 개발서버에서만 육안으로 확인 가능합니다.★</p>
+        <ul>
+            <li>1. npm -v ( npm 버전 확인 )</li>
+            <li>2. node -v ( node 버전 확인 )</li>
+            <li>3. gulp -v ( gulp 버전 확인 )
+                <ul>
+                    <li>=&gt; CLI version : 없을 시 터미널 창에 명령어 npm install -g gulp-cli</li>
+                    <li>=&gt; Local version : 없을 시 터미널 창에 명령어 npm install --save-dev gulp</li>
+                    <li>=&gt; 위 두 version 있을 시 터미널 창에 명령어 npm install gulp gulp-svg-sprite gulp-sort</li>
+                    <li>★ package 명 json 파일들이나 node_modules 폴더 생성시 서버에는 올리지 말 것, 로컬에서 SVG 파일들 스프라이트를 하기 위한 용도 그 이상 그 이하도 아닙니다.</li>
+                </ul>
+            </li>
+            <li>4. root 경로에 있는 gulpfile.js 실행하기 ( node server.js 실행중이라면 불가능 / 종료 후 해야합니다. )
+                <ul>
+                    <li>=&gt; 현재 플젝 root 경로에서 터미널 창에 gulp 명령어 치기.</li>
+                    <li>
+                        EX) 터미널창 Command Prompt 에서 /현재폴더명(SVGsprite_gulp)/gulpfile.js 이라면 /현재폴더명(SVGsprite_gulp)/ 에 터미널창 바라보게 한 후에 gulp 치기 <br />
+                        =&gt; 이걸 치면 /dist/view/폴더 자동으로 만들어지고 그 안에 스프라이트 된 svg 파일이 만들어 집니다.
+                    </li>
+                </ul>
+            </li>
+            <li>5. root 경로에 로컬 node server.js 실행하기 ( gulp 실행 후에 할 것 )
+                <ul>
+                    <li>=&gt; 현재 플젝 root 경로 폴더안에 server.js 파일 탑재 후 , port 번호 지정</li>
+                    <li>
+                        EX) 터미널창 Command Prompt 에서 /현재폴더명(SVGsprite_gulp)/server.js 이라면 /현재폴더명(SVGsprite_gulp)/ 에 터미널창 바라보게 한 후에 node server.js 치기 <br />
+                        =&gt; html 에 적용된 화면 확인
+                    </li>
+                </ul>
+            </li>
+            <li>6. /현재폴더명(SVGsprite_gulp)/dist/view/sprite~~~~.svg 파일 생성되는지 확인 ( 파일명은 언제든지 맘대로 변경해서 사용가능하나, js 파일 돌리면 항상 새로운 이름의 파일로 만들어 짐 )
+                <ul>
+                    <li>=&gt; sprite~~~~.svg 이 파일을 직접 열면 viewBox 에 id 값이 붙고 그 바로 밑에 있는 svg 태그의 width 와 height 값을 바로 볼 수 있음.</li>
+                    <li>=&gt; sprite~~~~.svg#(id값=파일명)</li>
+                    <li>EX) background-image:url(./dist/view/sprite.svg#Group) or src="./dist/view/sprite.svg#Group"</li>
+                    <li>EX) background-image:url(/원하는폴더명에/원하는파일명으로.svg#저장된svg파일명) or src="/원하는폴더명에/원하는파일명으로.svg#저장된svg파일명"</li>
+                </ul>
+            </li>
+        </ul>    <!--//-->
+        <div style="text-align:center;">
+            <img style="width:51px;height:64px;" src="./dist/view/sprite.svg#Group" alt="" />
+            <img style="width:60px;height:55px;" src="./dist/view/sprite.svg#Group2" alt="" />
+            <img style="width:41px;height:40px;" src="./dist/view/sprite.svg#test" alt="" />
+            <img style="width:289px;height:42px;" src="./dist/view/sprite.svg#logo" alt="" />
+        </div>    <!--//-->
+    </div>    <!--//-->
+</body>
+</html>
