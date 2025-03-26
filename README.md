@@ -1,8 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=333333&height=200&section=header&text=SI%20Total%20Project%202020~&fontSize=30&fontColor=ffffff)
 
 ### 2025snmb (2025 국립서울현충원 전면개편)
-- [대표사이트 서브(기본) 레이아웃](https://belugacurtain.github.io/project/2025snmb/site/snmb/sub.html)
-- [대표사이트 서브(와이드) 레이아웃](https://belugacurtain.github.io/project/2025snmb/site/snmb/sub_wide.html)
+- [대표사이트 서브 - 기본 레이아웃](https://belugacurtain.github.io/project/2025snmb/site/snmb/sub.html)
+- [대표사이트 서브 - 와이드 레이아웃](https://belugacurtain.github.io/project/2025snmb/site/snmb/sub_wide.html)
 
 ### 2024boeuncyber (2024 정이품보은군민 신규)
 - [대표사이트 메인 레이아웃](https://belugacurtain.github.io/project/2024boeuncyber/site/cyber/main.html)
