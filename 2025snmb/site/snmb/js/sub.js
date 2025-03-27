@@ -123,7 +123,7 @@ function printURL() {
                     $this.attr('title', '하위메뉴 닫기');
                 }
                 //
-                $('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has').find('.depth2').slideUp();
+                //$('.side .side_menu .menu .depth1 .depth1_list .depth1_item.has').find('.depth2').slideUp();
                 $this.parents('.depth1_item.has').find('.depth1_text').attr('title', '하위메뉴 닫기');
                 $this.parents('.depth1_item.has').find('.depth1_text').siblings('.depth2').slideDown();
             });
