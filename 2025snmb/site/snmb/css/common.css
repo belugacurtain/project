@@ -430,14 +430,14 @@ input[type="submit"]{cursor:pointer;}
     .lnb .menu .depth3 .depth3_list .depth3_item{display:inline-block;position:relative;width:calc((100% - 2.49vw) / 4);margin-top:8px;margin-right:0.83vw;vertical-align:top;}
     .lnb .menu .depth3 .depth3_list .depth3_item:nth-child(-n+4){margin-top:0;}
     .lnb .menu .depth3 .depth3_list .depth3_item:nth-child(4n){margin-right:0;}
-    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text{display:flex;align-items:center;justify-content:flex-start;flex-direction:row;position:relative;width:100%;height:37px;padding:8px;background-color:transparent;vertical-align:top;}
+    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text{display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:row;position:relative;width:100%;height:auto;padding:8px;background-color:transparent;vertical-align:top;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text:hover,
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text:focus{border-radius:5px;text-decoration:none;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text:hover{background-color:#edf1f5;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text:focus{outline:2px solid rgba(36, 107, 235, 0.8);outline-offset:-4px;}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span{display:inline-block;position:relative;vertical-align:top;}
-    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span em{display:inline-block;position:relative;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
-    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span em:before{display:inline-block;position:relative;margin:0 4px 0 0;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';vertical-align:top;content:'･';}
+    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span em{display:inline-block;position:relative;padding-left:12px;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';word-break:keep-all;vertical-align:top;}
+    .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text span em:before{display:inline-block;position:absolute;top:0;left:0;margin:0 4px 0 0;font-size:17px;color:#1d1d1d;line-height:20px;letter-spacing:-0.03em;font-weight:400;font-family:'PretendardGOV';vertical-align:top;content:'･';}
     .lnb .menu .depth3 .depth3_list .depth3_item .depth3_text[target="_blank"] span em:after{display:inline-block;position:relative;width:20px;height:20px;margin:0 0 0 4px;background-image:url(../images/guide/ico_go_20.svg);background-repeat:no-repeat;background-position:center center;background-size:18px;vertical-align:top;content:'';}
     
     .lnb .menu .depth4,
