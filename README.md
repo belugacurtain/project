@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=333333&height=200&section=header&text=SI%20Total%20Project%202020~&fontSize=30&fontColor=ffffff)
 
 ### 2025gunpo (2025 군포시청 부분개편)
-- [시민참여서비스 서브 레이아웃(작 업 중)](https://belugacurtain.github.io/project/2025gunpo/site/citizen/sub.html)
+- [시민참여서비스 서브 레이아웃(작업중)](https://belugacurtain.github.io/project/2025gunpo/site/citizen/sub.html)
 
 ### 2025snmb (2025 국립서울현충원 전면개편)
 - [대표사이트 서브 - 기본 레이아웃](https://belugacurtain.github.io/project/2025snmb/site/snmb/sub.html)
