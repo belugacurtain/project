@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="사이트 제목" />
+    <meta name="keywords" content="키워드 입력" />
+    <meta name="description" content="사이트 상세설명" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:site_name" content="사이트명 표시" />
+    <meta property="og:url" content="url 표기" />
+    <meta property="og:image" content="대표 이미지 경로" />
+    <meta property="og:title" content="페이지 제목 표시" />
+    <meta property="og:description" content="페이지 설명 표시" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="../../site/citizen/css/font.css" />
+    <link rel="stylesheet" href="../../site/citizen/css/main.css" />
+    <script src="../../site/citizen/js/jquery-1.12.4.HS-20200709.min.js"></script>
+    <script src="../../site/citizen/js/jquery.screen.min.custom.1.0.2.js"></script>
+    <script src="../../site/citizen/js/slick.min.custom.1.8.0.14.js"></script>
+    <script src="../../site/citizen/js/slick.extensions.min.js"></script>
+    <script src="../../common/js/program.min.js"></script>
+    <script src="../../site/citizen/js/common.js"></script>
+    <script src="../../site/citizen/js/gsap.min.js"></script>
+    <script src="../../site/citizen/js/ScrollTrigger.min.js"></script>
+    <script src="../../site/citizen/js/main.js"></script>
+    <title>군포시청 - 시민참여서비스 - 메인레이아웃</title>
+</head>
+<!--// body 태그 id = 메인 : main / 서브 : sub -->
+<!--// body 태그 class = 메인 : main 사이트아이디 / 서브 : sub 사이트아이디 -->
+<body id="main" class="main citizen">
+    <div class="accessibility">
+        <a href="#container">본문 바로가기</a>
+    </div>    <!--//accessibility-->
+    <div id="wrapper">
+        <header id="header">
+            <div class="header_box">
+                <h1 class="logo">
+                    <a href="" title="메인페이지로 이동" rel="noopener noreferrer"><span><em>시민참여</em><em class="skip">gunpo you</em></span></a>
+                </h1>    <!--//logo-->
+                <div class="menu_show">
+                    <button type="button" class="menu_button">메뉴열기</button>    <!--//menu_button-->
+                </div>    <!--//menu_show-->
+            </div>    <!--//header_box-->
+            <div class="lnb">
+                <div class="lnb_top_box">
+                    <div class="etc_link_box">
+                        <ul class="etc_link_list">
+                            <li class="etc_link_item login">
+                                <!--// 로그인이 되면 : 텍스트 로그아웃으로 수정 -->
+                                <a href="" class="etc_link" target="_blank" title="새창" rel="noopener noreferrer">로그인</a>    <!--//etc_link-->
+                            </li>    <!--//etc_link_item login-->
+                            <li class="etc_link_item join">
+                                <a href="" class="etc_link" target="_blank" title="새창" rel="noopener noreferrer">회원가입</a>    <!--//etc_link-->
+                            </li>    <!--//etc_link_item join-->
+                        </ul>    <!--//etc_link_list-->
+                    </div>    <!--//etc_link_box-->
+                </div>    <!--//lnb_top_box-->
+                <nav class="menu dropdown">
+                    <!--// depth_text 링크가 어떤 차수의 메뉴이든 새창일 때, target="_blank" title="새창" 필수 개발 필요 -->
+                    <!--// 선택된 마지막 차수인 depth_text 에 spy 클레스 필수 개발 필요 -->
+                    <h2 class="skip">메뉴</h2>    <!--//skip-->
+                    <div class="depth depth1">
+                        <ul class="depth_list depth1_list">
+                            <li class="depth_item depth1_item">
+                                <a href="" class="depth_text depth1_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>군포시에 바란다</em></span></a>    <!--//depth1_text-->
+                            </li>    <!--//depth1_item-->
+                            <li class="depth_item depth1_item">
+                                <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>시민제안</em></span></a>    <!--//depth1_text-->
+                                <div class="depth depth2">
+                                    <ul class="depth_list depth2_list">
+                                        <li class="depth_item depth2_item">
+                                            <!--// '제안안내' 가 선택되었다는 가정하에 spy 클레스 부여 -->
+                                            <a href="" class="depth_text depth2_text spy" rel="noopener noreferrer"><span><em>제안안내</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>공개제안</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>제안신청</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>나의제안보기</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                    </ul>    <!--//depth2_list-->
+                                </div>    <!--//depth2-->
+                            </li>    <!--//depth1_item-->
+                            <li class="depth_item depth1_item">
+                                <a href="" class="depth_text depth1_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>국민생각함</em></span></a>    <!--//depth1_text-->
+                            </li>    <!--//depth1_item-->
+                            <li class="depth_item depth1_item">
+                                <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>설문조사</em></span></a>    <!--//depth1_text-->
+                                <div class="depth depth2">
+                                    <ul class="depth_list depth2_list">
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>일반설문</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>주민제안 사업투표</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                    </ul>    <!--//depth2_list-->
+                                </div>    <!--//depth2-->
+                            </li>    <!--//depth1_item-->
+                            <li class="depth_item depth1_item">
+                                <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>협치</em></span></a>    <!--//depth1_text-->
+                                <div class="depth depth2">
+                                    <ul class="depth_list depth2_list">
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>시민행복위원회 안내</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>시민행복위원 회의록</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>시민행복위원회 활동사진</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>협치 공지사항</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>협치 자료실</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                    </ul>    <!--//depth2_list-->
+                                </div>    <!--//depth2-->
+                            </li>    <!--//depth1_item-->
+                            <li class="depth_item depth1_item">
+                                <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>주민참여예산</em></span></a>    <!--//depth1_text-->
+                                <div class="depth depth2">
+                                    <ul class="depth_list depth2_list">
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>주민참여예산제 안내</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>공지사항</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>위원회 활동현황</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>주민제안사업</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                        <li class="depth_item depth2_item">
+                                            <a href="" class="depth_text depth2_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>새창메뉴 테스트</em></span></a>    <!--//depth2_text-->
+                                        </li>    <!--//depth2_item-->
+                                    </ul>    <!--//depth2_list-->
+                                </div>    <!--//depth2-->
+                            </li>    <!--//depth1_item-->
+                        </ul>    <!--//depth1_list-->
+                    </div>    <!--//depth1-->
+                </nav>    <!--//menu eachdown-->
+                <div class="menu_hide">
+                    <button type="button" class="menu_button">메뉴 닫기</button>    <!--//menu_button-->
+                </div>    <!--//menu_hide-->
+            </div>    <!--//lnb-->
+            <div class="lnb_curtain">
+                <button type="button">메뉴닫기</button>
+            </div>    <!--//lnb_curtain-->
+            <div class="header_last">
+                <div class="etc_link_box">
+                    <ul class="etc_link_list">
+                        <li class="etc_link_item login">
+                            <!--// 로그인이 되면 : 텍스트 로그아웃으로 수정 -->
+                            <a href="" class="etc_link" target="_blank" title="새창" rel="noopener noreferrer">로그인</a>    <!--//etc_link-->
+                        </li>    <!--//etc_link_item login-->
+                        <li class="etc_link_item join">
+                            <a href="" class="etc_link" target="_blank" title="새창" rel="noopener noreferrer">회원가입</a>    <!--//etc_link-->
+                        </li>    <!--//etc_link_item join-->
+                    </ul>    <!--//etc_link_list-->
+                </div>    <!--//etc_link_box-->
+            </div>    <!--//header_last-->
+        </header>    <!--//#header-->
+        <div id="container">
+            <main>
+                <div class="rowgroup rowgroup1" style="min-height:500px;background-color:#f00;"></div>    <!--//rowgroup rowgroup1-->
+                <div class="rowgroup rowgroup2" style="min-height:500px;background-color:#0f0;"></div>    <!--//rowgroup rowgroup2-->
+                <div class="rowgroup rowgroup3" style="min-height:500px;background-color:#00f;"></div>    <!--//rowgroup rowgroup3-->
+            </main>
+        </div>    <!--//#container-->
+        <footer id="footer">
+            <div class="footer_quick">
+                <div class="quick_list">
+                    <div class="quick_item">
+                        <button type="button" class="quick_open_btn" title="관련 링크 레이어 열기"><span><em>군포시 행정복지센터</em></span></button>    <!--//quick_open_btn-->
+                        <div class="quick_layer">
+                            <div class="layer_list" tabindex="0">
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                            </div>    <!--//layer_list-->
+                        </div>    <!--//quick_layer-->
+                    </div>    <!--//quick_item-->
+                    <div class="quick_item">
+                        <button type="button" class="quick_open_btn" title="관련 링크 레이어 열기"><span><em>군포시 주요기관</em></span></button>    <!--//quick_open_btn-->
+                        <div class="quick_layer">
+                            <div class="layer_list" tabindex="0">
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                            </div>    <!--//layer_list-->
+                        </div>    <!--//quick_layer-->
+                    </div>    <!--//quick_item-->
+                    <div class="quick_item">
+                        <button type="button" class="quick_open_btn" title="관련 링크 레이어 열기"><span><em>관련사이트</em></span></button>    <!--//quick_open_btn-->
+                        <div class="quick_layer">
+                            <div class="layer_list" tabindex="0">
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                            </div>    <!--//layer_list-->
+                        </div>    <!--//quick_layer-->
+                    </div>    <!--//quick_item-->
+                    <div class="quick_item">
+                        <button type="button" class="quick_open_btn" title="관련 링크 레이어 열기"><span><em>유관기관</em></span></button>    <!--//quick_open_btn-->
+                        <div class="quick_layer">
+                            <div class="layer_list" tabindex="0">
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                                <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">관련기관</a></div>    <!--//layer_item-->
+                            </div>    <!--//layer_list-->
+                        </div>    <!--//quick_layer-->
+                    </div>    <!--//quick_item-->
+                </div>    <!--//quick_list-->
+            </div>    <!--//footer_quick-->
+            <div class="footer_info">
+                <div class="info_list">
+                    <div class="info_item privacy"><a href="" target="_blank" title="새창" rel="noopener noreferrer">개인정보처리방침</a></div>    <!--//info_item-->
+                    <div class="info_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">이메일주소무단수집방지정책</a></div>    <!--//info_item-->
+                    <div class="info_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer">민원전화안내</a></div>    <!--//info_item-->
+                </div>    <!--//info_list-->
+                <div class="info_bottom">
+                    <div class="bottom_item">
+                        <address class="address">[15829] 경기도 군포시 청백리길 6 (금정동)</address>    <!--//address-->
+                        <p class="copyright">
+                            COPYRIGHTⓒ GUNPO OFFICE. ALL RIGHTS RESERVED. <br />
+                            본 웹사이트는 이메일 주소가 무단 수집되는 것을 거부하며, 위반 시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
+                        </p>    <!--//copyright-->
+                    </div>    <!--//bottom_item-->
+                    <div class="bottom_item call">
+                        <div class="call_item type01">
+                            <div class="call_title">대표전화 (민원콜센터)</div>    <!--//call_title-->
+                            <div class="call_link">
+                                <a href="" rel="noopener noreferrer">031-392-300,</a>
+                                <a href="" rel="noopener noreferrer">1588-3385</a>
+                            </div>    <!--//call_link-->
+                        </div>    <!--//call_item type01-->
+                        <div class="call_item type02">
+                            <div class="call_title">야간당직 전화</div>    <!--//call_title-->
+                            <div class="call_link">
+                                <a href="" rel="noopener noreferrer">031-390-0221,</a>
+                                <a href="" rel="noopener noreferrer">0222</a>
+                            </div>    <!--//call_link-->
+                        </div>    <!--//call_item type02-->
+                    </div>    <!--//bottom_item-->
+                </div>    <!--//info_bottom-->
+            </div>    <!--//footer_info-->
+        </footer>    <!--//#footer-->
+    </div>    <!--//wrapper-->
+</body>
+</html>

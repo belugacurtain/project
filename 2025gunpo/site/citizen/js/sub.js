@@ -380,9 +380,26 @@
                 }
             });
             // 레이어창 활성화 종료
-
         });
         // CMS Tab 종료
+
+        // 브레드스크럽 로딩 시작
+        var breadcrumbArray = [];
+        $('.menu_item.active .menu_link span em').each(function(){
+            breadcrumbArray.push($(this).text());
+        });
+        for(var i=0; i<breadcrumbArray.length; i++){
+            $('.breadcrumb_list').append(
+                '<div class="breadcrumb_item">'+
+                    '<div class="breadcrumb_link">' +
+                        '<span>' +
+                            '<em>' + breadcrumbArray[i] + '</em>' +
+                        '</span>' +
+                    '</div>    <!--//breadcrumb_link-->' +
+                '</div>    <!--//breadcrumb_item-->'
+            );
+        }
+        // 브레드스크럽 로딩 종료
 
         $window.on('screen:tablet screen:phone', function (event) {
 
