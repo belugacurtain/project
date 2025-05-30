@@ -210,7 +210,7 @@
                 '(min-width:1001px)' : function () {
 
                     /* ---------- rowgroup1 시작 ---------- */
-                    gsap.to($('.service_popup'), {
+                    gsap.to($('.service .service_wrap .service_popup'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '400px 0%',
@@ -218,10 +218,10 @@
                             scrub : 2.4
                         },
                         ease : 'ease.in(1,0.3)',
-                        yPercent : -50,
+                        y : '-50%',
                         opacity : 0
                     });
-                    gsap.to($('.popup_slide_control'), {
+                    gsap.to($('.service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '400px 0%',
@@ -229,9 +229,9 @@
                             scrub : 3.6
                         },
                         ease : 'ease.in(1,0.3)',
-                        yPercent : 500
+                        y : '500%'
                     });
-                    gsap.to($('.service_quick'), {
+                    gsap.to($('.service .service_wrap .service_quick'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '400px 0%',
@@ -239,10 +239,10 @@
                             scrub : 1.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        yPercent : 100,
+                        y : '100%',
                         opacity : 0
                     });
-                    gsap.to($('.service_quick_link .quick_title'), {
+                    gsap.to($('.service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_title'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '405px 0%',
@@ -251,9 +251,9 @@
                         },
                         ease : 'ease.in(1,0.3)',
                         scale : 0,
-                        yPercent : -400
+                        y : '-400%'
                     });
-                    gsap.to($('.service_quick_link .quick_desc'), {
+                    gsap.to($('.service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_desc'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '405px 0%',
@@ -261,9 +261,9 @@
                             scrub : 1.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        xPercent : -100
+                        x : '-100%'
                     });
-                    gsap.to($('.service_quick_link .more_deco'), {
+                    gsap.to($('.service .service_wrap .service_quick .service_quick_inner .service_quick_link .more_deco'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '405px 0%',
@@ -273,13 +273,13 @@
                         ease : 'ease.in(1,0.3)',
                         transformOrigin : '100% 100%',
                         scale : 0,
-                        xPercent : 100,
+                        x : '100%',
                         opacity : 0
                     });
                     /* ---------- rowgroup1 종료 ---------- */
 
                     /* ---------- rowgroup2 시작 ---------- */
-                    gsap.from($('.survey_tab_wrap .survey_title'), {
+                    gsap.to($('.survey .survey_wrap .survey_tab_wrap .survey_title'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '110px 0%',
@@ -287,9 +287,9 @@
                             scrub : 1.02
                         },
                         ease : 'ease.in(1,0.3)',
-                        scale : 0
+                        scale : 1
                     });
-                    gsap.from($('.survey_tab_wrap .survey_tab_list'), {
+                    gsap.to($('.survey .survey_wrap .survey_tab_wrap .survey_tab_list'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '130px 0%',
@@ -297,31 +297,9 @@
                             scrub : 1.02
                         },
                         ease : 'ease.in(1,0.3)',
-                        scale : 0
+                        scale : 1
                     });
-                    gsap.from($('.survey_slide_item[data-category="3"]'), {
-                        scrollTrigger : {
-                            trigger : $('#wrapper'),
-                            start : '130px 0%',
-                            end : '350px 0%',
-                            scrub : 1.3
-                        },
-                        ease : 'ease.in(1,0.3)',
-                        opacity : 0,
-                        yPercent : 50
-                    });
-                    gsap.from($('.survey_slide_item[data-category="2"]'), {
-                        scrollTrigger : {
-                            trigger : $('#wrapper'),
-                            start : '130px 0%',
-                            end : '350px 0%',
-                            scrub : 2.5
-                        },
-                        ease : 'ease.in(1,0.3)',
-                        opacity : 0,
-                        yPercent : 50
-                    });
-                    gsap.from($('.survey_slide_item[data-category="1"]'), {
+                    gsap.to($('.survey .survey_wrap .survey_slide_wrap .survey_slide_category .survey_slide_item[data-category="1"]'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '130px 0%',
@@ -329,10 +307,42 @@
                             scrub : 3.7
                         },
                         ease : 'ease.in(1,0.3)',
-                        opacity : 0,
-                        yPercent : 50
+                        opacity : 1,
+                        y : '0%'
                     });
-                    gsap.to($('.survey_deco i.hand svg path'), {
+                    gsap.to($('.survey .survey_wrap .survey_slide_wrap .survey_slide_category .survey_slide_item[data-category="2"]'), {
+                        scrollTrigger : {
+                            trigger : $('#wrapper'),
+                            start : '130px 0%',
+                            end : '350px 0%',
+                            scrub : 2.5
+                        },
+                        ease : 'ease.in(1,0.3)',
+                        opacity : 1,
+                        y : '0%'
+                    });
+                    gsap.to($('.survey .survey_wrap .survey_slide_wrap .survey_slide_category .survey_slide_item[data-category="3"]'), {
+                        scrollTrigger : {
+                            trigger : $('#wrapper'),
+                            start : '130px 0%',
+                            end : '350px 0%',
+                            scrub : 1.3
+                        },
+                        ease : 'ease.in(1,0.3)',
+                        opacity : 1,
+                        y : '0%'
+                    });
+                    gsap.to($('.survey .survey_wrap .survey_slide_wrap .survey_slide_category .survey_slide_control'), {
+                        scrollTrigger : {
+                            trigger : $('#wrapper'),
+                            start : '110px 0%',
+                            end : '330px 0%',
+                            scrub : 1.02
+                        },
+                        ease : 'ease.in(1,0.3)',
+                        scale : 1
+                    });
+                    gsap.to($('.survey .survey_wrap .survey_deco i.hand svg path'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '400px 0%',
@@ -344,7 +354,7 @@
                             }
                         }
                     });
-                    gsap.from($('.survey_deco i.cloud01'), {
+                    gsap.to($('.survey .survey_wrap .survey_deco i.cloud01'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '500px 0%',
@@ -352,10 +362,10 @@
                             scrub : 2
                         },
                         ease : 'ease.in(1,0.3)',
-                        bottom : '-100%',
-                        left : '-30%'
+                        bottom : '0%',
+                        left : '183px'
                     });
-                    gsap.from($('.survey_deco i.cloud02'), {
+                    gsap.to($('.survey .survey_wrap .survey_deco i.cloud02'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '500px 0%',
@@ -363,10 +373,10 @@
                             scrub : 1.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        bottom : '-100%',
-                        left : '-30%'
+                        bottom : '0%',
+                        left : '0%'
                     });
-                    gsap.from($('.survey_deco i.cloud03'), {
+                    gsap.to($('.survey .survey_wrap .survey_deco i.cloud03'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '500px 0%',
@@ -374,86 +384,73 @@
                             scrub : 1.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        bottom : '-100%',
-                        right : '-30%'
+                        bottom : '0%',
+                        right : '0%'
                     });
-                    gsap.from($('.survey_deco i.star_rotate'), {
+                    gsap.to($('.survey .survey_wrap .survey_deco i.star_rotate'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '0% 0%',
                             end : '720px 0%',
-                            scrub : 4.5
+                            scrub : 3.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        scale : 0,
+                        scale : 1,
                         rotate : 1080,
-                        right : '100%',
-                        bottom : '120%'
+                        right : 'calc(((100% - 1480px) / 2) - 45px)',
+                        bottom : '-26px'
                     });
-                    gsap.from($('.survey_deco i.star_rotate i.star'), {
+                    gsap.to($('.survey .survey_wrap .survey_deco i.star_rotate i.star'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
                             start : '0% 0%',
                             end : '720px 0%',
-                            scrub : 4.5
+                            scrub : 3.5
                         },
                         ease : 'ease.in(1,0.3)',
                         rotate : -1080
                     });
-                    gsap.from($('.survey_slide_control'), {
-                        scrollTrigger : {
-                            trigger : $('#wrapper'),
-                            start : '110px 0%',
-                            end : '330px 0%',
-                            scrub : 1.02
-                        },
-                        ease : 'ease.in(1,0.3)',
-                        scale : 0
-                    });
                     /* ---------- rowgroup2 종료 ---------- */
 
                     /* ---------- rowgroup3 시작 ---------- */
-                    gsap.set($('.city_quick_link[data-city="1"]'), {
-                        transformOrigin : '0% 100%'
+                    gsap.to($('.city_quick .city_quick_wrap .city_quick_link_inner'), {
+                        transformPerspective : '3000px'
                     });
-                    gsap.set($('.city_quick_link[data-city="2"]'), {
-                        transformOrigin : '100% 100%'
-                    });
-                    gsap.from($('.city_quick_link[data-city="1"]'), {
+                    gsap.to($('.city_quick .city_quick_wrap .city_quick_link_inner'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
-                            start : '850px 0%',
-                            end : '1000px 0%',
-                            scrub : 2.6
+                            start : '350px 0%',
+                            end : '950px 0%',
+                            scrub : 3.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        rotate : 90,
-                        scale : 0,
-                        xPercent : 50,
-                        yPercent : -150
+                        rotateX : -360,
+                        rotateY : 720,
+                        scale : 1
                     });
-                    gsap.from($('.city_quick_link[data-city="2"]'), {
+                    gsap.to($('.city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link[data-city="1"]'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
-                            start : '850px 0%',
-                            end : '1000px 0%',
-                            scrub : 2.6
+                            start : '350px 0%',
+                            end : '950px 0%',
+                            scrub : 2.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        rotate : -90,
-                        scale : 0,
-                        xPercent : -50,
-                        yPercent : -150
+                        x : '0px',
+                        y : '0px',
+                        filter : 'blur(0px)'
                     });
-                    gsap.from($('.city_quick_link .link_box'), {
+                    gsap.to($('.city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link[data-city="2"]'), {
                         scrollTrigger : {
                             trigger : $('#wrapper'),
-                            start : '850px 0%',
-                            end : '1000px 0%',
-                            scrub : 1.3
+                            start : '350px 0%',
+                            end : '950px 0%',
+                            scrub : 2.5
                         },
                         ease : 'ease.in(1,0.3)',
-                        yPercent : 80
+                        x : '0px',
+                        y : '0px',
+                        filter : 'blur(0px)'
                     });
                     /* ---------- rowgroup3 종료 ---------- */
                 },
