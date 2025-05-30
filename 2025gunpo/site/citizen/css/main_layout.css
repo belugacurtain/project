@@ -3,7 +3,7 @@
 /* (주)한신정보기술 박남규 - 2025.06 */
 
 /* ---------- 메인 공통 시작 ---------- */
-.rowgroup{display:block;position:relative;width:100%;font-size:0;line-height:0;box-sizing:border-box;opacity:0;transition-property:opacity;transition-duration:2000ms;transition-timing-function:linear;}
+.rowgroup{display:block;position:relative;width:100%;font-size:0;line-height:0;box-sizing:border-box;opacity:0;transition-property:opacity;transition-duration:1000ms;transition-timing-function:linear;}
 .load_ani .rowgroup{opacity:1;}
 .rowgroup *:focus-visible{outline:2px solid #348ce5;}
 .rowgroup :before,
@@ -100,15 +100,31 @@
     .service .service_wrap .service_quick{width:460px;}
     .service .service_wrap .service_quick .service_quick_inner{height:calc((100% - 20px) / 2);}
     .service .service_wrap .service_quick .service_quick_inner + .service_quick_inner{margin-top:20px;}
-    .service .service_wrap .service_quick .service_quick_inner .service_quick_link{padding:0 210px 0 30px;}
-    .service .service_wrap .service_quick .service_quick_inner .service_quick_link:before{bottom:15px;transform-origin:100% 100%;transform:scale(0.84);}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link{padding:0 210px 0 40px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link:before{bottom:calc(50% - 80px);transform-origin:100% 100%;transform:scale(0.84);}
     .service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_title{font-size:26px;line-height:30px;}
     .service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_desc{font-size:17px;line-height:24px;}
     .service .service_wrap .service_quick .service_quick_inner .service_quick_link * + .quick_desc{margin-top:15px;}
 }
 @media all and (max-width:1240px){
     .service{padding:10px 0;}
-    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control:before{transform-origin:0% 100%;transform:scale(0.7);}
+    .service .service_wrap .service_popup{width:calc(100% - 420px);}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control:before{transform-origin:0% 100%;transform:scaleX(0.84) scaleY(0.7);}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control .control_title{padding-left:34px;font-size:17px;}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control * + .count_wrap{margin-left:0;}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control .count_wrap .count_text{min-width:22px;font-size:16px;}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control .btn_wrap .control_btn.prev,
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control .btn_wrap .control_btn.next,
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control .btn_wrap .control_btn.auto{min-width:26px;}
+    .service .service_wrap .service_quick{width:400px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link{padding:0 180px 0 40px;border-radius:25px 25px 0px 25px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link:before{bottom:calc(50% - 60px);right:1.5vw;background-size:18vw;background-position:right bottom;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_title{font-size:22px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_desc{font-size:16px;line-height:20px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link * + .quick_desc{margin-top:5px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .more_deco{width:70px;height:70px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .more_deco:before{width:40px;height:40px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .more_deco:after{bottom:calc(20px - 7px);right:calc(20px - 8px);}
 }
 @media all and (max-width:1000px){
     /* gsap 깨기 시작 */
@@ -243,8 +259,8 @@
 .survey .survey_wrap .survey_deco i.hand{z-index:2;bottom:-50px;left:calc(50% - 170px);width:1288px;height:383px;transform-origin:50% 50%;transform:rotate(-2deg);clip-path:polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);}
 .survey .survey_wrap .survey_deco i.hand svg{display:block;position:absolute;top:0;left:0;width:100%;height:100%;}
 .survey .survey_wrap .survey_deco i.hand svg.white_line{z-index:1;}
-.survey .survey_wrap .survey_deco i.hand svg.shadow_line{z-index:0;filter:blur(5px);opacity:0.1;}
-.survey .survey_wrap .survey_deco i.hand svg path{stroke-dashoffset:6231px;stroke-dasharray:6231px;transition-property:stroke-dashoffset;transition-duration:8000ms;transition-timing-function:cubic-bezier(.22, .57, .12, .96);}
+.survey .survey_wrap .survey_deco i.hand svg.shadow_line{z-index:0;filter:blur(5px);opacity:0.3;}
+.survey .survey_wrap .survey_deco i.hand svg path{stroke-dashoffset:6231px;stroke-dasharray:6231px;transition-property:stroke-dashoffset;transition-duration:12000ms;transition-timing-function:cubic-bezier(.22, .57, .12, .96);}
 .survey .survey_wrap .survey_deco i.cloud01{bottom:-100%;left:-30%;width:418px;height:170px;}
 .survey .survey_wrap .survey_deco i.cloud01:before{background-image:url(../images/main/survey_deco_cloud01.png);animation-name:move;animation-delay:200ms;}
 .survey .survey_wrap .survey_deco i.cloud02{bottom:-100%;left:-30%;width:406px;height:158px;}
