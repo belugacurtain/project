@@ -93,7 +93,22 @@
 .service .service_wrap .service_quick .service_quick_inner[data-type="2"] .service_quick_link .quick_title{color:#6e55d8;}
 .service .service_wrap .service_quick .service_quick_inner[data-type="2"] .service_quick_link .more_deco:before{background-color:#816bdf;}
 @media all and (max-width:1480px){
-
+    .service{padding:20px 0;}
+    .service .service_wrap{padding:0 3%;}
+    .service .service_wrap .service_popup{width:calc(100% - 480px);}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_list .popup_slide_item .popup_slide_link .img_wrap{min-height:0;padding:28% 0;}
+    .service .service_wrap .service_quick{width:460px;}
+    .service .service_wrap .service_quick .service_quick_inner{height:calc((100% - 20px) / 2);}
+    .service .service_wrap .service_quick .service_quick_inner + .service_quick_inner{margin-top:20px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link{padding:0 210px 0 30px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link:before{bottom:15px;transform-origin:100% 100%;transform:scale(0.84);}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_title{font-size:26px;line-height:30px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link .quick_desc{font-size:17px;line-height:24px;}
+    .service .service_wrap .service_quick .service_quick_inner .service_quick_link * + .quick_desc{margin-top:15px;}
+}
+@media all and (max-width:1240px){
+    .service{padding:10px 0;}
+    .service .service_wrap .service_popup .popup_slide_wrap .popup_slide_control:before{transform-origin:0% 100%;transform:scale(0.7);}
 }
 @media all and (max-width:1000px){
     /* gsap 깨기 시작 */
