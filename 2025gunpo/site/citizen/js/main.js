@@ -132,7 +132,13 @@
                 pauseOnSwipe : true,
                 pauseOnClick : true,
                 pauseOnDotsHover : true,
-                asNavFor : $surveyFrontSlideList
+                asNavFor : $surveyFrontSlideList,
+                responsive : [{
+                    breakpoint : 1241,
+                    settings : {
+                        slidesToShow : 1
+                    }
+                }]
             });
             $surveyBackSlideList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
                 setTimeout(function(){
@@ -175,7 +181,13 @@
                 pauseOnSwipe : true,
                 pauseOnClick : true,
                 pauseOnDotsHover : true,
-                asNavFor : $surveyBackSlideList
+                asNavFor : $surveyBackSlideList,
+                responsive : [{
+                    breakpoint : 1241,
+                    settings : {
+                        slidesToShow : 2
+                    }
+                }]
             });
             // front 슬라이드 종료
         });
