@@ -384,7 +384,21 @@
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link:hover .link_more .more_round{animation:arrow 1500ms 200ms alternate infinite cubic-bezier(.22, .57, .12, .96);}
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link:hover .link_more .more_round:before{animation:arrow 1500ms 200ms alternate infinite cubic-bezier(.22, .57, .12, .96);}
 @media all and (max-width:1480px){
-
+    .city_quick{padding:65px 0 70px;}
+    .city_quick .city_quick_wrap{padding:0 3%;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box{padding:40px 200px 60px 30px;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box * + .link_desc{margin-top:15px;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .box_deco:before{transform-origin:100% 100%;transform:scale(0.8);}
+}
+@media all and (max-width:1240px){
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link{width:calc((100% - 20px) / 2);}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box{padding:30px 160px 55px 30px;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .link_title{font-size:20px;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .link_desc{font-size:16px;line-height:24px;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box * + .link_desc{margin-top:10px;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .link_desc br{display:none;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .box_deco:before{transform:scale(0.66) translateX(45px);}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_more{left:35px;width:70px;height:70px;}
 }
 @media all and (max-width:1000px){
     /* gsap 깨기 시작 */
