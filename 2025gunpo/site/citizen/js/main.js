@@ -95,6 +95,7 @@
                 $surveySlideNext = $this.find('.survey_slide_control .next'),
                 $surveyBackSlideList = $this.find('.back_slide_list'),
                 $surveyFrontSlideList = $this.find('.front_slide_list'),
+                $surveyFrontSlideDots = $this.find('.front_slide_dots'),
                 $surveyFrontSlideItem = $surveyFrontSlideList.find('.survey_slide_item'),
                 $surveyFrontSlideItemClone = $surveyFrontSlideItem.clone();
 
@@ -162,7 +163,13 @@
             $surveyFrontSlideList.slick({
                 autoplay : false,
                 speed : 1200,
-                dots : false,
+                dots : true,
+                appendDots: $surveyFrontSlideDots,
+                dotsClass:'slick-dots clearfix',
+                customPaging : function(slider, i) {
+                    var thumb = $(slider.$slides[i]).attr('data-thum');
+                    return '<button type="button">'+(i + 1)+'<span class="skip">번 보기</span></button>';
+                },
                 draggable : true,
                 swipe : true,
                 swipeToSlide : true,
@@ -199,6 +206,12 @@
                     settings : {
                         variableWidth : true,
                         slidesToShow : 2
+                    }
+                },{
+                    breakpoint : 601,
+                    settings : {
+                        variableWidth : true,
+                        slidesToShow : 1
                     }
                 }]
             });
