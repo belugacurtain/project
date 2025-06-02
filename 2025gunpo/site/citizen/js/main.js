@@ -185,6 +185,19 @@
                 responsive : [{
                     breakpoint : 1241,
                     settings : {
+                        variableWidth : false,
+                        slidesToShow : 2
+                    }
+                },{
+                    breakpoint : 1001,
+                    settings : {
+                        variableWidth : true,
+                        slidesToShow : 3
+                    }
+                },{
+                    breakpoint : 901,
+                    settings : {
+                        variableWidth : true,
                         slidesToShow : 2
                     }
                 }]
