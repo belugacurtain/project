@@ -538,6 +538,7 @@
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link[data-city="2"]{transform:translateX(400px) translateY(-400px);filter:blur(10px);}
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link:hover{text-decoration:none;}
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box{display:block;position:relative;width:100%;border-radius:20px;padding:53px 297px 69px 59px;}
+.city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box:before{display:block;position:absolute;right:0;bottom:0;width:398px;height:130px;background-image:url(../images/main/city_quick_link_box_before.png);background-repeat:no-repeat;background-position:left top;background-size:100% 100%;content:'';opacity:0.15;}
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link[data-city="1"] .link_box{background-image:linear-gradient(to right, #f45863 0%, #f55f7f 100%);}
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link[data-city="2"] .link_box{background-image:linear-gradient(to right, #1a95dc 0%, #219ed8 100%);}
 .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .link_title{display:block;position:relative;width:100%;font-size:25px;color:#fff;line-height:30px;letter-spacing:0;font-weight:400;font-family:'JalnanGothic';word-break:keep-all;}
@@ -600,6 +601,7 @@
     .city_quick .city_quick_wrap .city_quick_link_inner{display:block;}
     .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link{display:block;width:100%;padding:4.84vw 0 3vw;}
     .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box{height:29.17vw;padding:0 37.5vw 15px 9.17vw;}
+    .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box:before{width:181px;height:58px;}
     .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .link_title{font-size:4.56vw;line-height:1.2em;}
     .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .box_deco{width:37.5vw;height:33.61vw;}
     .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_more{left:calc(9.17vw - 7px);}
@@ -609,4 +611,3 @@
     .city_quick .city_quick_wrap .city_quick_link_inner .city_quick_link .link_box .link_title{font-size:5.56vw;}
 }
 /* ---------- rowgroup3 종료 ---------- */
-
