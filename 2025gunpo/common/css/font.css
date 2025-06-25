@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* 본고딕 */
+@font-face{
+    font-family: 'NotoKr';
+    font-weight: 200;
+    src: url("../fonts/NotoSansCJKkr-Light.woff2") format('woff2'),
+    url("../fonts/NotoSansCJKkr-Light.woff") format('woff');
+}
+@font-face{
+    font-family: 'NotoKr';
+    font-weight: 300;
+    src: url("../fonts/NotoSansCJKkr-DemiLight.woff2") format('woff2'),
+    url("../fonts/NotoSansCJKkr-DemiLight.woff") format('woff');
+}
+@font-face{
+    font-family: 'NotoKr';
+    font-weight: 500;
+    src: url("../fonts/NotoSansCJKkr-Medium.woff2") format('woff2'),
+    url("../fonts/NotoSansCJKkr-Medium.woff") format('woff');
+}
+@font-face{
+    font-family: 'NotoKr';
+    font-weight: 600;
+    src: url("../fonts/NotoSansCJKkr-Bold.woff2") format('woff2'),
+    url("../fonts/NotoSansCJKkr-Bold.woff") format('woff');
+}
+
+/* 본명조 */
+@font-face{
+    font-family: 'NotoSerifKr';
+    src: url("../fonts/NotoSerifKR-Regular.woff2") format('woff2'),
+    url("../fonts/NotoSerifKR-Regular.woff") format('woff');
+}
+
+
+
+/* G마켓산스 */
+@font-face{
+    font-family: 'GmarketSans';
+    font-weight: 200;
+    src: url("../fonts/GmarketSans-Light.woff2") format('woff2'),
+    url("../fonts/GmarketSans-Light.woff") format('woff');
+}
+@font-face{
+    font-family: 'GmarketSans';
+    font-weight: 400;
+    src: url("../fonts/GmarketSans-Medium.woff2") format('woff2'),
+    url("../fonts/GmarketSans-Medium.woff") format('woff');
+}
+@font-face{
+    font-family: 'GmarketSans';
+    font-weight: 600;
+    src: url("../fonts/GmarketSans-Bold.woff2") format('woff2'),
+    url("../fonts/GmarketSans-Bold.woff") format('woff');
+}
+
+/* 조선궁서체 */
+@font-face {
+    font-family: 'ChosunGs';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 잘난체 */
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 학교안심 리코더 */
+@font-face {
+    font-family: 'TTHakgyoansimRikodeoR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimRikodeoR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Pretendard GOV - 대한민국 공공 서비스 */
+@font-face {
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 즐거운이야기체 */
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

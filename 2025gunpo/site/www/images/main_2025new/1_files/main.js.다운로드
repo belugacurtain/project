@@ -1,0 +1,567 @@
+(function($) {
+    'use strict';
+
+    $(function() {
+
+        var $window = element.$window = $(window),
+            $html = element.$html = $('html'),
+            $header = element.$header = $('#header'),
+            $container = element.$container = $('#container');
+
+        /* tabmenu */
+        var $tabs = $container.find('.tabs'),
+            $tabButton = $tabs.find('.tab_button');
+
+        $tabs.find('.tab_item:last-child').addClass('last');
+
+        $tabButton.on('click', function(event){
+            var $this = $(this),
+                tabHref = $(this).attr('href');
+
+            event.preventDefault();
+
+            $this.parent().addClass('active').siblings().removeClass('active');
+            $this.parent().siblings().children('.tab_button').attr({'aria-selected':'false'});
+            $this.attr({'aria-selected':'true'});
+            $this.parent().siblings().children('.tab_button').removeAttr('title');
+            $this.attr('title', '선택됨');
+
+            $(tabHref).addClass('active').siblings('.tab_panel').removeClass('active');
+        });
+
+        /* 비주얼 */
+        var $boardItembox = $('.visual .tab_content .tabitem');
+        $boardItembox.each(function(){
+            var $boardSlide = $(this).find('.visual_list'),
+                $SlideItem = $boardSlide.find('.visual_item'),
+                ItemLength = $SlideItem.length,
+                $SlideControl = $boardSlide.siblings('.visual_control'),
+                $SlidePage = $(this).find('.visual_count'),
+                $Total = $SlidePage.find('.visual_total');
+            $Total.text(ItemLength);
+            $boardSlide.slick({
+                autoplay : true,
+                dots:false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow : $SlideControl.find('.visual_prev'),
+                nextArrow : $SlideControl.find('.visual_next'),
+                pauseOnDotsHover : true,
+                swipe:false,
+                draggable:false,
+                //추가 기능
+                autoArrow : $SlideControl.find('.visual_auto'),
+                isRunOnLowIE : false,
+                pauseOnArrowClick : false,
+                pauseOnDirectionKeyPush : true,
+                pauseOnSwipe : true,
+                pauseOnDotsClick : true,
+                pauseText : '정지',
+                playText : '재생',
+                current : $SlidePage.find('.visual_current'),
+                total : $SlidePage.find('.visual_total'),
+                customState : function(state) {
+                    //현재 슬라이드 위치가 10보다 작을 때
+                    if(state.current < 10) {
+                        state.current = '0' + state.current;
+                    }
+                    //슬라이드 갯수가 10보다 작을 때
+                    if(state.total < 10) {
+                        state.total = '0' + state.total;
+                    }
+                    return state;
+                }
+            });
+        });
+        //비주얼팝업 tab버튼
+        $('.visual .tabbox ul li .tabbtn').on('click', function(){
+            var $this = $(this),
+                $MyParent = $this.parent('li'),
+                IsActive = $MyParent.is('.active'),
+                ParentIndex = $MyParent.index(),
+                $OtherParents = $MyParent.siblings('li'),
+                $OtherBtns = $OtherParents.find('.tabbtn'),
+                $TabContent = $this.parents('.tabbox').siblings('.tab_content'),
+                $MyCon = $TabContent.find('.tabitem').eq(ParentIndex),
+                $MySlide = $MyCon.find('.visual_list'),
+                $OtherCon = $MyCon.siblings('.tabitem');
+            if(!IsActive){
+                $OtherParents.removeClass('active');
+                $OtherBtns.removeAttr('title');
+                $MyParent.addClass('active');
+                $this.attr('title', '선택됨');
+                $OtherCon.removeClass('active');
+                $MyCon.addClass('active');
+                $MySlide.slick('setPosition');
+            };
+        });
+
+        /* 즐겨찾는 메뉴 */
+        var $shortcut = $container.find('.shortcut'),
+            $shortcutCurrent = $shortcut.find('.shortcut_current'),
+            $shortcutTotal =  $shortcut.find('.shortcut_total'),
+            $shortcutPrev = $shortcut.find('.shortcut_prev'),
+            $shortcutNext = $shortcut.find('.shortcut_next'),
+            $shortcutButton = $shortcut.find('.shortcut_button'),
+            $shortcutClose = $shortcut.find('.shortcut_close'),
+            $shortcutList = $shortcut.find('.shortcut_list'),
+            $shortcutItem = $shortcut.find('.shortcut_item'),
+            $shortcutPanel = $shortcut.find('.shortcut_panel'),
+            $shortcutForm = $shortcut.find('.shortcut_form'),
+            $shortcutReset = $shortcut.find('.shortcut_reset'),
+            $shortcutSave = $shortcut.find('.shortcut_save'),
+
+            $shortcutSelect = $shortcut.find('.shortcut_select'),
+
+            shortcutMainSlickOption ={
+                infinite: false,
+                slidesToShow: 8,
+                slidesToScroll: 8,
+                //variableWidth: true,
+                autoplay: false,
+                total: $shortcutTotal,
+                current: $shortcutCurrent,
+                arrows: true,
+                prevArrow: $shortcutPrev,
+                nextArrow: $shortcutNext,
+                customState : function(state) {
+                    var current = state.current,
+                        total = state.total;
+
+                    if(current < 10) {
+                        state.current = '0' + current;
+                    }
+                    if(total < 10) {
+                        state.total = '0' + total;
+                    }
+                    return state;
+                },
+                responsive: [{
+                    breakpoint: 1601,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 6
+                    }
+                },{
+                    breakpoint: 1001,
+                    settings: {
+                        rows: 2,
+                        slidesToShow: 4,
+                        slidesToScroll: 8
+                    }
+                },{
+                    breakpoint: 801,
+                    settings: {
+                        rows: 2,
+                        slidesToShow: 3,
+                        slidesToScroll: 6
+                    }
+                }]
+            },
+            shortcutPanelSlickOption = {
+                infinite: true,
+                rows: 2,
+                slidesPerRow: 11,
+                //slidesToShow: 11,
+                //slidesToScroll: 1,
+                autoplay: false,
+                total: $shortcutTotal,
+                current: $shortcutCurrent,
+                arrows: true,
+                prevArrow: $shortcutPrev,
+                nextArrow: $shortcutNext,
+                customState : function(state) {
+                    var current = state.current,
+                        total = state.total;
+
+                    if(current < 10) {
+                        state.current = '0' + current;
+                    }
+                    if(total < 10) {
+                        state.total = '0' + total;
+                    }
+
+                    return state;
+                },
+                responsive: [{
+                    breakpoint: 1601,
+                    settings: {
+                        slidesPerRow: 8
+                    }
+                },{
+                    breakpoint: 1301,
+                    settings: {
+                        slidesPerRow: 6
+                    }
+                },{
+                    breakpoint: 1001,
+                    settings: {
+                        rows: 2,
+                        slidesPerRow: 5
+                    }
+                },{
+                    breakpoint: 641,
+                    settings: {
+                        rows: 2,
+                        slidesPerRow: 3
+                    }
+                }]
+            }
+
+
+        $shortcutList.slick(shortcutMainSlickOption);
+
+
+
+
+        //바로가기 세팅
+        $shortcutButton.on('click', function(event) {
+
+            var $this = $(this),
+                offsetTop = $this.offset().top,
+                headerHeight = $header.height(),
+                state = $.screen.settings.state;
+
+            if(~$.inArray('tablet', state) || ~$.inArray('phone', state)) {
+                $shortcutPanel.css('top', offsetTop - headerHeight);
+            }
+
+            $html.addClass('shortcut_open');
+            //$shortcutList.slick('unslick');
+            $shortcutForm.slick(shortcutPanelSlickOption).slick('setPosition');
+        });
+
+        $window.on('screen', function(event) {
+            $shortcutList.slick('setPosition');
+            $shortcutList.slick('setPosition');
+        });
+
+        $shortcutList.find('div').removeAttr('tabindex');
+        $shortcutList.find('.shortcut_anchor').attr('tabindex','0');
+
+        $shortcutList.on("afterChange", function () {
+            $shortcutList.find('.slick-slide').removeAttr('tabindex');
+            $shortcutList.find('.shortcut_anchor').attr('tabindex','0');
+        });
+
+        var $quick = $container.find('.quick'),
+            $quickList = $quick.find('.quick_list'),
+            $quickDots = $quick.find('.quick_dots'),
+            quickSlickOption = {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                autoplay: false,
+                arrows: true,
+                dots: true,
+                appendDots: $quickDots,
+                /*
+                responsive: [{
+                    breakpoint: 641,
+                    settings: {
+                        dots: false,
+                    }
+                }]
+                */
+            };
+
+        $window.on('screen', function(event) {
+            if($window.width() < 640) {
+                $quickList.slick(quickSlickOption);
+            }else{
+                $quickList.slick('unslick');
+            }
+        });
+
+
+        /* 즐겨찾는 메뉴 */
+        var $oneline = $container.find('.oneline'),
+            $onelineList = $oneline.find('.oneline_list'),
+            $onelineCurrent = $oneline.find('.oneline_current'),
+            $onelineTotal =  $oneline.find('.oneline_total'),
+            $onelineAuto = $oneline.find('.oneline_auto'),
+            $onelinePrev = $oneline.find('.oneline_prev'),
+            $onelineNext = $oneline.find('.oneline_next');
+
+        $onelineList.slick({
+            vertical: true,
+            slidesToShow: 1,
+            autoplay: true,
+            total: $onelineTotal,
+            current: $onelineCurrent,
+            arrows: true,
+            playText: '재생',
+            pauseText: '정지',
+            autoArrow: $onelineAuto,
+            prevArrow: $onelinePrev,
+            nextArrow: $onelineNext,
+            customState : function(state) {
+                var current = state.current,
+                    total = state.total;
+
+                if(current < 10) {
+                    state.current = '0' + current;
+                }
+                if(total < 10) {
+                    state.total = '0' + total;
+                }
+                return state;
+            },
+            /*
+            responsive: [{
+                breakpoint: 641,
+                settings: {
+                    dots: false,
+                }
+            }]
+            */
+
+        });
+
+        /* 알림존 */
+        var $popupzone = $container.find('.popupzone'),
+            $popupzoneList = $popupzone.find('.popupzone_list'),
+            $popupzoneCurrent = $popupzone.find('.popupzone_current'),
+            $popupzoneTotal =  $popupzone.find('.popupzone_total'),
+            $popupzoneAuto = $popupzone.find('.popupzone_auto'),
+            $popupzonePrev = $popupzone.find('.popupzone_prev'),
+            $popupzoneNext = $popupzone.find('.popupzone_next');
+
+        $popupzoneList.slick({
+            slidesToShow: 3,
+            autoplay: true,
+            total: $popupzoneTotal,
+            current: $popupzoneCurrent,
+            arrows: true,
+            playText: '재생',
+            pauseText: '정지',
+            autoArrow: $popupzoneAuto,
+            prevArrow: $popupzonePrev,
+            nextArrow: $popupzoneNext,
+            accessibility: true,
+            customState : function(state) {
+                var current = state.current,
+                    total = state.total;
+
+                if(current < 10) {
+                    state.current = '0' + current;
+                }
+                if(total < 10) {
+                    state.total = '0' + total;
+                }
+                return state;
+            },
+            responsive: [{
+                breakpoint: 1601,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },{
+                breakpoint: 1000,
+                settings: {
+                    variableWidth: true,
+                    slidesToShow: 3,
+                }
+            },{
+                breakpoint: 801,
+                settings: {
+                    variableWidth: true,
+                    slidesToShow: 1,
+                    accessibility: true,
+                }
+            }]
+        });
+
+        $popupzoneList.find('.slick-slide').removeAttr('tabindex');
+        $popupzoneList.find('.popupzone_anchor').attr('tabindex','0');
+
+        $popupzoneList.on("afterChange", function () {
+            $popupzoneList.find('.popupzone_anchor').attr('tabindex','0');
+            setTimeout(
+                function(){ $popupzoneList.find('.slick-slide').removeAttr('tabindex'); }, 100);
+        });
+
+        /* 슬기로운 군포생활 */
+        var $service = $container.find('.service'),
+            $serviceOpen = $service.find('.service_open'),
+            $serviceHide = $service.find('.service_hide');
+
+        $serviceOpen.on('click', function(event) {
+            $html.addClass('service_open');
+            //$html.addClass('dimded').removeClass('lnb_show lnb_open');
+        });
+        $serviceHide.on('click', function(event) {
+            $html.removeClass('service_open');
+            //$html.removeClass('dimded');
+        });
+
+
+        /* 실생활 분야별 정보 */
+        var $field = $container.find('.field'),
+            $fieldList = $field.find('.field_list'),
+            $fieldCurrent = $field.find('.field_current'),
+            $fieldTotal =  $field.find('.field_total'),
+            $fieldAuto = $field.find('.field_auto'),
+            $fieldPrev = $field.find('.field_prev'),
+            $fieldNext = $field.find('.field_next');
+
+
+
+        $fieldList.slick({
+            infinite: false,
+            rows: 2,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            autoplay: false,
+            total: $fieldTotal,
+            current: $fieldCurrent,
+            arrows: true,
+            playText: '재생',
+            pauseText: '정지',
+            autoArrow: $fieldAuto,
+            prevArrow: $fieldPrev,
+            nextArrow: $fieldNext,
+            customState : function(state) {
+
+                var current = state.current,
+                    total = state.total;
+
+                if(current < 10) {
+                    state.current = '0' + current;
+                }
+                if(total < 10) {
+                    state.total = '0' + total;
+                }
+                return state;
+
+
+
+            },
+            responsive: [{
+                breakpoint: 1601,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },{
+                breakpoint: 1301,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },{
+                breakpoint: 1001,
+                settings: {
+                    rows: 1,
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }]
+        });
+        $fieldList.find('.slick-slide').removeAttr('tabindex');
+        $fieldList.find('.field_anchor').attr('tabindex','0');
+
+        /* 군포소식 */
+        var $ebook = $container.find('.ebook'),
+            $ebookList = $ebook.find('.ebook_list'),
+            $ebookPrev = $ebook.find('.ebook_prev'),
+            $ebookNext = $ebook.find('.ebook_next');
+
+        $ebookList.slick({
+            infinite: false,
+            slidesToShow: 1,
+            arrows: true,
+            prevArrow: $ebookPrev,
+            nextArrow: $ebookNext,
+            /*
+            responsive: [{
+                breakpoint: 641,
+                settings: {
+                    dots: false,
+                }
+            }]
+            */
+
+        });
+
+        /* social */
+        var $social = $container.find('.social'),
+            $socialList = $social.find('.social_list'),
+            $socialItem = $social.find('.social_item'),
+            $socialCurrent = $social.find('.social_current'),
+            $socialTotal =  $social.find('.social_total'),
+            $socialPrev = $social.find('.social_prev'),
+            $socialNext = $social.find('.social_next'),
+            $socialButton = $social.find('.select_button'),
+            $socialBlank = $social.find('.social_blank'),
+            socialSlickOption = {
+                //variableWidth: true,
+                slidesToShow: 3,
+                autoplay: false,
+                total: $socialTotal,
+                current: $socialCurrent,
+                arrows: true,
+                prevArrow: $socialPrev,
+                nextArrow: $socialNext,
+                customState : function(state) {
+                    var current = state.current,
+                        total = state.total;
+
+                    if(current < 10) {
+                        state.current = '0' + current;
+                    }
+                    if(total < 10) {
+                        state.total = '0' + total;
+                    }
+                    return state;
+                },
+                responsive: [{
+                    breakpoint: 1601,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },{
+                    breakpoint: 1001,
+                    settings: {
+
+                    }
+                },{
+                    breakpoint: 801,
+                    settings: {
+                        variableWidth: true,
+                        slidesToShow: 2,
+                    }
+                }]
+            };
+
+        $socialList.slick(socialSlickOption);
+
+        $socialList.find('.slick-slide').removeAttr('tabindex');
+        $socialList.find('.field_anchor').attr('tabindex','0');
+
+        $socialList.on("afterChange", function () {
+            $socialList.find('.social_anchor').attr('tabindex','0');
+            setTimeout(function(){ $socialList.find('.slick-slide').removeAttr('tabindex'); }, 100);
+        });
+
+        $socialButton.on('click', function() {
+            var $this = $(this),
+                socialIndex = $this.parent().index(),
+                data = $this.data();
+
+            $socialButton.removeClass('active');
+            $this.addClass('active');
+
+            $socialButton.removeAttr('title');
+            $this.attr('title', '선택됨');
+
+            $socialBlank.eq(socialIndex).addClass('active').siblings().removeClass('active');
+
+            $socialList.slick('unslick');
+            $socialItem.remove();
+            $socialList.append($socialItem.filter('[data-category="' + data.category + '"]'));
+            $socialList.slick(socialSlickOption);
+
+        }).filter('.active').triggerHandler('click');
+
+    });
+})(window.jQuery);
