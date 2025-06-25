@@ -1,6 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=333333&height=200&section=header&text=SI%20Total%20Project%202020~&fontSize=30&fontColor=ffffff)
 
 ### 2025gunpo (2025 군포시청 부분개편)
+- [대표 메인 레이아웃](https://belugacurtain.github.io/project/2025gunpo/site/www/main.html)
 - [시민참여서비스 메인 레이아웃](https://belugacurtain.github.io/project/2025gunpo/site/citizen/main.html)
 - [시민참여서비스 서브 레이아웃](https://belugacurtain.github.io/project/2025gunpo/site/citizen/sub.html)
 
