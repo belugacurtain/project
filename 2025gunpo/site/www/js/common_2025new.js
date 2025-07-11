@@ -59,9 +59,9 @@
             }
         });
         // 주요사이트 레이어 종료
-        
+
         // 모바일 lnb 열기 시작
-        $('.etc_quick_item.menu_show button.menu_button').on('click.menu', function(event) {
+        $('.etc_box .menu_show button.menu_button').on('click.menu', function(event) {
             $html.toggleClass('lnb_show');
         });
         // 모바일 lnb 열기 종료
@@ -76,6 +76,28 @@
             $html.removeClass('lnb_show');
         });
         // 모바일 lnb 닫기 종료
+
+        // 모바일 search 열기 시작
+        $(document).on('click', '.header_box .etc_fixed_item.search button.etc_fixed_btn', function(){
+            $('.header_box .etc_fixed_item.search').addClass('active');
+        });
+        $(document).on('click', '.header_box .etc_fixed_item.search button.etc_search_close', function(){
+            $('.header_box .etc_fixed_item.search').removeClass('active');
+        });
+        // 모바일 search 열기 종료
+
+        // 모바일 퀵메뉴 열기 시작
+        $(document).on('click', '.header_box .etc_fixed_item.floating button.quick_show_btn', function(){
+            if(!($('#wrapper').is('.quick_show_active'))){
+                $('#wrapper').addClass('quick_show_active');
+                $(this).attr('title', '모바일 퀵메뉴 닫기');
+            }
+            else{
+                $('#wrapper').removeClass('quick_show_active');
+                $(this).attr('title', '모바일 퀵메뉴 열기');
+            }
+        });
+        // 모바일 퀵메뉴 열기 종료
 
         // 푸터 배너 슬라이드 시작
         var $footerSlideWrap = $('.footer_slide_wrap'),
@@ -115,7 +137,7 @@
             }]
         });
         // 푸터 배너 슬라이드 종료
-        
+
         // 푸터 바로가기 시작
         $('.footer_quick_wrap button.footer_quick_open').on('click', function(){
             if( !($(this).parent('.footer_quick_item').is('.active')) ){

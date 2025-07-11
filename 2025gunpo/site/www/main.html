@@ -294,19 +294,71 @@
             <h1 class="logo">
                 <a href="/www/index.do" rel="noopener noreferrer"><span><em>GUNPO YOU 군포시</em></span></a>
             </h1>    <!--//logo-->
+            <!--// 1000px 이하에서 나타납니다. -->
             <div class="etc_box">
+                <!--// 2025. 07. 10. 클라이언트 요구로 미사용
                 <div class="etc_quick_list">
                     <div class="etc_quick_item login">
-                        <!--//
-                            '로그인' 하면 텍스트 '로그아웃' 으로 변경
-                            '로그아웃' 하면 텍스트 '로그인' 으로 변경
-                        -->
-                        <a href="/www/login.do?key=4693&amp;rurl=REFERER" class="etc_quick_link" rel="noopener noreferrer"><span><em>로그인</em></span></a>    <!--//etc_quick_link-->
-                    </div>    <!--//etc_quick_item login-->
+                        <a href="/www/login.do?key=4693&amp;rurl=REFERER" class="etc_quick_link" rel="noopener noreferrer"><span><em>로그인</em></span></a>
+                    </div>
                     <div class="etc_quick_item menu_show">
-                        <button type="button" class="etc_quick_link menu_button">메뉴열기</button>    <!--//etc_quick_link menu_button-->
-                    </div>    <!--//etc_quick_item menu_show-->
-                </div>    <!--//etc_quick_list-->
+                        <button type="button" class="etc_quick_link menu_button">메뉴열기</button>
+                    </div>
+                </div>
+                -->
+                <div class="etc_fixed_list">
+                    <div class="etc_fixed_item search">
+                        <button type="button" title="검색창 열기" class="etc_fixed_btn"><span><em>검색창 열기버튼</em></span></button>    <!--//etc_fixed_btn-->
+                        <div class="search_layer">
+                            <button type="button" title="검색창 닫기" class="etc_search_close"><span><em>검색창 닫기버튼</em></span></button>    <!--//etc_search_close-->
+                            <div class="search_type">
+                                <button type="button" title="검색창 닫기" class="etc_search_close"><span><em>검색창 닫기버튼</em></span></button>    <!--//etc_search_close-->
+                                <form action="">    <!--//action 값 꼭 채워주세요-->
+                                    <fieldset>
+                                        <legend>통합검색 입력 폼</legend>
+                                        <div class="search_type_inner">
+                                            <div class="search_input">
+                                                <div class="input_box">
+                                                    <input type="text" title="검색어 입력" placeholder="군포, 무엇이 궁금하세요?" />
+                                                </div>    <!--//input_box-->
+                                            </div>    <!--//search_input-->
+                                            <div class="search_submit_wrap">
+                                                <div class="search_submit">
+                                                    <div class="submit_box">
+                                                        <input type="submit" value="검색하기" />
+                                                    </div>    <!--//submit_box-->
+                                                </div>    <!--//search_submit-->
+                                            </div>    <!--//search_submit_wrap-->
+                                        </div>    <!--//search_type_inner-->
+                                    </fieldset>
+                                </form>
+                            </div>    <!--//search_type-->
+                        </div>    <!--//search_layer-->
+                    </div>    <!--//etc_fixed_item search-->
+                    <div class="etc_fixed_item floating">
+                        <div class="floating_item home_show">
+                            <a href="./index.do" rel="noopener noreferrer"><span><em>홈</em></span></a>
+                        </div>    <!--//floating_item home_show-->
+                        <div class="floating_item quick_show">
+                            <button type="button" title="모바일 퀵메뉴 열기" class="quick_show_btn"><span><em>QUICK MENU</em></span></button>    <!--//quick_show_btn-->
+                            <div class="quick_show_layer">
+                                <div class="quick_show_layer_list">
+                                    <div class="quick_show_layer_item" data-quick-show="1"><a href="" rel="noopener noreferrer"><span><em>새소식</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="2"><a href="" rel="noopener noreferrer"><span><em>고시공고</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="3"><a href="" rel="noopener noreferrer"><span><em>채용정보</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="4"><a href="" rel="noopener noreferrer"><span><em>조직도</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="5"><a href="" rel="noopener noreferrer"><span><em>청사안내</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="6"><a href="" rel="noopener noreferrer"><span><em>통합예약</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="7"><a href="" rel="noopener noreferrer"><span><em>시민공간</em></span></a></div>    <!--//quick_show_layer_item-->
+                                    <div class="quick_show_layer_item" data-quick-show="8"><a href="" rel="noopener noreferrer"><span><em>분야별정보</em></span></a></div>    <!--//quick_show_layer_item-->
+                                </div>    <!--//quick_show_layer_list-->
+                            </div>    <!--//quick_show_layer-->
+                        </div>    <!--//floating_item quick_show-->
+                        <div class="floating_item menu_show">
+                            <button type="button" class="menu_button"><span><em>메뉴</em></span></button>    <!--//menu_button-->
+                        </div>    <!--//floating_item menu_show-->
+                    </div>    <!--//etc_fixed_item floating-->
+                </div>    <!--//etc_fixed_list-->
             </div>    <!--//etc_box-->
         </div>    <!--//header_box-->
         <div class="lnb">
@@ -364,26 +416,20 @@
                                         </div>    <!--//depth3-->
                                     </li>    <!--//depth2_item-->
                                     <li class="depth_item depth2_item">
-                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>열린 광장</em></span></a>    <!--//depth2_text-->
-                                    </li>    <!--//depth2_item-->
-                                    <li class="depth_item depth2_item">
-                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>시민제안</em></span></a>    <!--//depth2_text-->
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>시민제안공간</em></span></a>    <!--//depth2_text-->
                                         <div class="depth depth3">
                                             <ul class="depth_list depth3_list">
                                                 <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>제안안내</em></span></a>    <!--//depth3_text-->
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>시민제안</em></span></a>    <!--//depth3_text-->
                                                 </li>    <!--//depth3_item-->
                                                 <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>공개제안</em></span></a>    <!--//depth3_text-->
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>설문조사</em></span></a>    <!--//depth3_text-->
                                                 </li>    <!--//depth3_item-->
                                                 <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>제안신청</em></span></a>    <!--//depth3_text-->
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>협치</em></span></a>    <!--//depth3_text-->
                                                 </li>    <!--//depth3_item-->
                                                 <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>나의제안보기</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>국민생각함</em></span></a>    <!--//depth3_text-->
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>주민참여예산</em></span></a>    <!--//depth3_text-->
                                                 </li>    <!--//depth3_item-->
                                             </ul>    <!--//depth3_list-->
                                         </div>    <!--//depth3-->
@@ -492,9 +538,6 @@
                                         </div>    <!--//depth3-->
                                     </li>    <!--//depth2_item-->
                                     <li class="depth_item depth2_item">
-                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>설문조사</em></span></a>    <!--//depth2_text-->
-                                    </li>    <!--//depth2_item-->
-                                    <li class="depth_item depth2_item">
                                         <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>나눔행복<sup>+</sup>동행</em></span></a>    <!--//depth2_text-->
                                         <div class="depth depth3">
                                             <ul class="depth_list depth3_list">
@@ -513,31 +556,6 @@
                                                             </li>    <!--//depth4_item-->
                                                         </ul>    <!--//depth4_list-->
                                                     </div>    <!--//depth4-->
-                                                </li>    <!--//depth3_item-->
-                                            </ul>    <!--//depth3_list-->
-                                        </div>    <!--//depth3-->
-                                    </li>    <!--//depth2_item-->
-                                    <li class="depth_item depth2_item">
-                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>협치</em></span></a>    <!--//depth2_text-->
-                                        <div class="depth depth3">
-                                            <ul class="depth_list depth3_list">
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>시민행복위원회 안내</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>시민행복위원회  회의록</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>시민행복위원회 활동사진</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>협치 공지사항</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>협치 자료실</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" target="_blank" title="새창" rel="noopener noreferrer"><span><em>군포시공익활동지원센터</em></span></a>    <!--//depth3_text-->
                                                 </li>    <!--//depth3_item-->
                                             </ul>    <!--//depth3_list-->
                                         </div>    <!--//depth3-->
@@ -562,31 +580,6 @@
                                         </div>    <!--//depth3-->
                                     </li>    <!--//depth2_item-->
                                     <li class="depth_item depth2_item">
-                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>주민참여예산</em></span></a>    <!--//depth2_text-->
-                                        <div class="depth depth3">
-                                            <ul class="depth_list depth3_list">
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>주민참여예산제 안내</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>공지사항</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>위원회 구성</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>위원회 활동현황</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>주민제안사업</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                                <li class="depth_item depth3_item">
-                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>주민제안사업투표</em></span></a>    <!--//depth3_text-->
-                                                </li>    <!--//depth3_item-->
-                                            </ul>    <!--//depth3_list-->
-                                        </div>    <!--//depth3-->
-                                    </li>    <!--//depth2_item-->
-                                    <li class="depth_item depth2_item">
                                         <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>마을공동체</em></span></a>    <!--//depth2_text-->
                                         <div class="depth depth3">
                                             <ul class="depth_list depth3_list">
@@ -601,6 +594,9 @@
                                     </li>    <!--//depth2_item-->
                                     <li class="depth_item depth2_item">
                                         <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>공공시설 개방(경기공유)</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>열린 광장</em></span></a>    <!--//depth2_text-->
                                     </li>    <!--//depth2_item-->
                                 </ul>    <!--//depth2_list-->
                             </div>    <!--//depth2-->
