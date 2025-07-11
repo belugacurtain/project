@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="사이트 제목">
+    <meta name="keywords" content="키워드 입력">
+    <meta name="description" content="사이트 상세설명">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:site_name" content="사이트명 표시">
+    <meta property="og:url" content="url 표기">
+    <meta property="og:image" content="대표 이미지 경로">
+    <meta property="og:title" content="페이지 제목 표시">
+    <meta property="og:description" content="페이지 설명 표시">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="../../site/yivc/images/common/favicon.png">
+    <link rel="icon" href="../../site/yivc/images/common/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../site/yivc/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../../site/yivc/css/main.css" />
+    <script src="../../site/yivc/js/jquery-1.12.4.HS-20200709.min.js"></script>
+    <script src="../../site/yivc/js/jquery.screen.min.custom.1.0.2.js"></script>
+    <script src="../../site/yivc/js/slick.min.custom.1.8.0.14.js"></script>
+    <script src="../../site/yivc/js/slick.extensions.min.js"></script>
+    <script src="../../site/yivc/js/common.js"></script>
+    <script src="../../site/yivc/js/splitting.min.js"></script>
+    <script src="../../site/yivc/js/gsap.min.js"></script>
+    <script src="../../site/yivc/js/ScrollTrigger.min.js"></script>
+    <script src="../../site/yivc/js/main.js"></script>
+    <title>용인시 자원봉사센터 - 메인 레이아웃</title>
+</head>
+<body id="main" class="main siteid">
+<!--// 메인레이아웃(id="main" class="main 사이트아이디") -->
+<!--// 서브레이아웃(id="sub" class="sub 사이트아이디 page현재메뉴키값") -->
+<div class="accessibility">
+    <a href="#container">본문 바로가기</a>
+</div>  <!--//accessibility-->
+<div id="wrapper">
+    <header id="header">
+        <div class="header_box">
+            <div class="header_box_inner">
+                <h1 class="logo"><a href="./index.do" rel="noopener noreferrer"><span><em>재단법인 용인시자원봉사센터 Yongin Volunteer Center</em></span></a></h1>
+                <div class="header_search">
+                    <button type="button" title="레이어 열기" class="mobile_search_open"><span><em>검색창 레이어</em></span></button>    <!--//mobile_search_open-->
+                    <div class="header_search_layer">
+                        <form action="">    <!--// action 값 꼭 채워주세요 -->
+                            <fieldset>
+                                <legend>검색입력 폼</legend>
+                                <div class="layer_inner">
+                                    <div class="form_box">
+                                        <div class="form_text">
+                                            <input type="text" id="testText" name="testText" title="검색어 입력" placeholder="검색어를 입력해주세요" class="text_type" />    <!--//text_type-->
+                                        </div>    <!--//form_text-->
+                                    </div>    <!--//form_box-->
+                                    <div class="submit_box">
+                                        <div class="form_submit">
+                                            <input type="submit" id="testSubmit" name="testSubmit" value="검색" class="submit_type" />    <!--//submit_type-->
+                                        </div>    <!--//form_submit-->
+                                    </div>    <!--//submit_box-->
+                                </div>    <!--//layer_inner-->
+                            </fieldset>
+                        </form>
+                        <button type="button" title="레이어 닫기" class="mobile_search_close"><span><em>닫기</em></span></button>    <!--//mobile_search_close-->
+                    </div>    <!--//header_search_layer-->
+                </div>    <!--//header_search-->
+                <div class="header_sns">
+                <div class="sns_quick_list">
+                    <div class="sns_quick_item blog"><a href="" class="sns_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시 자원봉사센터 블로그</em></span></a></div>    <!--//sns_quick_item blog-->
+                    <div class="sns_quick_item facebook"><a href="" class="sns_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시 자원봉사센터 페이스북</em></span></a></div>    <!--//sns_quick_item facebook-->
+                    <div class="sns_quick_item instagram"><a href="" class="sns_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시 자원봉사센터 인스타그램</em></span></a></div>    <!--//sns_quick_item instagram-->
+                    <div class="sns_quick_item youtube"><a href="" class="sns_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시 자원봉사센터 유튜브</em></span></a></div>    <!--//sns_quick_item youtube-->
+                    <div class="sns_quick_item kakao"><a href="" class="sns_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시 자원봉사센터 카카오</em></span></a></div>    <!--//sns_quick_item kakao-->
+                </div>    <!--//sns_quick_list-->
+            </div>    <!--//header_sns-->
+                <div class="menu_show">
+                <button type="button" class="menu_button">메뉴 열기</button>    <!--//menu_button-->
+            </div>    <!--//menu_show-->
+            </div>    <!--//header_box_inner-->
+        </div>    <!--//header_box-->
+        <div class="lnb">
+            <div class="lnb_top_box">
+                <div class="lnb_top_box_inner">
+                    <h1 class="logo"><a href="./index.do" rel="noopener noreferrer"><span><em>재단법인 용인시자원봉사센터 Yongin Volunteer Center</em></span></a></h1>
+                    <div class="etc_list">
+                        <div class="etc_item login">
+                            <!--//
+                                로그인 상태 때 : 텍스트 '로그아웃' 으로 변경
+                                로그아웃 상태 때 : 텍스트 '로그인' 으로 변경
+                            -->
+                            <a href="" rel="noopener noreferrer"><span><em>로그인</em></span></a>
+                        </div>    <!--//etc_item login-->
+                    </div>    <!--//etc_list-->
+                </div>    <!--//lnb_top_box_inner-->
+            </div>    <!--//lnb_top_box-->
+            <nav class="menu eachdown">
+                <h2 class="skip">메뉴</h2>    <!--//skip-->
+                <div class="depth depth1">
+                    <!--//
+                        선택된 차수 .depth_text 에 spy 클레스 부여 개발 필요
+                        선택된 차수 .depth_text 에 title="선택됨" 개발 필요
+                    -->
+                    <ul class="depth_list depth1_list">
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>센터소개</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>인사말</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>연혁</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>미션 및 경영목표</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>조직도</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>ESG 경영</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text spy" title="선택됨" rel="noopener noreferrer"><span><em>경영 전략체계</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>중점 과제</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>반부패‧청렴 윤리경영</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>인권경영</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>자체경영공시</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>임원 및 직원 현황</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>친인척 채용 현황</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>사업계획</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>예산현황</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>업무추진비 사용내역</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>복리후생비 집행현황</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>경영성과</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>결산</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>외부기관 감사결과</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>계약현황</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>통합경영공시</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>찾아오시는 길</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>자원봉사</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>자원봉사란?</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>참여절차</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>봉사활동 분야</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>봉사신청 가이드</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>단체/활동처</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>단체 등록 절차</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>활동처 안내</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>활동처 지도</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>활동처 관리자 업무</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>활동처 관리자 소통방</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>포상/혜택</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>인센티브 안내</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>할인 및 지원</em></span></a>    <!--//depth2_text-->
+                                        <div class="depth depth3">
+                                            <ul class="depth_list depth3_list">
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>종합검진 할인</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>공영주차장 할인</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>지역화폐 지급</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>독감예방접종비 지원</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>간병비 지원</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                                <li class="depth_item depth3_item">
+                                                    <a href="" class="depth_text depth3_text" rel="noopener noreferrer"><span><em>온기나눔 가맹점</em></span></a>    <!--//depth3_text-->
+                                                </li>    <!--//depth3_item-->
+                                            </ul>    <!--//depth3_list-->
+                                        </div>    <!--//depth3-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>교육 및 연수</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>포상제도</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>명예의 전당</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>센터소식</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>공지사항</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>언론보도</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>활동현황</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>홍보영상</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>센터자료실</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>서식자료실</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>온라인 교육자료</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>사진 자료실</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>자원봉사 상해보험</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                        <li class="depth_item depth1_item">
+                            <a href="" class="depth_text depth1_text" rel="noopener noreferrer"><span><em>소통광장</em></span></a>    <!--//depth1_text-->
+                            <div class="depth depth2">
+                                <ul class="depth_list depth2_list">
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>자주하는 질문</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>문의하기</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>칭찬합시다</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>부패 공익 신고센터</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>영문번역 요청</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>정보공개 요청</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                    <li class="depth_item depth2_item">
+                                        <a href="" class="depth_text depth2_text" rel="noopener noreferrer"><span><em>제안 및 건의</em></span></a>    <!--//depth2_text-->
+                                    </li>    <!--//depth2_item-->
+                                </ul>    <!--//depth2_list-->
+                            </div>    <!--//depth2-->
+                        </li>    <!--//depth1_item-->
+                    </ul>    <!--//depth1_list-->
+                </div>    <!--//depth1-->
+            </nav>    <!--//menu-->
+            <div class="menu_hide">
+                <button type="button" class="menu_button">메뉴 닫기</button>    <!--//menu_button-->
+            </div>    <!--//menu_hide-->
+        </div>    <!--//lnb-->
+        <div class="lnb_curtain">
+            <button type="button">메뉴 닫기</button>
+        </div>    <!--//lnb_curtain-->
+        <div class="header_last">
+            <div class="etc_list">
+                <div class="etc_item login">
+                    <!--//
+                        로그인 상태 때 : 텍스트 '로그아웃' 으로 변경
+                        로그아웃 상태 때 : 텍스트 '로그인' 으로 변경
+                    -->
+                    <a href="" rel="noopener noreferrer"><span><em>로그인</em></span></a>
+                </div>    <!--//etc_item login-->
+                <div class="etc_item sitemap">
+                    <a href="" title="사이트맵 바로가기" rel="noopener noreferrer"><span><em>사이트맵</em></span></a>
+                </div>    <!--//etc_item sitemap-->
+            </div>    <!--//etc_list-->
+        </div>    <!--//header_last-->
+    </header>    <!--//#header-->
+    <div id="container">
+        <main>
+            <div class="rowgroup rowgroup1">
+                <section class="visual">
+                    <h2 class="skip">비주얼 영역</h2>    <!--//skip-->
+                    <div class="visual_wrap">
+                        <div class="visual_slide_wrap">
+                            <div class="visual_slide_list">
+                                <!--// 비주얼에 링크 있으면 a.visual_slide_link -->
+                                <!--// 비주얼에 링크가 새창일 때는 a.visual_slide_link target="_blank" title="새창" -->
+                                <!--// 비주얼에 링크 없으면 div.visual_slide_link -->
+                                <div class="visual_slide_item">
+                                    <div class="visual_slide_link">
+                                        <span class="img_wrap">
+                                            <!--//
+                                                비주얼 사진 등록 경로 background-image:url(개발필요) , src="개발필요"
+                                                비주얼 사진 이미지 대체텍스트 alt="개발필요"
+                                            -->
+                                            <i style="background-image:url(../../site/yivc/images/main/visual_dummy01.jpg);" class="view_img"></i>    <!--//view_img-->
+                                            <img src="../../site/yivc/images/main/visual_dummy01.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                        </span>    <!--//img_wrap-->
+                                    </div>    <!--//visual_slide_link-->
+                                </div>    <!--//visual_slide_item-->
+                                <div class="visual_slide_item">
+                                    <a href="" class="visual_slide_link">
+                                        <span class="img_wrap">
+                                            <!--//
+                                                비주얼 사진 등록 경로 background-image:url(개발필요) , src="개발필요"
+                                                비주얼 사진 이미지 대체텍스트 alt="개발필요"
+                                            -->
+                                            <i style="background-image:url(../../site/yivc/images/main/visual_dummy02.jpg);" class="view_img"></i>    <!--//view_img-->
+                                            <img src="../../site/yivc/images/main/visual_dummy02.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                        </span>    <!--//img_wrap-->
+                                    </a>    <!--//visual_slide_link-->
+                                </div>    <!--//visual_slide_item-->
+                            </div>    <!--//visual_slide_list-->
+                        </div>    <!--//visual_slide_wrap-->
+                        <div class="visual_title_wrap">
+                            <div class="visual_title_list">
+                                <div class="visual_title_item">
+                                    <div class="top_title word-split" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.2">여러분의 작은 손길이</div>    <!--//top_title-->
+                                    <div class="bottom_title word-split" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.4">희망을 만듭니다</div>    <!--//bottom_title-->
+                                </div>    <!--//visual_title_item-->
+                            </div>    <!--//visual_title_list-->
+                            <div class="visual_slide_control">
+                                <div class="nav_box"></div>    <!--//nav_box-->
+                                <div class="btn_box">
+                                    <button type="button" class="control_btn prev">이전 슬라이드 보기</button>    <!--//control_btn prev-->
+                                    <button type="button" class="control_btn next">다음 슬라이드 보기</button>    <!--//control_btn next-->
+                                    <button type="button" class="control_btn auto"></button>    <!--//control_btn auto-->
+                                </div>    <!--//btn_box-->
+                            </div>    <!--//visual_slide_control-->
+                        </div>    <!--//visual_title_wrap-->
+                        <div class="visual_quick_wrap">
+                            <div class="visual_quick_list">
+                                <div class="visual_quick_item" data-quick="1">
+                                    <a href="" class="visual_quick_link" rel="noopener noreferrer">
+                                        <span class="link_inner"><em>자원봉사란?</em></span>    <!--//link_inner-->
+                                    </a>    <!--//visual_quick_link-->
+                                </div>    <!--//visual_quick_item-->
+                                <div class="visual_quick_item" data-quick="2">
+                                    <a href="" class="visual_quick_link" rel="noopener noreferrer">
+                                        <span class="link_inner"><em>인센티브제</em></span>    <!--//link_inner-->
+                                    </a>    <!--//visual_quick_link-->
+                                </div>    <!--//visual_quick_item-->
+                                <div class="visual_quick_item" data-quick="3">
+                                    <a href="" class="visual_quick_link" rel="noopener noreferrer">
+                                        <span class="link_inner"><em>할인 가맹점</em></span>    <!--//link_inner-->
+                                    </a>    <!--//visual_quick_link-->
+                                </div>    <!--//visual_quick_item-->
+                                <div class="visual_quick_item" data-quick="4">
+                                    <a href="" class="visual_quick_link" rel="noopener noreferrer">
+                                        <span class="link_inner"><em>명예의 전당</em></span>    <!--//link_inner-->
+                                    </a>    <!--//visual_quick_link-->
+                                </div>    <!--//visual_quick_item-->
+                                <div class="visual_quick_item" data-quick="5">
+                                    <a href="" class="visual_quick_link" rel="noopener noreferrer">
+                                        <span class="link_inner"><em>자원봉사 활동처</em></span>    <!--//link_inner-->
+                                    </a>    <!--//visual_quick_link-->
+                                </div>    <!--//visual_quick_item-->
+                                <div class="visual_quick_item" data-quick="6">
+                                    <a href="" class="visual_quick_link" rel="noopener noreferrer">
+                                        <span class="link_inner"><em>1365 가이드</em></span>    <!--//link_inner-->
+                                    </a>    <!--//visual_quick_link-->
+                                </div>    <!--//visual_quick_item-->
+                            </div>    <!--//visual_quick_list-->
+                        </div>    <!--//visual_quick_wrap-->
+                    </div>    <!--//visual_wrap-->
+                </section>    <!--//visual-->
+            </div>    <!--//rowgroup1-->
+            <div class="rowgroup rowgroup2">
+                <section class="service">
+                    <h2 class="skip">봉사현황 영역</h2>    <!--//skip-->
+                    
+                    <svg class="service_gra_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 73">
+                        <defs>
+                            <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="countType01">
+                                <stop offset="0%" style="stop-color:#f45b83;"></stop>
+                                <stop offset="100%" style="stop-color:#ffc96a;"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>    <!--//service_gra_svg-->
+                    <svg class="service_gra_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 73">
+                        <defs>
+                            <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="countType02">
+                                <stop offset="0%" style="stop-color:#37d2c5;"></stop>
+                                <stop offset="100%" style="stop-color:#ffc96a;"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>    <!--//service_gra_svg-->
+                    <svg class="service_gra_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 73">
+                        <defs>
+                            <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="countType03">
+                                <stop offset="0%" style="stop-color:#db70f2;"></stop>
+                                <stop offset="100%" style="stop-color:#ffc96a;"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>    <!--//service_gra_svg-->
+                    
+                    
+                    
+                    
+                    <div class="service_wrap">
+                        <div class="service_title_box">
+                            <div class="top_title">나눔으로 소통하는</div>    <!--//top_title-->
+                            <div class="bottom_title">용인시자원봉사센터</div>    <!--//bottom_title-->
+                            <div class="desc">
+                                <i class="deco"><i></i></i>    <!--//deco-->
+                                <span><em>용인시자원봉사센터와 같이 함께해서 <br />행복해요~♡</em></span>
+                            </div>    <!--//desc-->
+                        </div>    <!--//service_title_box-->
+                        
+                        <div class="service_count_box">
+                            <div class="service_count_list">
+                                <div class="service_count_item" data-count="1">
+                                    <div class="service_count_inner">
+                                        <span class="category">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 73">
+                                                <g>
+                                                    <path d="M 186 35 L 186 12 Q 185 3 176 2 L 12 2 Q 3 3 2 12 L 2 49 Q 3 58 12 59 L 138 59 L 138 71 L 156 59" stroke="url(#countType01)" stroke-width="2" fill="rgba(0, 0, 0, 0)" stroke-linecap="round" />
+                                                </g>
+                                            </svg>
+                                            <em class="category_text">개인자원봉사자</em>    <!--//category_text-->
+                                        </span>    <!--//category-->
+                                        <span class="count_text">
+                                            <!--// data-number 값에 현재 각 봉사 카테고리명 숫자 개발 필요 -->
+                                            <em class="count_number" data-number="321456"></em>    <!--//count_number-->
+                                            <em class="count_unit">명</em>    <!--//count_unit-->
+                                        </span>    <!--//count_text-->
+                                    </div>    <!--//service_count_inner-->
+                                </div>    <!--//service_count_item-->
+                                <div class="service_count_item" data-count="2">
+                                    <div class="service_count_inner">
+                                        <span class="category">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 73">
+                                                <g>
+                                                    <path d="M 186 35 L 186 12 Q 185 3 176 2 L 12 2 Q 3 3 2 12 L 2 49 Q 3 58 12 59 L 138 59 L 138 71 L 156 59" stroke="url(#countType02)" stroke-width="2" fill="rgba(0, 0, 0, 0)" stroke-linecap="round" />
+                                                </g>
+                                            </svg>
+                                            <em class="category_text">자원봉사단체</em>    <!--//category_text-->
+                                        </span>    <!--//category-->
+                                        <span class="count_text">
+                                            <!--// data-number 값에 현재 각 봉사 카테고리명 숫자 개발 필요 -->
+                                            <em class="count_number" data-number="876"></em>    <!--//count_number-->
+                                            <em class="count_unit">개</em>    <!--//count_unit-->
+                                        </span>    <!--//count_text-->
+                                    </div>    <!--//service_count_inner-->
+                                </div>    <!--//service_count_item-->
+                                <div class="service_count_item" data-count="3">
+                                    <div class="service_count_inner">
+                                        <span class="category">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 73">
+                                                <g>
+                                                    <path d="M 186 35 L 186 12 Q 185 3 176 2 L 12 2 Q 3 3 2 12 L 2 49 Q 3 58 12 59 L 138 59 L 138 71 L 156 59" stroke="url(#countType03)" stroke-width="2" fill="rgba(0, 0, 0, 0)" stroke-linecap="round" />
+                                                </g>
+                                            </svg>
+                                            <em class="category_text">자원봉사활동처</em>    <!--//category_text-->
+                                        </span>    <!--//category-->
+                                        <span class="count_text">
+                                            <!--// data-number 값에 현재 각 봉사 카테고리명 숫자 개발 필요 -->
+                                            <em class="count_number" data-number="1234"></em>    <!--//count_number-->
+                                            <em class="count_unit">개</em>    <!--//count_unit-->
+                                        </span>    <!--//count_text-->
+                                    </div>    <!--//service_count_inner-->
+                                </div>    <!--//service_count_item-->
+                            </div>    <!--//service_count_list-->
+                        </div>    <!--//service_count_box-->
+                    </div>    <!--//service_wrap-->
+                </section>    <!--//service-->
+                <section class="sns_story">
+                    <h2 class="skip">sns 소식 영역</h2>    <!--//skip-->
+                    <div class="sns_story_wrap">
+                        <div class="sns_story_slide_wrap">
+                            <div class="sns_story_slide_list">
+                                <div class="sns_story_slide_item" data-sns="facebook">
+                                    <a href="" target="_blank" title="새창" class="sns_story_slide_link" rel="noopener noreferrer">
+                                        <span class="img_wrap">
+                                            <!--//
+                                                해당 sns 썸네일 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                해당 sns 썸네일 사진 이미지 대체텍스트 or 해당 sns 게시글의 제목이나 내용들 alt="개발필요"
+                                            -->
+                                            <i style="background-image:url(../../site/yivc/images/main/sns_dummy01.jpg);" class="view_img"></i>    <!--//view_img-->
+                                            <img src="../../site/yivc/images/main/sns_dummy01.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                        </span>    <!--//img_wrap-->
+                                        <span class="text_wrap">
+                                            <span class="ymd">
+                                                <span class="day">02</span>    <!--//day-->
+                                                <span class="year_month">2025-06</span>    <!--//year_month-->
+                                            </span>    <!--//ymd-->
+                                            <span class="title">6월 5일 세계 환경의 날</span>    <!--//title-->
+                                        </span>    <!--//text_wrap-->
+                                    </a>    <!--//sns_story_slide_link-->
+                                </div>    <!--//sns_story_slide_item-->
+                                <div class="sns_story_slide_item" data-sns="facebook">
+                                    <a href="" target="_blank" title="새창" class="sns_story_slide_link" rel="noopener noreferrer">
+                                        <span class="img_wrap">
+                                            <!--//
+                                                해당 sns 썸네일 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                해당 sns 썸네일 사진 이미지 대체텍스트 or 해당 sns 게시글의 제목이나 내용들 alt="개발필요"
+                                            -->
+                                            <i style="background-image:url(../../site/yivc/images/main/sns_dummy01.jpg);" class="view_img"></i>    <!--//view_img-->
+                                            <img src="../../site/yivc/images/main/sns_dummy01.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                        </span>    <!--//img_wrap-->
+                                        <span class="text_wrap">
+                                            <span class="ymd">
+                                                <span class="day">07</span>    <!--//day-->
+                                                <span class="year_month">2025-05</span>    <!--//year_month-->
+                                            </span>    <!--//ymd-->
+                                            <span class="title">6월 5일 세계 환경의 날</span>    <!--//title-->
+                                        </span>    <!--//text_wrap-->
+                                    </a>    <!--//sns_story_slide_link-->
+                                </div>    <!--//sns_story_slide_item-->
+                                <div class="sns_story_slide_item" data-sns="facebook">
+                                    <a href="" target="_blank" title="새창" class="sns_story_slide_link" rel="noopener noreferrer">
+                                        <span class="img_wrap">
+                                            <!--//
+                                                해당 sns 썸네일 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                해당 sns 썸네일 사진 이미지 대체텍스트 or 해당 sns 게시글의 제목이나 내용들 alt="개발필요"
+                                            -->
+                                            <i style="background-image:url(../../site/yivc/images/main/sns_dummy01.jpg);" class="view_img"></i>    <!--//view_img-->
+                                            <img src="../../site/yivc/images/main/sns_dummy01.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                        </span>    <!--//img_wrap-->
+                                        <span class="text_wrap">
+                                            <span class="ymd">
+                                                <span class="day">22</span>    <!--//day-->
+                                                <span class="year_month">2025-04</span>    <!--//year_month-->
+                                            </span>    <!--//ymd-->
+                                            <span class="title">6월 5일 세계 환경의 날</span>    <!--//title-->
+                                        </span>    <!--//text_wrap-->
+                                    </a>    <!--//sns_story_slide_link-->
+                                </div>    <!--//sns_story_slide_item-->
+                                <div class="sns_story_slide_item" data-sns="facebook">
+                                    <a href="" target="_blank" title="새창" class="sns_story_slide_link" rel="noopener noreferrer">
+                                        <span class="img_wrap">
+                                            <!--//
+                                                해당 sns 썸네일 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                해당 sns 썸네일 사진 이미지 대체텍스트 or 해당 sns 게시글의 제목이나 내용들 alt="개발필요"
+                                            -->
+                                            <i style="background-image:url(../../site/yivc/images/main/sns_dummy01.jpg);" class="view_img"></i>    <!--//view_img-->
+                                            <img src="../../site/yivc/images/main/sns_dummy01.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                        </span>    <!--//img_wrap-->
+                                        <span class="text_wrap">
+                                            <span class="ymd">
+                                                <span class="day">01</span>    <!--//day-->
+                                                <span class="year_month">2025-03</span>    <!--//year_month-->
+                                            </span>    <!--//ymd-->
+                                            <span class="title">6월 5일 세계 환경의 날</span>    <!--//title-->
+                                        </span>    <!--//text_wrap-->
+                                    </a>    <!--//sns_story_slide_link-->
+                                </div>    <!--//sns_story_slide_item-->
+                            </div>    <!--//sns_story_slide_list-->
+                            <div class="sns_story_slide_control">
+                                <button type="button" class="control_btn prev">이전 슬라이드 보기</button>    <!--//control_btn prev-->
+                                <button type="button" class="control_btn next">다음 슬라이드 보기</button>    <!--//control_btn next-->
+                            </div>    <!--//sns_story_slide_control-->
+                        </div>    <!--//sns_story_slide_wrap-->
+                    </div>    <!--//sns_story_wrap-->
+                </section>    <!--//sns_story-->
+            </div>    <!--//rowgroup2-->
+            <div class="rowgroup rowgroup3">
+                <section class="board">
+                    <h2 class="skip">게시판 영역</h2>    <!--//skip-->
+                    <div class="board_wrap">
+                        <div class="section_title">공지/소식</div>    <!--//section_title-->
+                        <div class="section_slide_wrap" data-type="board">
+                            <div class="section_slide_list">
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">공지/소식 게시글 제목</em>    <!--//title_text-->
+                                                <!--// 새로운 게시글일 때 아래의 .new 마크업 표출 -->
+                                                <em class="new">new</em>    <!--//new-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">yyyy-mm-dd</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목</em>    <!--//title_text-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">2025-06-25</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목</em>    <!--//title_text-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">2025-06-24</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목 공지/소식 게시글 제목</em>    <!--//title_text-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">2025-06-23</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                            </div>    <!--//section_slide_list-->
+                            <div class="section_slide_more">
+                                <a href="" class="more_link" title="공지/소식 더보기" rel="noopener noreferrer"><span><em>더보기</em></span></a>    <!--//more_link-->
+                            </div>    <!--//section_slide_more-->
+                        </div>    <!--//section_slide_wrap-->
+                    </div>    <!--//board_wrap-->
+                </section>    <!--//board-->
+                <section class="news">
+                    <h2 class="skip">보도자료 영역</h2>    <!--//skip-->
+                    <div class="news_wrap">
+                        <div class="section_title">보도자료</div>    <!--//section_title-->
+                        <div class="section_slide_wrap" data-type="news">
+                            <div class="section_slide_list">
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">보도자료 게시글 제목</em>    <!--//title_text-->
+                                                <!--// 새로운 게시글일 때 아래의 .new 마크업 표출 -->
+                                                <em class="new">new</em>    <!--//new-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">yyyy-mm-dd</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목</em>    <!--//title_text-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">2025-06-25</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목</em>    <!--//title_text-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">2025-06-24</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                                <div class="section_slide_item">
+                                    <a href="" class="section_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="link_title">
+                                                <em class="title_text">보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목 보도자료 게시글 제목</em>    <!--//title_text-->
+                                            </span>    <!--//link_title-->
+                                            <span class="link_ymd">2025-06-23</span>    <!--//link_ymd-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//section_slide_link-->
+                                </div>    <!--//section_slide_item-->
+                            </div>    <!--//section_slide_list-->
+                            <div class="section_slide_more">
+                                <a href="" class="more_link" title="보도자료 더보기" rel="noopener noreferrer"><span><em>더보기</em></span></a>    <!--//more_link-->
+                            </div>    <!--//section_slide_more-->
+                        </div>    <!--//section_slide_wrap-->
+                    </div>    <!--//news_wrap-->
+                </section>    <!--//news-->
+            </div>    <!--//rowgroup3-->
+            <div class="rowgroup rowgroup4">
+                <section class="story">
+                    <h2 class="skip">봉사활동 스토리 영역</h2>    <!--//skip-->
+                    <div class="story_wrap">
+                        <div class="story_title_box">
+                            <div class="story_title">봉사활동 스토리</div>    <!--//story_title-->
+                            <div class="story_desc">봉사로 이어지는 따뜻한 연결, 봉사로 세상을 밝히다!</div>    <!--//story_desc-->
+                            <div class="story_more">
+                                <a href="" class="more_link" title="봉사활동 스토리 더보기" rel="noopener noreferrer"><span><em>더보기</em></span></a>    <!--//more_link-->
+                            </div>    <!--//story_more-->
+                        </div>    <!--//story_title_box-->
+                        <div class="story_slide_wrap">
+                            <div class="story_slide_list">
+                                <div class="story_slide_item">
+                                    <a href="" class="story_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="img_wrap">
+                                                <!--//
+                                                    봉사활동 스토리 게시물 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                    봉사활동 스토리 게시물 사진 이미지 대체텍스트 or 해당 게시글의 제목이나 내용들 alt="개발필요"
+                                                -->
+                                                <i style="background-image:url(../../site/yivc/images/main/story_dummy01.jpg);" class="view_img"></i>    <!--//view_img-->
+                                                <img src="../../site/yivc/images/main/story_dummy01.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                            </span>    <!--//img_wrap-->
+                                            <span class="text_wrap">
+                                                <span class="title">
+                                                    <em class="text">유소년 축구대회, 장애인·비장애인이 함께하는 걷기대회 재능나눔 부스 운영</em>    <!--//text-->
+                                                    <i class="more_icon"></i>    <!--//more_icon-->
+                                                </span>    <!--//title-->
+                                                <span class="ymd">2025-05-23</span>    <!--//ymd-->
+                                            </span>    <!--//text_wrap-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//story_slide_link-->
+                                </div>    <!--//story_slide_item-->
+                                <div class="story_slide_item">
+                                    <a href="" class="story_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="img_wrap">
+                                                <!--//
+                                                    봉사활동 스토리 게시물 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                    봉사활동 스토리 게시물 사진 이미지 대체텍스트 or 해당 게시글의 제목이나 내용들 alt="개발필요"
+                                                -->
+                                                <i style="background-image:url(../../site/yivc/images/main/story_dummy02.jpg);" class="view_img"></i>    <!--//view_img-->
+                                                <img src="../../site/yivc/images/main/story_dummy02.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                            </span>    <!--//img_wrap-->
+                                            <span class="text_wrap">
+                                                <span class="title">
+                                                    <em class="text">2025년 찾아가는 재난안전 및 응급처치 교실</em>    <!--//text-->
+                                                    <i class="more_icon"></i>    <!--//more_icon-->
+                                                </span>    <!--//title-->
+                                                <span class="ymd">2025-05-22</span>    <!--//ymd-->
+                                            </span>    <!--//text_wrap-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//story_slide_link-->
+                                </div>    <!--//story_slide_item-->
+                                <div class="story_slide_item">
+                                    <a href="" class="story_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="img_wrap">
+                                                <!--//
+                                                    봉사활동 스토리 게시물 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                    봉사활동 스토리 게시물 사진 이미지 대체텍스트 or 해당 게시글의 제목이나 내용들 alt="개발필요"
+                                                -->
+                                                <i style="background-image:url(../../site/yivc/images/main/story_dummy03.jpg);" class="view_img"></i>    <!--//view_img-->
+                                                <img src="../../site/yivc/images/main/story_dummy03.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                            </span>    <!--//img_wrap-->
+                                            <span class="text_wrap">
+                                                <span class="title">
+                                                    <em class="text">용인시자원봉사센터, 지역 6개 대학과 자원봉사 업무협약식 업무협약식 업무협약식 업무협약식 업무협약식 업무협약식</em>    <!--//text-->
+                                                    <i class="more_icon"></i>    <!--//more_icon-->
+                                                </span>    <!--//title-->
+                                                <span class="ymd">2025-05-22</span>    <!--//ymd-->
+                                            </span>    <!--//text_wrap-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//story_slide_link-->
+                                </div>    <!--//story_slide_item-->
+                                <div class="story_slide_item">
+                                    <a href="" class="story_slide_link" rel="noopener noreferrer">
+                                        <span class="link_inner">
+                                            <span class="img_wrap">
+                                                <!--//
+                                                    봉사활동 스토리 게시물 사진 경로 background-image:url(개발필요) , src="개발필요"
+                                                    봉사활동 스토리 게시물 사진 이미지 대체텍스트 or 해당 게시글의 제목이나 내용들 alt="개발필요"
+                                                -->
+                                                <i style="background-image:url(../../site/yivc/images/main/story_dummy04.jpg);" class="view_img"></i>    <!--//view_img-->
+                                                <img src="../../site/yivc/images/main/story_dummy04.jpg" alt="" class="hidden_img" />    <!--//hidden_img-->
+                                            </span>    <!--//img_wrap-->
+                                            <span class="text_wrap">
+                                                <span class="title">
+                                                    <em class="text">용인특례시 산하기관 사회공헌활동 탄소중립 녹지 녹지 녹지 녹지 녹지 녹지 녹지 녹지 녹지</em>    <!--//text-->
+                                                    <i class="more_icon"></i>    <!--//more_icon-->
+                                                </span>    <!--//title-->
+                                                <span class="ymd">2025-05-22</span>    <!--//ymd-->
+                                            </span>    <!--//text_wrap-->
+                                        </span>    <!--//link_inner-->
+                                    </a>    <!--//story_slide_link-->
+                                </div>    <!--//story_slide_item-->
+                            </div>    <!--//story_slide_list-->
+                            <div class="story_slide_control">
+                                <button type="button" class="control_btn prev">이전 슬라이드 보기</button>    <!--//control_btn prev-->
+                                <button type="button" class="control_btn next">다음 슬라이드 보기</button>    <!--//control_btn next-->
+                            </div>    <!--//story_slide_control-->
+                        </div>    <!--//story_slide_wrap-->
+                        <div class="story_clone_slide_wrap">
+                            <div class="story_clone_slide_list"></div>    <!--//story_clone_slide_list-->
+                        </div>    <!--//story_clone_slide_wrap-->
+                    </div>    <!--//story_wrap-->
+                </section>    <!--//story-->
+            </div>    <!--//rowgroup4-->
+        </main>
+    </div>    <!--//#container-->
+    <footer id="footer">
+        <div class="footer_quick">
+            <div class="footer_quick_list">
+                <div class="footer_quick_item layer_type">
+                    <button type="button" title="퀵 링크 레이어 열기" class="footer_quick_link"><span><em>자원봉사</em></span></button>    <!--//footer_quick_link-->
+                    <div class="layer_inner">
+                        <div class="layer_list">
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>1365자원봉사포털</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>한국자원봉사센터협회</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>사회복지인증시스템</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>청소년자원봉사</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>교육부 NEIS</em></span></a></div>    <!--//layer_item-->
+                        </div>    <!--//layer_list-->
+                    </div>    <!--//layer_inner-->
+                </div>    <!--//footer_quick_item layer_type-->
+                <div class="footer_quick_item layer_type">
+                    <button type="button" title="퀵 링크 레이어 열기" class="footer_quick_link"><span><em>용인시 유관기관</em></span></button>    <!--//footer_quick_link-->
+                    <div class="layer_inner">
+                        <div class="layer_list">
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시체육회</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시축구센터</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시인재육성재단</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인도시공사</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시디지털산업진흥원</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인문화재단</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인시청소년미래재단</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>청소년수련관</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>청소년수련원</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>용인자연휴양림</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>더미 링크1</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>더미 링크2</em></span></a></div>    <!--//layer_item-->
+                        </div>    <!--//layer_list-->
+                    </div>    <!--//layer_inner-->
+                </div>    <!--//footer_quick_item layer_type-->
+                <div class="footer_quick_item layer_type">
+                    <button type="button" title="퀵 링크 레이어 열기" class="footer_quick_link"><span><em>경기도 시군센터</em></span></button>    <!--//footer_quick_link-->
+                    <div class="layer_inner">
+                        <div class="layer_list">
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>경기도센터</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>가평군</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>고양시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>과천시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>광명시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>광주시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>구리시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>군포시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>김포시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>남양주시</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>더미 링크1</em></span></a></div>    <!--//layer_item-->
+                            <div class="layer_item"><a href="" target="_blank" title="새창" rel="noopener noreferrer"><span><em>더미 링크2</em></span></a></div>    <!--//layer_item-->
+                        </div>    <!--//layer_list-->
+                    </div>    <!--//layer_inner-->
+                </div>    <!--//footer_quick_item layer_type-->
+                <div class="footer_quick_item link_type">
+                    <a href="" class="footer_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>국민권익위원회</em></span></a>    <!--//footer_quick_link-->
+                </div>    <!--//footer_quick_item link_type-->
+                <div class="footer_quick_item link_type">
+                    <a href="" class="footer_quick_link" target="_blank" title="새창" rel="noopener noreferrer"><span><em>클린아이 잡플러스</em></span></a>    <!--//footer_quick_link-->
+                </div>    <!--//footer_quick_item link_type-->
+            </div>    <!--//footer_quick_list-->
+        </div>    <!--//footer_quick-->
+        <div class="footer_info">
+            <div class="info_item">
+                <div class="info_text_list">
+                    <div class="info_text_item privacy"><a href="" rel="noopener noreferrer"><span><em>개인정보 취급방침</em></span></a></div>    <!--//info_text_item-->
+                    <div class="info_text_item"><a href="" rel="noopener noreferrer"><span><em>이메일무단수집거부</em></span></a></div>    <!--//info_text_item-->
+                    <div class="info_text_item"><a href="" rel="noopener noreferrer"><span><em>사이트맵</em></span></a></div>    <!--//info_text_item-->
+                    <div class="info_text_item"><a href="" rel="noopener noreferrer"><span><em>찾아오시는길</em></span></a></div>    <!--//info_text_item-->
+                </div>    <!--//info_text_list-->
+            </div>    <!--//info_item-->
+            <div class="info_item">
+                <div class="info_etc_list">
+                    <div class="info_etc_item">
+                        <div class="etc_title">사단법인 용인시자원봉사센터</div>    <!--//etc_title-->
+                        <div class="etc_title">고유번호</div>    <!--//etc_title-->
+                        <div class="etc_text">142-82-03699</div>    <!--//etc_text-->
+                    </div>    <!--//info_etc_item-->
+                    <div class="info_etc_item">
+                        <div class="etc_title">주소</div>    <!--//etc_title-->
+                        <div class="etc_text">(17019) 경기도 용인시 처인구 중부대로 1199 <br class="mobile_br" />용인시청 제2별관</div>    <!--//etc_text-->
+                    </div>    <!--//info_etc_item-->
+                    <div class="info_etc_item">
+                        <div class="etc_title">고객지원메일</div>    <!--//etc_title-->
+                        <div class="etc_text">yivc7757@v1365.or.kr</div>    <!--//etc_text-->
+                        <br class="mobile_br" />
+                        <div class="etc_title">팩스</div>    <!--//etc_title-->
+                        <div class="etc_text">031-629-7757</div>    <!--//etc_text-->
+                        <div class="etc_title">전화번호</div>    <!--//etc_title-->
+                        <div class="etc_text">1544-7115</div>    <!--//etc_text-->
+                    </div>    <!--//info_etc_item-->
+                    <div class="info_etc_item">
+                        <div class="etc_title">업무시간</div>    <!--//etc_title-->
+                        <div class="etc_text">평일 9:00 ~ 18:00 (주말 및 공휴일 휴무 / <br class="mobile_br" />점심시간 12시~13시)</div>    <!--//etc_text-->
+                    </div>    <!--//info_etc_item-->
+                </div>    <!--//info_etc_list-->
+            </div>    <!--//info_item-->
+        </div>    <!--//footer_info-->
+        <div class="footer_bottom">
+            <p>재단법인 용인시자원봉사센터는 용인시 자원봉사자 활동 지원을 <br class="mobile_br" />통해 다함께 행복하고 살기 좋은 도시를 만들고자 노력하고 있습니다.</p>
+            <p class="copyright">Copyright © YONGIN1365.OR.KR, All rights reserved.</p>    <!--//copyright-->
+        </div>    <!--//footer_bottom-->
+        <div class="footer_top">
+            <button type="button">맨위로</button>    <!--//footer_top-->
+        </div>    <!--//footer_top-->
+    </footer>    <!--//#footer-->
+</div>    <!--//#wrapper-->
+</body>
+</html>
