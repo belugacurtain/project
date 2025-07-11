@@ -3,11 +3,11 @@
 /* (주)한신정보기술 박남규 - 2025.07 */
 
 /* 기본세팅 시작 */
-body{position:relative;font-size:18px;color:#000;line-height:28px;letter-spacing:-0.02em;font-weight:400;font-family:'Score','Malgun Gothic','맑은 고딕',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;overflow-x:hidden;}
-a:link{color:#000;text-decoration:none;}
-a:visited{color:#000;text-decoration:none;}
-a:hover{color:#000;text-decoration:underline;}
-a:active{color:#000;text-decoration:underline;}
+body{position:relative;font-size:16px;color:#444;line-height:28px;letter-spacing:-0.02em;font-weight:400;font-family:'Score','Malgun Gothic','맑은 고딕',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;overflow-x:hidden;}
+a:link{color:#444;text-decoration:none;}
+a:visited{color:#444;text-decoration:none;}
+a:hover{color:#444;text-decoration:underline;}
+a:active{color:#444;text-decoration:underline;}
 a span{cursor:pointer;}
 button{cursor:pointer;font-family:'Score','Malgun Gothic','맑은 고딕',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;}
 input{font-family:'Score','Malgun Gothic','맑은 고딕',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;}
