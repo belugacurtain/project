@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=333333&height=200&section=header&text=SI%20Total%20Project%202020~&fontSize=30&fontColor=ffffff)
 
-### 2025gunpo (2025 용인시 자원봉사센터 전면개편)
+### 2025yongin (2025 용인시 자원봉사센터 전면개편)
 - [대표사이트 메인 레이아웃](https://belugacurtain.github.io/project/2025yongin/site/yivc/main.html)
 - [대표사이트 서브 레이아웃](https://belugacurtain.github.io/project/2025yongin/site/yivc/sub.html)
 
