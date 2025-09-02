@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.gunamiDate{display:flex;align-items:center;justify-content:space-between;flex-direction:row;gap:8px;position:relative;width:100%;color:#000;box-sizing:border-box;}
+.gunamiDate .startDate,
+.gunamiDate .endDate{display:inline-block;position:relative;width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;font-size:inherit;color:inherit;line-height:inherit;vertical-align:top;box-sizing:border-box;}
+.gunamiDate .gunamiCalendar{display:inline-block;position:absolute;z-index:90;top:calc(100% + 5px);left:50%;width:100%;height:auto;padding:10px;background-color:#fff;border:1px solid #2c3464;border-radius:10px;font-size:0;line-height:0;vertical-align:top;box-sizing:border-box;transform:translateX(-50%);}
+.gunamiDate .gunamiCalendar:before,
+.gunamiDate .gunamiCalendar:after,
+.gunamiDate .gunamiCalendar *,
+.gunamiDate .gunamiCalendar *:before,
+.gunamiDate .gunamiCalendar *:after{border:none;font-size:0;line-height:0;box-sizing:border-box;}
+.gunamiDate .gunamiCalendar .cal-top{display:block;position:relative;width:100%;}
+.gunamiDate .gunamiCalendar .cal-top .top-item{display:flex;align-items:center;justify-content:space-between;flex-direction:row;position:relative;width:100%;}
+.gunamiDate .gunamiCalendar .cal-top * + .top-item{margin-top:10px;}
+.gunamiDate .gunamiCalendar .cal-top .top-item button{display:inline-block;position:relative;width:100%;padding:0 5px;background-color:#fff;border:1px solid #283a5a;border-radius:5px;font-size:12px;color:#283a5a;line-height:20px;letter-spacing:-0.03em;font-weight:600;white-space:nowrap;vertical-align:top;}
+.gunamiDate .gunamiCalendar .cal-top .top-item * + button{margin-left:5px;}
+.gunamiDate .gunamiCalendar .cal-top .top-item button:hover{background-color:#eef2f8;color:#283a5a;}
+.gunamiDate .gunamiCalendar .cal-top .top-item button.active{background-color:#eef2f8;color:#283a5a;}
+.gunamiDate .gunamiCalendar .cal-wrap{display:flex;align-items:flex-start;justify-content:stretch;flex-direction:row;position:relative;width:100%;}
+.gunamiDate .gunamiCalendar * + .cal-wrap{margin-top:10px;}
+.gunamiDate .gunamiCalendar .cal-wrap > div{display:inline-block;position:relative;width:100%;vertical-align:top;}
+.gunamiDate .gunamiCalendar .cal-wrap > div + div{margin-left:20px;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head{display:block;position:relative;width:100%;white-space:nowrap;text-align:center;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head * + *{margin-left:10px;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head button{display:inline-block;position:relative;min-width:18px;min-height:18px;font-size:0;line-height:0;vertical-align:top;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head .currentYM{display:inline-block;position:relative;font-size:15px;color:#000;line-height:18px;letter-spacing:-0.03em;font-weight:600;white-space:nowrap;vertical-align:top;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head .prev-year{background:url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%3e%3cpath%20d='M2239.832%20238a.645.645%200%200%201-.471-.209l-3.333-3.571a.751.751%200%200%201%200-1.01.635.635%200%200%201%20.943%200l2.862%203.066%202.862-3.066a.636.636%200%200%201%20.943%200%20.751.751%200%200%201%200%201.01l-3.333%203.571a.645.645%200%200%201-.473.209z'%20transform='rotate(90%201236.416%20-998.416)'%20style='fill:%23121212'/%3e%3cpath%20d='M2239.832%20238a.645.645%200%200%201-.471-.209l-3.333-3.571a.751.751%200%200%201%200-1.01.635.635%200%200%201%20.943%200l2.862%203.066%202.862-3.066a.636.636%200%200%201%20.943%200%20.751.751%200%200%201%200%201.01l-3.333%203.571a.645.645%200%200%201-.473.209z'%20transform='rotate(90%201238.916%20-995.916)'%20style='fill:%23121212'/%3e%3c/svg%3e") no-repeat center center;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head .prev-month{background:url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%3e%3cpath%20d='M2239.832%20238a.645.645%200%200%201-.471-.209l-3.333-3.571a.751.751%200%200%201%200-1.01.635.635%200%200%201%20.943%200l2.862%203.066%202.862-3.066a.636.636%200%200%201%20.943%200%20.751.751%200%200%201%200%201.01l-3.333%203.571a.645.645%200%200%201-.473.209z'%20transform='rotate(90%201237.916%20-996.916)'%20style='fill:%23121212'/%3e%3c/svg%3e") no-repeat center center;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head .next-month{background:url("data:image/svg+xml,%3csvg%20data-name='그룹%2020602'%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%3e%3cpath%20d='M4%200a.645.645%200%200%200-.471.209L.2%203.781a.751.751%200%200%200%200%201.01.635.635%200%200%200%20.943%200L4%201.724l2.862%203.067a.636.636%200%200%200%20.943%200%20.751.751%200%200%200%200-1.01L4.471.209A.645.645%200%200%200%204%200z'%20transform='rotate(90%203%204)'%20style='fill:%23121212'/%3e%3c/svg%3e") no-repeat center center;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-head .next-year{background:url("data:image/svg+xml,%3csvg%20data-name='그룹%2020601'%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%3e%3cpath%20d='M4%200a.645.645%200%200%200-.471.209L.2%203.781a.751.751%200%200%200%200%201.01.635.635%200%200%200%20.943%200L4%201.724l2.862%203.067a.636.636%200%200%200%20.943%200%20.751.751%200%200%200%200-1.01L4.471.209A.645.645%200%200%200%204%200z'%20transform='rotate(90%204.5%205.5)'%20style='fill:%23121212'/%3e%3cpath%20d='M4%200a.645.645%200%200%200-.471.209L.2%203.781a.751.751%200%200%200%200%201.01.635.635%200%200%200%20.943%200L4%201.724l2.862%203.067a.636.636%200%200%200%20.943%200%20.751.751%200%200%200%200-1.01L4.471.209A.645.645%200%200%200%204%200z'%20transform='rotate(90%202%203)'%20style='fill:%23121212'/%3e%3c/svg%3e") no-repeat center center;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body{display:block;position:relative;width:100%;}
+.gunamiDate .gunamiCalendar .cal-wrap > div * + .calendar-body{margin-top:5px;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week{display:flex;align-items:center;justify-content:space-between;flex-direction:row;position:relative;width:100%;text-align:left;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week + .week{margin-top:2px;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week:nth-child(n+8){display:none;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week *{display:inline-block;position:relative;width:100%;min-height:20px;background-color:#fff;font-size:13px;color:#2c3464;line-height:20px;letter-spacing:-0.03em;font-weight:500;vertical-align:top;text-align:center;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week *:first-child{color:#df4444;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week *:last-child{color:#0868cc;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week *.rangecheck{background-color:#2c3464;color:#fff;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week .date-btn.other{background-color:#f2f4f8;color:#a5b0c6;}
+.gunamiDate .gunamiCalendar .cal-wrap > div .calendar-body .week.day-header *{border:none;font-weight:500;}
+.gunamiDate .gunamiCalendar .cal-bottom{display:flex;align-items:center;justify-content:flex-end;flex-direction:row;position:relative;width:100%;}
+.gunamiDate .gunamiCalendar * + .cal-bottom{margin-top:10px;}
+.gunamiDate .gunamiCalendar .cal-bottom .bottom-item{display:inline-block;position:relative;vertical-align:top;}
+.gunamiDate .gunamiCalendar .cal-bottom * + .bottom-item{margin-left:5px;}
+.gunamiDate .gunamiCalendar .cal-bottom .bottom-item button{display:inline-block;position:relative;width:auto;padding:0 15px;background-color:#fff;border:1px solid #0f75de;border-radius:5px;font-size:13px;color:#0f75de;line-height:24px;letter-spacing:-0.03em;font-weight:600;white-space:nowrap;vertical-align:top;}
+.gunamiDate .gunamiCalendar .cal-bottom .bottom-item button:hover{background-color:#0f75de;border-color:#0f75de;color:#fff;}
+.gunamiDate .gunamiCalendar .cal-bottom .bottom-item:last-child button{background-color:#0f75de;border-color:#0f75de;color:#fff;}
+@media all and (max-width:1000px){
+    .gunamiDate .gunamiCalendar{left:auto;right:0;transform:none;}
+}

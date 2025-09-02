@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/gunamiDate.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./assets/js/gunamiDate.js"></script>
+    <title>AI 프롬프트 달력</title>
+    <style>
+        html,body{position:relative;margin:0;padding:0;height:100vh;overflow:hidden;}
+        a:hover, button:hover{cursor:pointer;}
+        #wrapper{position:absolute;top:0;left:0;width:100%;height:100%;padding:100px calc((100% - 1000px) / 2);overflow:hidden;box-sizing:border-box;}
+        .prompt{margin-bottom:10px;text-align:center;}
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div class="prompt">
+        <a href="https://chatgpt.com/share/68b69d0a-c474-800a-8537-564db2f1b2fd" target="_blank" title="새창" rel="noopener noreferrer">prompt ( 작업 소요 시간 : 4h )</a>
+    </div>
+    <div class="gunamiDate">
+        <input type="text" name="startDate" id="startDate" class="startDate"/> ~ <input type="text" name="endDate" id="endDate" class="endDate"/>
+        <div class="gunamiCalendar"></div>    <!--//gunamiCalendar-->
+    </div>    <!--//gunamiDate-->
+</div>    <!--//#wrapper-->
+</body>
+</html>
