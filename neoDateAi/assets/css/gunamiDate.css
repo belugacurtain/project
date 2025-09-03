@@ -49,3 +49,13 @@
 @media all and (max-width:1000px){
     .gunamiDate .gunamiCalendar{left:auto;right:0;transform:none;}
 }
+@media all and (max-width:640px){
+    .gunamiDate .gunamiCalendar .cal-top .top-item{display:block;font-size:0;line-height:0;}
+    .gunamiDate .gunamiCalendar .cal-top .top-item button{display:inline-block;width:calc((100% - 8px) / 3);margin-top:4px;margin-right:4px;vertical-align:top;}
+    .gunamiDate .gunamiCalendar .cal-top .top-item button:nth-child(-n+3){margin-top:0;}
+    .gunamiDate .gunamiCalendar .cal-top .top-item button:nth-child(3n){margin-right:0;}
+    
+    .gunamiDate .gunamiCalendar .cal-top .top-item * + button{margin-left:0;}
+    .gunamiDate .gunamiCalendar .cal-wrap{flex-direction:column;}
+    .gunamiDate .gunamiCalendar .cal-wrap > div + div{margin-top:20px;margin-left:0;}
+}

@@ -9,10 +9,17 @@
     <script src="./assets/js/gunamiDate.js"></script>
     <title>AI 프롬프트 달력</title>
     <style>
-        html,body{position:relative;margin:0;padding:0;height:100vh;overflow:hidden;}
+        html,body{position:relative;margin:0;padding:0;overflow:hidden;}
         a:hover, button:hover{cursor:pointer;}
-        #wrapper{position:absolute;top:0;left:0;width:100%;height:100%;padding:100px calc((100% - 1000px) / 2);overflow:hidden;box-sizing:border-box;}
+        #wrapper{width:100%;min-height:100vh;padding:100px calc((100% - 1000px) / 2);overflow-x:hidden;overflow-y:auto;box-sizing:border-box;}
         .prompt{margin-bottom:10px;text-align:center;}
+        @media all and (max-width:1000px){
+            #wrapper{padding:100px 3%;}
+        }
+        @media all and (max-width:640px){
+            html,body{height:auto;}
+            #wrapper{position:static;padding:50px 3%;}
+        }
     </style>
 </head>
 <body>
