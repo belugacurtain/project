@@ -4,50 +4,56 @@
 @font-face{
     font-family:'PretendardGOV';
     font-weight:100;
-    src:url("../font/PretendardGOV-Thin.woff2") format('woff2'),
-    url("../font/PretendardGOV-Thin.woff") format('woff');
+    src:url("../font/PretendardGOV-Thin.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-Thin.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:200;
-    src:url("../font/PretendardGOV-Light.woff2") format('woff2'),
-    url("../font/PretendardGOV-Light.woff") format('woff');
+    src:url("../font/PretendardGOV-Light.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-Light.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:300;
-    src:url("../font/PretendardGOV-ExtraLight.woff2") format('woff2'),
-    url("../font/PretendardGOV-ExtraLight.woff") format('woff');
+    src:url("../font/PretendardGOV-ExtraLight.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-ExtraLight.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:400;
-    src:url("../font/PretendardGOV-Regular.woff2") format('woff2'),
-    url("../font/PretendardGOV-Regular.woff") format('woff');
+    src:url("../font/PretendardGOV-Regular.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-Regular.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:500;
-    src:url("../font/PretendardGOV-Medium.woff2") format('woff2'),
-    url("../font/PretendardGOV-Medium.woff") format('woff');
+    src:url("../font/PretendardGOV-Medium.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-Medium.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:600;
-    src:url("../font/PretendardGOV-Bold.woff2") format('woff2'),
-    url("../font/PretendardGOV-Bold.woff") format('woff');
+    src:url("../font/PretendardGOV-Bold.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-Bold.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:700;
-    src:url("../font/PretendardGOV-SemiBold.woff2") format('woff2'),
-    url("../font/PretendardGOV-SemiBold.woff") format('woff');
+    src:url("../font/PretendardGOV-SemiBold.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-SemiBold.subset.woff") format('woff');
 }
 @font-face{
     font-family:'PretendardGOV';
     font-weight:800;
-    src:url("../font/PretendardGOV-ExtraBold.woff2") format('woff2'),
-    url("../font/PretendardGOV-ExtraBold.woff") format('woff');
+    src:url("../font/PretendardGOV-ExtraBold.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-ExtraBold.subset.woff") format('woff');
+}
+@font-face{
+    font-family:'PretendardGOV';
+    font-weight:900;
+    src:url("../font/PretendardGOV-Black.subset.woff2") format('woff2'),
+    url("../font/PretendardGOV-Black.subset.woff") format('woff');
 }
 
 /* JalnanGothic */
